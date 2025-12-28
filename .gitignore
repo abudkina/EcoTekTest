@@ -1,0 +1,31 @@
+# Временные файлы
+*.tmp
+*.temp
+*.log
+*.cache
+*~
+
+# Системные файлы
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Редакторы
+.vscode/
+!.vscode/launch.json
+.idea/
+*.swp
+*.swo
+
+# Большие бинарные файлы (если не нужны в репозитории)
+# *.pdf
+# *.zip
+# *.rar
+
+# Node modules (если будет использоваться)
+node_modules/
+package-lock.json
+
+# Временные файлы коммитов
+COMMIT_EDITMSG
+
