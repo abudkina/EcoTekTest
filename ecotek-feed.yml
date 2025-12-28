@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE yml_catalog SYSTEM "shops.dtd">
+<yml_catalog date="2024-12-25 15:00">
+<shop>
+    <name>ЭКОТЭК АС</name>
+    <company>ООО ЭКОТЭК АС</company>
+    <url>https://ecotek-as.ru</url>
+    <currencies>
+        <currency id="RUB" rate="1"/>
+    </currencies>
+    <categories>
+        <category id="1">Темное печное топливо</category>
+        <category id="2">Утилизация медицинских отходов</category>
+        <category id="3">Утилизация промышленных отходов</category>
+        <category id="4">Утилизация лакокрасочных отходов</category>
+        <category id="5">Прием отработанного масла</category>
+        <category id="6">Смазывающие средства</category>
+        <category id="7">Вывоз мусора и отходов</category>
+    </categories>
+    <offers>
+        <!-- Товар: Темное печное топливо -->
+        <offer id="fuel1" type="vendor.model" available="true">
+            <url>https://ecotek-as.ru/#catalog</url>
+            <price>30000</price>
+            <currencyId>RUB</currencyId>
+            <categoryId>1</categoryId>
+            <picture>https://ecotek-as.ru/static/images/5.jpg</picture>
+            <picture>https://ecotek-as.ru/static/images/Gemini1.png</picture>
+            <delivery>true</delivery>
+            <delivery-options>
+                <option cost="0" days="1-2"/>
+            </delivery-options>
+            <name>Темное печное топливо</name>
+            <description>Темное печное топливо для отопительных установок (печей и котлов) средней мощности. Обладает высокой теплотворной способностью, экономично и эффективно для обогрева производственных, складских и сельскохозяйственных помещений. Поставка по Москве и Московской области.</description>
+            <vendor>ЭКОТЭК АС</vendor>
+            <model>ТПТ-1</model>
+            <param name="Единица измерения">тонна</param>
+            <param name="Тип топлива">жидкое нефтяное</param>
+            <param name="Вид услуги">поставка</param>
+            <param name="Регион">Москва и МО</param>
+            <param name="Тип упаковки">налив</param>
+        </offer>
+        
+        <!-- Услуга: Утилизация медицинских отходов -->
+        <offer id="med1" type="book" available="true">
+            <url>https://ecotek-as.ru/#catalog</url>
+            <price>0</price>
+            <currencyId>RUB</currencyId>
+            <categoryId>2</categoryId>
+            <picture>https://ecotek-as.ru/static/images/4.jpeg</picture>
+            <picture>https://ecotek-as.ru/static/images/Gemini3.png</picture>
+            <delivery>false</delivery>
+            <name>Утилизация медицинских отходов классов Б, В, Г</name>
+            <description>Полный цикл безопасного обращения с медицинскими отходами: вывоз, транспортировка, термическое обезвреживание. Работаем со всеми классами опасности. Лицензированная деятельность. Строгое соответствие требованиям Роспотребнадзора и СанПиН.</description>
+            <param name="Тип услуги">Утилизация отходов</param>
+            <param name="Класс опасности">Б, В, Г</param>
+            <param name="Регион">Москва и Московская область</param>
+            <param name="Лицензия">есть</param>
+            <param name="Способ утилизации">термический</param>
+        </offer>
+        
+        <!-- Услуга: Утилизация промышленных отходов -->
+        <offer id="ind1" type="book" available="true">
+            <url>https://ecotek-as.ru/#catalog</url>
+            <price>0</price>
+            <currencyId>RUB</currencyId>
+            <categoryId>3</categoryId>
+            <picture>https://ecotek-as.ru/static/images/6.png</picture>
+            <name>Утилизация промышленных отходов</name>
+            <description>Безопасный вывоз и юридически безупречная утилизация промышленных отходов: металлические и абразивные отходы, нефтесодержащие отходы, химические и гальванические отходы, жидкие отходы, отработанные фильтры, нефтешлам.</description>
+            <param name="Тип услуги">Утилизация отходов</param>
+            <param name="Вид отходов">промышленные</param>
+            <param name="Регион">Москва и МО</param>
+            <param name="Вывоз">да</param>
+            <param name="Лицензия">есть</param>
+        </offer>
+        
+        <!-- Услуга: Утилизация лакокрасочных отходов -->
+        <offer id="paint1" type="book" available="true">
+            <url>https://ecotek-as.ru/#catalog</url>
+            <price>0</price>
+            <currencyId>RUB</currencyId>
+            <categoryId>4</categoryId>
+            <picture>https://ecotek-as.ru/static/images/9.jpg</picture>
+            <name>Утилизация лакокрасочных отходов</name>
+            <description>Законная и безопасная утилизация просроченных красок, растворителей, клеев, эмалей, герметиков, мастик, красителей, загрязненной тары и инструментов. Решение проблемы "под ключ".</description>
+            <param name="Тип услуги">Утилизация отходов</param>
+            <param name="Вид отходов">лакокрасочные</param>
+            <param name="Регион">Москва и МО</param>
+            <param name="Прием тары">да</param>
+            <param name="Лицензия">есть</param>
+        </offer>
+        
+        <!-- Услуга: Прием отработанного масла -->
+        <offer id="oil1" type="book" available="true">
+            <url>https://ecotek-as.ru/#catalog</url>
+            <price>0</price>
+            <currencyId>RUB</currencyId>
+            <categoryId>5</categoryId>
+            <picture>https://ecotek-as.ru/static/images/8.png</picture>
+            <picture>https://ecotek-as.ru/static/images/Gemini2.png</picture>
+            <name>Прием и вывоз отработанного масла</name>
+            <description>Скупка отработанных масел для безопасной переработки: автомобильные, индустриальные, компрессорные, трансформаторные масла. Вывозим от 1 тонны или принимаем на площадке. Экологично и выгодно.</description>
+            <param name="Тип услуги">Прием отходов</param>
+            <param name="Вид отходов">отработанное масло</param>
+            <param name="Регион">Москва и МО</param>
+            <param name="Минимальный объем">от 1 тонны</param>
+            <param name="Вывоз">да</param>
+        </offer>
+        
+        <!-- Товар: Смазывающее средство G-12 -->
+        <offer id="lube1" type="vendor.model" available="true">
+            <url>https://ecotek-as.ru/#catalog</url>
+            <price>0</price>
+            <currencyId>RUB</currencyId>
+            <categoryId>6</categoryId>
+            <picture>https://ecotek-as.ru/static/images/7.jpg</picture>
+            <delivery>true</delivery>
+            <delivery-options>
+                <option cost="0" days="1-3"/>
+            </delivery-options>
+            <name>Многофункциональное проникающее смазывающее средство G-12</name>
+            <description>Средство сочетает свойства очистителя, смазки и защитного покрытия. Для демонтажа резьбовых соединений, удаления ржавчины, окалины, защиты от коррозии. Применение в авто, дома и на производстве.</description>
+            <vendor>ЭКОТЭК АС</vendor>
+            <model>G-12</model>
+            <param name="Тип">смазка-очиститель</param>
+            <param name="Объем">500 мл</param>
+            <param name="Назначение">многофункциональное</param>
+            <param name="Регион">Москва и МО</param>
+        </offer>
+        
+        <!-- Услуга: Вывоз мусора и отходов -->
+        <offer id="trash1" type="book" available="true">
+            <url>https://ecotek-as.ru/#catalog</url>
+            <price>0</price>
+            <currencyId>RUB</currencyId>
+            <categoryId>7</categoryId>
+            <picture>https://ecotek-as.ru/static/images/6.png</picture>
+            <name>Вывоз мусора и отходов</name>
+            <description>Регулярный вывоз и транспортировка отходов по удобному графику. Работаем с юридическими лицами. Все виды отходов, включая строительные, промышленные, твердые бытовые отходы.</description>
+            <param name="Тип услуги">Вывоз отходов</param>
+            <param name="Регулярность">разовый/регулярный</param>
+            <param name="Регион">Москва и МО</param>
+            <param name="График">индивидуальный</param>
+            <param name="Контейнер">предоставляем</param>
+        </offer>
+    </offers>
+</shop>
+</yml_catalog>
