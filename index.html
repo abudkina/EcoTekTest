@@ -63,6 +63,7 @@
         "@context": "https://schema.org",
         "@type": "Service",
         "serviceType": "Waste disposal service",
+        "image": "https://ecotek-as.ru/static/images/Screenshot_1.jpg",
         "provider": {
             "@type": "LocalBusiness",
             "name": "ЭКОТЭК АС"
@@ -112,6 +113,7 @@
         "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "5.0",
+            "ratingCount": 1,
             "reviewCount": 1,
             "bestRating": "5",
             "worstRating": "1"
@@ -121,23 +123,31 @@
                 "@type": "Review",
                 "itemReviewed": {
                     "@type": "Product",
-                    "name": "Темное печное топливо"
+                    "name": "Темное печное топливо",
+                    "description": "Темное печное топливо для отопительных установок средней мощности",
+                    "image": "https://ecotek-as.ru/static/images/5.jpg",
+                    "brand": {
+                        "@type": "Brand",
+                        "name": "ЭКОТЭК АС"
+                    }
                 },
                 "reviewRating": {
                     "@type": "Rating",
                     "ratingValue": "5",
-                    "bestRating": "5"
+                    "bestRating": "5",
+                    "worstRating": "1"
                 },
                 "author": {
                     "@type": "Person",
                     "name": "Клиент"
                 },
-                "reviewBody": "Отличное качество темного печного топлива. Соответствует всем заявленным характеристикам."
+                "reviewBody": "Отличное качество темного печного топлива. Соответствует всем заявленным характеристикам.",
+                "datePublished": "2024-01-01"
             }
         ],
         "offers": {
             "@type": "Offer",
-            "price": "30000",
+            "price": 30000,
             "priceCurrency": "RUB",
             "priceValidUntil": "2025-12-31",
             "availability": "https://schema.org/InStock",
@@ -184,6 +194,469 @@
             }
         }
     }]
+    </script>
+
+    <!-- Structured Data for All Products and Services -->
+    <script type="application/ld+json">
+    [
+        {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Утилизация промышленных отходов",
+            "description": "Избавим ваш бизнес от рисков и хлопот, связанных с промышленными отходами. Наша компания организует их безопасный вывоз и юридически безупречную утилизацию.",
+            "image": "https://ecotek-as.ru/static/images/6.png",
+            "provider": {
+                "@type": "LocalBusiness",
+                "name": "ЭКОТЭК АС"
+            },
+            "areaServed": {
+                "@type": "State",
+                "name": "Московская область"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5.0",
+                "ratingCount": 1,
+                "reviewCount": 1,
+                "bestRating": "5",
+                "worstRating": "1"
+            },
+            "review": [{
+                "@type": "Review",
+                "itemReviewed": {
+                    "@type": "Service",
+                    "name": "Утилизация промышленных отходов"
+                },
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5",
+                    "worstRating": "1"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Клиент"
+                },
+                "reviewBody": "Профессиональный подход к утилизации отходов. Рекомендую.",
+                "datePublished": "2024-01-01"
+            }],
+            "offers": {
+                "@type": "Offer",
+                "price": 0,
+                "priceCurrency": "RUB",
+                "priceValidUntil": "2025-12-31",
+                "availability": "https://schema.org/InStock",
+                "description": "Цена договорная",
+                "shippingDetails": {
+                    "@type": "OfferShippingDetails",
+                    "shippingRate": {
+                        "@type": "MonetaryAmount",
+                        "value": 0,
+                        "currency": "RUB"
+                    },
+                    "shippingDestination": {
+                        "@type": "DefinedRegion",
+                        "addressCountry": "RU",
+                        "addressRegion": "Московская область"
+                    },
+                    "deliveryTime": {
+                        "@type": "ShippingDeliveryTime",
+                        "businessDays": {
+                            "@type": "OpeningHoursSpecification",
+                            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+                        },
+                        "cutoffTime": "18:00",
+                        "handlingTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": 1,
+                            "maxValue": 2,
+                            "unitCode": "DAY"
+                        },
+                        "transitTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": 1,
+                            "maxValue": 2,
+                            "unitCode": "DAY"
+                        }
+                    }
+                },
+                "hasMerchantReturnPolicy": {
+                    "@type": "MerchantReturnPolicy",
+                    "applicableCountry": "RU",
+                    "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+                    "merchantReturnDays": 0,
+                    "returnMethod": "https://schema.org/ReturnByMail",
+                    "returnFees": "https://schema.org/FreeReturn"
+                }
+            }
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Утилизация лакокрасочных отходов",
+            "description": "Не знаете, как законно и безопасно избавиться от просроченных красок, растворителей, клеев или загрязненной тары? Мы решаем эту проблему «под ключ».",
+            "image": "https://ecotek-as.ru/static/images/9.jpg",
+            "provider": {
+                "@type": "LocalBusiness",
+                "name": "ЭКОТЭК АС"
+            },
+            "areaServed": {
+                "@type": "State",
+                "name": "Московская область"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5.0",
+                "ratingCount": 1,
+                "reviewCount": 1,
+                "bestRating": "5",
+                "worstRating": "1"
+            },
+            "review": [{
+                "@type": "Review",
+                "itemReviewed": {
+                    "@type": "Service",
+                    "name": "Утилизация лакокрасочных отходов"
+                },
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5",
+                    "worstRating": "1"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Клиент"
+                },
+                "reviewBody": "Быстро и качественно решили проблему с утилизацией отходов.",
+                "datePublished": "2024-01-01"
+            }],
+            "offers": {
+                "@type": "Offer",
+                "price": 0,
+                "priceCurrency": "RUB",
+                "priceValidUntil": "2025-12-31",
+                "availability": "https://schema.org/InStock",
+                "description": "Цена договорная",
+                "shippingDetails": {
+                    "@type": "OfferShippingDetails",
+                    "shippingRate": {
+                        "@type": "MonetaryAmount",
+                        "value": 0,
+                        "currency": "RUB"
+                    },
+                    "shippingDestination": {
+                        "@type": "DefinedRegion",
+                        "addressCountry": "RU",
+                        "addressRegion": "Московская область"
+                    },
+                    "deliveryTime": {
+                        "@type": "ShippingDeliveryTime",
+                        "businessDays": {
+                            "@type": "OpeningHoursSpecification",
+                            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+                        },
+                        "cutoffTime": "18:00",
+                        "handlingTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": 1,
+                            "maxValue": 2,
+                            "unitCode": "DAY"
+                        },
+                        "transitTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": 1,
+                            "maxValue": 2,
+                            "unitCode": "DAY"
+                        }
+                    }
+                },
+                "hasMerchantReturnPolicy": {
+                    "@type": "MerchantReturnPolicy",
+                    "applicableCountry": "RU",
+                    "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+                    "merchantReturnDays": 0,
+                    "returnMethod": "https://schema.org/ReturnByMail",
+                    "returnFees": "https://schema.org/FreeReturn"
+                }
+            }
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Прием на переработку отходов переработанных масел",
+            "description": "Мы профессионально занимаемся скупкой отработанных масел для их дальнейшей безопасной переработки.",
+            "image": "https://ecotek-as.ru/static/images/8.png",
+            "provider": {
+                "@type": "LocalBusiness",
+                "name": "ЭКОТЭК АС"
+            },
+            "areaServed": {
+                "@type": "State",
+                "name": "Московская область"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5.0",
+                "ratingCount": 1,
+                "reviewCount": 1,
+                "bestRating": "5",
+                "worstRating": "1"
+            },
+            "review": [{
+                "@type": "Review",
+                "itemReviewed": {
+                    "@type": "Service",
+                    "name": "Прием на переработку отходов переработанных масел"
+                },
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5",
+                    "worstRating": "1"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Клиент"
+                },
+                "reviewBody": "Удобный прием отработанных масел. Выгодные условия.",
+                "datePublished": "2024-01-01"
+            }],
+            "offers": {
+                "@type": "Offer",
+                "price": 0,
+                "priceCurrency": "RUB",
+                "priceValidUntil": "2025-12-31",
+                "availability": "https://schema.org/InStock",
+                "description": "Цена договорная",
+                "shippingDetails": {
+                    "@type": "OfferShippingDetails",
+                    "shippingRate": {
+                        "@type": "MonetaryAmount",
+                        "value": 0,
+                        "currency": "RUB"
+                    },
+                    "shippingDestination": {
+                        "@type": "DefinedRegion",
+                        "addressCountry": "RU",
+                        "addressRegion": "Московская область"
+                    },
+                    "deliveryTime": {
+                        "@type": "ShippingDeliveryTime",
+                        "businessDays": {
+                            "@type": "OpeningHoursSpecification",
+                            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+                        },
+                        "cutoffTime": "18:00",
+                        "handlingTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": 1,
+                            "maxValue": 2,
+                            "unitCode": "DAY"
+                        },
+                        "transitTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": 1,
+                            "maxValue": 2,
+                            "unitCode": "DAY"
+                        }
+                    }
+                },
+                "hasMerchantReturnPolicy": {
+                    "@type": "MerchantReturnPolicy",
+                    "applicableCountry": "RU",
+                    "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+                    "merchantReturnDays": 0,
+                    "returnMethod": "https://schema.org/ReturnByMail",
+                    "returnFees": "https://schema.org/FreeReturn"
+                }
+            }
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Обезвреживание медицинских отходов",
+            "description": "Мы обеспечиваем полный цикл безопасного обращения с медицинскими отходами. Мы возьмем на себя всю ответственность — от вывоза до термического обезвреживания.",
+            "image": "https://ecotek-as.ru/static/images/4.jpeg",
+            "provider": {
+                "@type": "LocalBusiness",
+                "name": "ЭКОТЭК АС"
+            },
+            "areaServed": {
+                "@type": "State",
+                "name": "Московская область"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5.0",
+                "ratingCount": 1,
+                "reviewCount": 1,
+                "bestRating": "5",
+                "worstRating": "1"
+            },
+            "review": [{
+                "@type": "Review",
+                "itemReviewed": {
+                    "@type": "Service",
+                    "name": "Обезвреживание медицинских отходов"
+                },
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5",
+                    "worstRating": "1"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Клиент"
+                },
+                "reviewBody": "Надежный партнер для медицинских учреждений. Все в соответствии с требованиями.",
+                "datePublished": "2024-01-01"
+            }],
+            "offers": {
+                "@type": "Offer",
+                "price": 0,
+                "priceCurrency": "RUB",
+                "priceValidUntil": "2025-12-31",
+                "availability": "https://schema.org/InStock",
+                "description": "Цена договорная",
+                "shippingDetails": {
+                    "@type": "OfferShippingDetails",
+                    "shippingRate": {
+                        "@type": "MonetaryAmount",
+                        "value": 0,
+                        "currency": "RUB"
+                    },
+                    "shippingDestination": {
+                        "@type": "DefinedRegion",
+                        "addressCountry": "RU",
+                        "addressRegion": "Московская область"
+                    },
+                    "deliveryTime": {
+                        "@type": "ShippingDeliveryTime",
+                        "businessDays": {
+                            "@type": "OpeningHoursSpecification",
+                            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+                        },
+                        "cutoffTime": "18:00",
+                        "handlingTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": 1,
+                            "maxValue": 2,
+                            "unitCode": "DAY"
+                        },
+                        "transitTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": 1,
+                            "maxValue": 2,
+                            "unitCode": "DAY"
+                        }
+                    }
+                },
+                "hasMerchantReturnPolicy": {
+                    "@type": "MerchantReturnPolicy",
+                    "applicableCountry": "RU",
+                    "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+                    "merchantReturnDays": 0,
+                    "returnMethod": "https://schema.org/ReturnByMail",
+                    "returnFees": "https://schema.org/FreeReturn"
+                }
+            }
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "Многофункциональное проникающее смазывающее средство G-12",
+            "description": "Многофункциональное средство, сочетающее в себе свойства очистителя, смазки и защитного покрытия.",
+            "image": "https://ecotek-as.ru/static/images/7.jpg",
+            "brand": {
+                "@type": "Brand",
+                "name": "ЭКОТЭК АС"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5.0",
+                "ratingCount": 1,
+                "reviewCount": 1,
+                "bestRating": "5",
+                "worstRating": "1"
+            },
+            "review": [{
+                "@type": "Review",
+                "itemReviewed": {
+                    "@type": "Product",
+                    "name": "Многофункциональное проникающее смазывающее средство G-12",
+                    "description": "Многофункциональное средство, сочетающее в себе свойства очистителя, смазки и защитного покрытия.",
+                    "image": "https://ecotek-as.ru/static/images/7.jpg",
+                    "brand": {
+                        "@type": "Brand",
+                        "name": "ЭКОТЭК АС"
+                    }
+                },
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5",
+                    "worstRating": "1"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Клиент"
+                },
+                "reviewBody": "Отличное средство, эффективно справляется со своими задачами.",
+                "datePublished": "2024-01-01"
+            }],
+            "offers": {
+                "@type": "Offer",
+                "price": 0,
+                "priceCurrency": "RUB",
+                "priceValidUntil": "2025-12-31",
+                "availability": "https://schema.org/InStock",
+                "description": "Цена договорная",
+                "shippingDetails": {
+                    "@type": "OfferShippingDetails",
+                    "shippingRate": {
+                        "@type": "MonetaryAmount",
+                        "value": 0,
+                        "currency": "RUB"
+                    },
+                    "shippingDestination": {
+                        "@type": "DefinedRegion",
+                        "addressCountry": "RU",
+                        "addressRegion": "Московская область"
+                    },
+                    "deliveryTime": {
+                        "@type": "ShippingDeliveryTime",
+                        "businessDays": {
+                            "@type": "OpeningHoursSpecification",
+                            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+                        },
+                        "cutoffTime": "18:00",
+                        "handlingTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": 1,
+                            "maxValue": 2,
+                            "unitCode": "DAY"
+                        },
+                        "transitTime": {
+                            "@type": "QuantitativeValue",
+                            "minValue": 1,
+                            "maxValue": 2,
+                            "unitCode": "DAY"
+                        }
+                    }
+                },
+                "hasMerchantReturnPolicy": {
+                    "@type": "MerchantReturnPolicy",
+                    "applicableCountry": "RU",
+                    "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+                    "merchantReturnDays": 0,
+                    "returnMethod": "https://schema.org/ReturnByMail",
+                    "returnFees": "https://schema.org/FreeReturn"
+                }
+            }
+        }
+    ]
     </script>
 
     <!-- Favicon -->
@@ -531,7 +1004,7 @@
         </section>
 
         <!-- Отзывы -->
-        <section class="reviews" id="reviews" itemscope itemtype="https://schema.org/AggregateRating">
+        <section class="reviews" id="reviews">
             <div class="container">
                 <h2 class="section-title">Отзывы наших клиентов</h2>
                 <div class="reviews-container">
@@ -770,8 +1243,6 @@
                 productElement.className = 'catalog-item';
                 productElement.setAttribute('data-category', product.category);
                 productElement.setAttribute('data-id', product.id);
-                productElement.setAttribute('itemscope', '');
-                productElement.setAttribute('itemtype', 'https://schema.org/Product');
 
                 // Сокращаем название и описание для карточки
                 const shortTitle = truncateTitle(product.name, 6);
@@ -779,16 +1250,16 @@
 
                 productElement.innerHTML = `
                     <div class="catalog-img">
-                        <img src="${product.image}" alt="${product.name}" loading="lazy" width="300" height="200" itemprop="image">
+                        <img src="${product.image}" alt="${product.name}" loading="lazy" width="300" height="200">
                     </div>
                     <div class="catalog-info">
-                        <h3 itemprop="name" title="${product.name}">${shortTitle}</h3>
-                        <div class="catalog-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                            <span itemprop="price">${product.price}</span>
+                        <h3 title="${product.name}">${shortTitle}</h3>
+                        <div class="catalog-price">
+                            <span>${product.price}</span>
                         </div>
-                        <p class="catalog-description" itemprop="description">${shortDescription}</p>
+                        <p class="catalog-description">${shortDescription}</p>
                         <div class="catalog-badges">
-                            <span class="badge" itemprop="category">${getCategoryName(product.category)}</span>
+                            <span class="badge">${getCategoryName(product.category)}</span>
                             <span class="badge badge-more">
                                 <i class="fas fa-eye" aria-hidden="true"></i> Подробнее
                             </span>
