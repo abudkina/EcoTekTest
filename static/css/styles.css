@@ -1364,6 +1364,18 @@ footer {
     /* Оптимизация рендеринга изображений карусели */
     will-change: opacity;
     backface-visibility: hidden;
+    overflow: hidden;
+}
+
+.carousel-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
 }
 
 .carousel-item.active {
