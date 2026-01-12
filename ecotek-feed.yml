@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE yml_catalog SYSTEM "shops.dtd">
-<yml_catalog date="2024-12-25 15:00">
+<yml_catalog date="2024-12-26 15:00">
 <shop>
     <name>ЭКОТЭК АС</name>
     <company>ООО ЭКОТЭК АС</company>
@@ -10,11 +10,22 @@
     </currencies>
     <categories>
         <category id="1">Темное печное топливо</category>
-        <category id="2">Утилизация медицинских отходов</category>
+        <category id="2">Обезвреживание медицинских отходов</category>
         <category id="3">Утилизация промышленных отходов</category>
         <category id="4">Утилизация лакокрасочных отходов</category>
-        <category id="5">Прием отработанного масла</category>
+        <category id="5">Утилизация отработанных масел</category>
         <category id="6">Смазывающие средства</category>
+        <category id="7">Утилизация воды, загрязненной нефтепродуктами</category>
+        <category id="8">Утилизация грунта, загрязненного нефтепродуктами</category>
+        <category id="9">Утилизация резины</category>
+        <category id="10">Утилизация дизельного топлива</category>
+        <category id="11">Утилизация песка</category>
+        <category id="12">Утилизация спецодежды</category>
+        <category id="13">Утилизация шлама</category>
+        <category id="14">Утилизация масляных фильтров</category>
+        <category id="15">Утилизация нефтепродуктов</category>
+        <category id="16">Утилизация трансформаторного масла</category>
+        <category id="17">Утилизация моторного масла</category>
     </categories>
     <offers>
         <!-- Товар: Темное печное топливо -->
@@ -40,7 +51,7 @@
             <param name="Тип упаковки">налив</param>
         </offer>
         
-        <!-- Услуга: Утилизация медицинских отходов -->
+        <!-- Услуга: Обезвреживание медицинских отходов -->
         <offer id="med1" type="book" available="true">
             <url>https://ecotek-as.ru/#catalog</url>
             <price>0</price>
@@ -49,8 +60,8 @@
             <picture>https://ecotek-as.ru/static/images/4.jpeg</picture>
             <picture>https://ecotek-as.ru/static/images/Gemini3.png</picture>
             <delivery>false</delivery>
-            <name>Утилизация медицинских отходов классов Б, В, Г</name>
-            <description>Полный цикл безопасного обращения с медицинскими отходами: транспортировка, термическое обезвреживание. Работаем со всеми классами опасности. Лицензированная деятельность. Строгое соответствие требованиям Роспотребнадзора и СанПиН.</description>
+            <name>Обезвреживание медицинских отходов</name>
+            <description>Мы обеспечиваем полный цикл безопасного обращения с медицинскими отходами. Мы возьмем на себя всю ответственность — от вывоза до термического обезвреживания, чтобы ваше учреждение могло работать в строгом соответствии с требованиями Роспотребнадзора и СанПиН. Работаем со всеми классами опасности: Б (опасные), В (чрезвычайно опасные), Г (токсикологические).</description>
             <param name="Тип услуги">Утилизация отходов</param>
             <param name="Класс опасности">Б, В, Г</param>
             <param name="Регион">Москва и Московская область</param>
@@ -89,7 +100,7 @@
             <param name="Лицензия">есть</param>
         </offer>
         
-        <!-- Услуга: Прием отработанного масла -->
+        <!-- Услуга: Утилизация отработанных масел -->
         <offer id="oil1" type="book" available="true">
             <url>https://ecotek-as.ru/#catalog</url>
             <price>0</price>
@@ -97,8 +108,8 @@
             <categoryId>5</categoryId>
             <picture>https://ecotek-as.ru/static/images/8.png</picture>
             <picture>https://ecotek-as.ru/static/images/Gemini2.png</picture>
-            <name>Прием отработанного масла</name>
-            <description>Скупка отработанных масел для безопасной переработки: автомобильные, индустриальные, компрессорные, трансформаторные масла. Принимаем от 1 тонны на площадке. Экологично и выгодно.</description>
+            <name>Утилизация отработанных масел</name>
+            <description>Мы профессионально занимаемся скупкой отработанных масел для их дальнейшей безопасной переработки. Это не только выгодно, но и экологично — вы получаете доход и освобождаетесь от ответственности за правильную утилизацию опасных отходов. Принимаем на возмездной основе: автомобильные масла (моторные, трансмиссионные), индустриальные масла, компрессорные масла, трансформаторные масла. Мы можем сами вывезти объёмом от тонны, либо готовы принять у нас на площадке любой объём.</description>
             <param name="Тип услуги">Прием отходов</param>
             <param name="Вид отходов">отработанное масло</param>
             <param name="Регион">Москва и МО</param>
@@ -124,6 +135,183 @@
             <param name="Объем">500 мл</param>
             <param name="Назначение">многофункциональное</param>
             <param name="Регион">Москва и МО</param>
+        </offer>
+        
+        <!-- Услуга: Утилизация воды, загрязненной нефтепродуктами -->
+        <offer id="water1" type="book" available="true">
+            <url>https://ecotek-as.ru/#catalog</url>
+            <price>0</price>
+            <currencyId>RUB</currencyId>
+            <categoryId>7</categoryId>
+            <picture>https://ecotek-as.ru/static/images/13.jpg</picture>
+            <delivery>false</delivery>
+            <name>Утилизация воды, загрязненной нефтепродуктами</name>
+            <description>Профессиональная утилизация воды, загрязненной нефтепродуктами. Полный цикл работ от отбора проб до очистки и утилизации с соблюдением всех экологических норм.</description>
+            <param name="Тип услуги">Утилизация отходов</param>
+            <param name="Вид отходов">вода, загрязненная нефтепродуктами</param>
+            <param name="Регион">Москва и МО</param>
+            <param name="Лицензия">есть</param>
+        </offer>
+        
+        <!-- Услуга: Утилизация грунта, загрязненного нефтепродуктами -->
+        <offer id="soil1" type="book" available="true">
+            <url>https://ecotek-as.ru/#catalog</url>
+            <price>0</price>
+            <currencyId>RUB</currencyId>
+            <categoryId>8</categoryId>
+            <picture>https://ecotek-as.ru/static/images/17.jpg</picture>
+            <delivery>false</delivery>
+            <name>Утилизация грунта, загрязненного нефтепродуктами</name>
+            <description>Утилизация грунта, загрязненного нефтепродуктами. Безопасная переработка и обезвреживание с соблюдением всех требований законодательства.</description>
+            <param name="Тип услуги">Утилизация отходов</param>
+            <param name="Вид отходов">грунт, загрязненный нефтепродуктами</param>
+            <param name="Регион">Москва и МО</param>
+            <param name="Лицензия">есть</param>
+        </offer>
+        
+        <!-- Услуга: Утилизация резины -->
+        <offer id="rubber1" type="book" available="true">
+            <url>https://ecotek-as.ru/#catalog</url>
+            <price>0</price>
+            <currencyId>RUB</currencyId>
+            <categoryId>9</categoryId>
+            <picture>https://ecotek-as.ru/static/images/15.jpg</picture>
+            <delivery>false</delivery>
+            <name>Утилизация резины</name>
+            <description>Утилизация резиновых отходов различных видов. Экологически безопасная переработка с соблюдением всех норм и требований.</description>
+            <param name="Тип услуги">Утилизация отходов</param>
+            <param name="Вид отходов">резиновые отходы</param>
+            <param name="Регион">Москва и МО</param>
+            <param name="Лицензия">есть</param>
+        </offer>
+        
+        <!-- Услуга: Утилизация дизельного топлива -->
+        <offer id="diesel1" type="book" available="true">
+            <url>https://ecotek-as.ru/#catalog</url>
+            <price>0</price>
+            <currencyId>RUB</currencyId>
+            <categoryId>10</categoryId>
+            <picture>https://ecotek-as.ru/static/images/14.jpg</picture>
+            <delivery>false</delivery>
+            <name>Утилизация дизельного топлива</name>
+            <description>Утилизация некондиционного и отработанного дизельного топлива. Безопасная переработка с полным пакетом документов.</description>
+            <param name="Тип услуги">Утилизация отходов</param>
+            <param name="Вид отходов">дизельное топливо</param>
+            <param name="Регион">Москва и МО</param>
+            <param name="Лицензия">есть</param>
+        </offer>
+        
+        <!-- Услуга: Утилизация песка -->
+        <offer id="sand1" type="book" available="true">
+            <url>https://ecotek-as.ru/#catalog</url>
+            <price>0</price>
+            <currencyId>RUB</currencyId>
+            <categoryId>11</categoryId>
+            <picture>https://ecotek-as.ru/static/images/18.jpg</picture>
+            <delivery>false</delivery>
+            <name>Утилизация песка</name>
+            <description>Утилизация загрязненного песка и песчаных отходов. Обеспечиваем прием и переработку с соблюдением всех экологических норм.</description>
+            <param name="Тип услуги">Утилизация отходов</param>
+            <param name="Вид отходов">загрязненный песок</param>
+            <param name="Регион">Москва и МО</param>
+            <param name="Лицензия">есть</param>
+        </offer>
+        
+        <!-- Услуга: Утилизация спецодежды -->
+        <offer id="clothing1" type="book" available="true">
+            <url>https://ecotek-as.ru/#catalog</url>
+            <price>0</price>
+            <currencyId>RUB</currencyId>
+            <categoryId>12</categoryId>
+            <picture>https://ecotek-as.ru/static/images/20.jpg</picture>
+            <delivery>false</delivery>
+            <name>Утилизация спецодежды</name>
+            <description>Утилизация спецодежды и средств индивидуальной защиты. Безопасная утилизация с соблюдением всех санитарных норм.</description>
+            <param name="Тип услуги">Утилизация отходов</param>
+            <param name="Вид отходов">спецодежда</param>
+            <param name="Регион">Москва и МО</param>
+            <param name="Лицензия">есть</param>
+        </offer>
+        
+        <!-- Услуга: Утилизация шлама -->
+        <offer id="sludge1" type="book" available="true">
+            <url>https://ecotek-as.ru/#catalog</url>
+            <price>0</price>
+            <currencyId>RUB</currencyId>
+            <categoryId>13</categoryId>
+            <picture>https://ecotek-as.ru/static/images/22.jpg</picture>
+            <delivery>false</delivery>
+            <name>Утилизация шлама</name>
+            <description>Утилизация нефтешлама и других видов шлама. Прием и переработка с соблюдением всех экологических требований.</description>
+            <param name="Тип услуги">Утилизация отходов</param>
+            <param name="Вид отходов">шлам</param>
+            <param name="Регион">Москва и МО</param>
+            <param name="Лицензия">есть</param>
+        </offer>
+        
+        <!-- Услуга: Утилизация масляных фильтров -->
+        <offer id="filters1" type="book" available="true">
+            <url>https://ecotek-as.ru/#catalog</url>
+            <price>0</price>
+            <currencyId>RUB</currencyId>
+            <categoryId>14</categoryId>
+            <picture>https://ecotek-as.ru/static/images/21.jpg</picture>
+            <delivery>false</delivery>
+            <name>Утилизация масляных фильтров</name>
+            <description>Утилизация отработанных масляных фильтров. Прием и переработка с соблюдением всех экологических норм.</description>
+            <param name="Тип услуги">Утилизация отходов</param>
+            <param name="Вид отходов">масляные фильтры</param>
+            <param name="Регион">Москва и МО</param>
+            <param name="Лицензия">есть</param>
+        </offer>
+        
+        <!-- Услуга: Утилизация нефтепродуктов -->
+        <offer id="petroleum1" type="book" available="true">
+            <url>https://ecotek-as.ru/#catalog</url>
+            <price>0</price>
+            <currencyId>RUB</currencyId>
+            <categoryId>15</categoryId>
+            <picture>https://ecotek-as.ru/static/images/19.jpg</picture>
+            <delivery>false</delivery>
+            <name>Утилизация нефтепродуктов</name>
+            <description>Утилизация различных видов нефтепродуктов. Прием и переработка некондиционных и отработанных нефтепродуктов.</description>
+            <param name="Тип услуги">Утилизация отходов</param>
+            <param name="Вид отходов">нефтепродукты</param>
+            <param name="Регион">Москва и МО</param>
+            <param name="Лицензия">есть</param>
+        </offer>
+        
+        <!-- Услуга: Утилизация трансформаторного масла -->
+        <offer id="transformer1" type="book" available="true">
+            <url>https://ecotek-as.ru/#catalog</url>
+            <price>0</price>
+            <currencyId>RUB</currencyId>
+            <categoryId>16</categoryId>
+            <picture>https://ecotek-as.ru/static/images/16.jpg</picture>
+            <delivery>false</delivery>
+            <name>Утилизация трансформаторного масла</name>
+            <description>Утилизация отработанного трансформаторного масла. Прием и переработка с соблюдением всех требований безопасности.</description>
+            <param name="Тип услуги">Утилизация отходов</param>
+            <param name="Вид отходов">трансформаторное масло</param>
+            <param name="Регион">Москва и МО</param>
+            <param name="Лицензия">есть</param>
+        </offer>
+        
+        <!-- Услуга: Утилизация моторного масла -->
+        <offer id="motor1" type="book" available="true">
+            <url>https://ecotek-as.ru/#catalog</url>
+            <price>0</price>
+            <currencyId>RUB</currencyId>
+            <categoryId>17</categoryId>
+            <picture>https://ecotek-as.ru/static/images/23.jpg</picture>
+            <delivery>false</delivery>
+            <name>Утилизация моторного масла</name>
+            <description>Утилизация отработанного моторного масла. Прием и переработка моторного масла от автомобилей и техники на возмездной основе.</description>
+            <param name="Тип услуги">Утилизация отходов</param>
+            <param name="Вид отходов">моторное масло</param>
+            <param name="Регион">Москва и МО</param>
+            <param name="Минимальный объем">от 1 тонны</param>
+            <param name="Лицензия">есть</param>
         </offer>
     </offers>
 </shop>
