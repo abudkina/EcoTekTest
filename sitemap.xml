@@ -10,7 +10,7 @@
     <!-- Главная страница -->
     <url>
         <loc>https://ecotek-as.ru/</loc>
-        <lastmod>2026-02-02</lastmod>
+        <lastmod>2026-02-05</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <image:image>
@@ -22,7 +22,7 @@
     <!-- Раздел: Печное топливо -->
     <url>
         <loc>https://ecotek-as.ru/#fuel</loc>
-        <lastmod>2026-02-02</lastmod>
+        <lastmod>2026-02-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
         <image:image>
