@@ -3,8 +3,8 @@ const pngToIco = require("png-to-ico");
 const fs = require("fs");
 const path = require("path");
 
-const SRC = path.join(__dirname, "static/images/Screenshot_1-Photoroom.png");
-const OUT = path.join(__dirname, "favicon.ico");
+const SRC = path.join(__dirname, "public/static/images/Screenshot_1-Photoroom.png");
+const OUT = path.join(__dirname, "public/favicon.ico");
 const BLACK_THRESHOLD = 45;
 
 async function makeBlackTransparent(inputPath) {

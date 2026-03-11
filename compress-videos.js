@@ -2,7 +2,7 @@ const { spawn } = require('child_process');
 const path = require('path');
 const fs = require('fs');
 
-const VIDEO_FOLDER = 'static/video';
+const VIDEO_FOLDER = 'public/static/video';
 const EXTENSIONS = ['.mp4', '.webm', '.mov', '.avi', '.mkv'];
 
 // Настройки сжатия (CRF 28 = хороший баланс качество/размер)

@@ -10,10 +10,10 @@ const mode = args[0] || 'all'; // 'all', 'images', 'photos'
 
 const folders = [];
 if (mode === 'all' || mode === 'images') {
-  folders.push('static/images');
+  folders.push('public/static/images');
 }
 if (mode === 'all' || mode === 'photos') {
-  folders.push('static/photo');
+  folders.push('public/static/photo');
 }
 
 async function compressImages() {

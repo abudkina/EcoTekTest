@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Lossless image compression for EcoTek website",
   "scripts": {
+    "start": "node server.js",
     "compress": "node compress-images.js",
     "compress:images": "node compress-images.js images",
     "compress:photos": "node compress-images.js photos",
@@ -13,6 +14,11 @@
   "keywords": ["compression", "imagemin", "png", "jpg", "webp"],
   "author": "",
   "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "nodemailer": "^6.9.7"
+  },
   "devDependencies": {
     "imagemin": "^8.0.1",
     "imagemin-jpegtran": "^6.0.0",

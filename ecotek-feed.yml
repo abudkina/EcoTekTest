@@ -31,7 +31,7 @@
         <!-- Товар: Темное печное топливо -->
         <offer id="fuel1" type="vendor.model" available="true">
             <url>https://ecotek-as.ru/products/fuel</url>
-            <price>30000</price>
+            <price>26</price>
             <currencyId>RUB</currencyId>
             <categoryId>1</categoryId>
             <picture>https://ecotek-as.ru/static/images/5.jpg</picture>
@@ -44,7 +44,7 @@
             <description>Темное печное топливо для отопительных установок (печей и котлов) средней мощности. Обладает высокой теплотворной способностью для обогрева производственных, складских и сельскохозяйственных помещений по Москве и МО.</description>
             <vendor>ЭКОТЭК АС</vendor>
             <model>ТПТ-1</model>
-            <param name="Единица измерения">тонна</param>
+            <param name="Единица измерения">литр</param>
             <param name="Тип топлива">жидкое нефтяное</param>
             <param name="Регион">Москва и МО</param>
             <param name="Упаковка">налив</param>

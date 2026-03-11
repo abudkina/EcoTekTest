@@ -9,7 +9,6 @@ Disallow: /wp-admin/
 Disallow: /wp-includes/
 Disallow: /search/
 Clean-param: utm_source&utm_medium&utm_campaign /
-Crawl-delay: 1
 
 # Боты Google
 User-agent: Googlebot
