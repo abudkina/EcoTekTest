@@ -8,7 +8,10 @@
 body {
     line-height: 1.6;
     color: #333;
-    background: url('../images/dolina-spokoinoi-reki.jpg') no-repeat center center;
+    background-color: #e5ebe5;
+    background-image: url('../images/dolina-spokoinoi-reki.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
     background-size: cover;
     background-attachment: scroll;
     position: relative;
@@ -58,10 +61,10 @@ header {
 }
 
 .logo-image {
+    display: block;
     height: 40px;
     width: auto;
     object-fit: contain;
-    /* Делает белый логотип */
     border-radius: 30%;
 }
 
@@ -80,16 +83,21 @@ header {
 .logo-text {
     font-size: 1.8rem;
     font-weight: bold;
+    line-height: 1;
     color: white;
 }
 
 nav ul {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     list-style: none;
+    gap: 4px 24px;
+    max-width: 720px;
 }
 
 nav li {
-    margin-left: 30px;
+    margin-left: 0;
 }
 
 nav a {
@@ -600,7 +608,7 @@ nav a:hover::after {
 
 .request-form .btn {
     margin-top: 8px;
-    align-self: flex-start;
+    align-self: center;
 }
 
 .about-details {
@@ -1200,6 +1208,7 @@ nav a:hover::after {
     box-sizing: border-box;
 }
 .request-modal-body textarea { resize: vertical; min-height: 80px; }
+.request-modal-body form .btn { align-self: center; }
 #request-form-status { min-height: 1.5em; font-size: 0.95rem; text-align: center; }
 #request-form-status.success { color: #2ecc71; }
 #request-form-status.error { color: #c0392b; }

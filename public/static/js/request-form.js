@@ -27,7 +27,10 @@
         statusEl.className = isError ? 'error' : 'success';
     }
 
+    function openModalClick(e) { e.preventDefault(); openModal(); }
     if (btnOpen) btnOpen.addEventListener('click', openModal);
+    var linkOpen = document.getElementById('link-open-request');
+    if (linkOpen) linkOpen.addEventListener('click', openModalClick);
     if (btnClose) btnClose.addEventListener('click', closeModal);
     if (overlay) {
         overlay.addEventListener('click', function (e) {
