@@ -7,10 +7,19 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
 
@@ -20,6 +29,18 @@ jobs:
 
       - name: Prepare static site
         run: node scripts/prepare-gh-pages.js
+
+      - name: Deploy via GitHub Actions Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Publish to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
 
       - name: Publish to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4
