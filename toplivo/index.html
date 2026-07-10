@@ -206,50 +206,58 @@
         </div>
     </section>
 
-    <section class="fuel-calculator-block" id="fuel-calculator">
-        <div class="container">
-            <h2 class="section-title">Калькулятор стоимости</h2>
-            <p class="lead-text">Укажите объём в литрах или массу в кг — рассчитаем сумму. Цена: 26 ₽/л, 30 ₽/кг.</p>
-            <div class="fuel-calc">
-                <div class="fuel-calc-tabs">
-                    <button type="button" class="fuel-calc-tab active" data-unit="liters" aria-pressed="true">Литры</button>
-                    <button type="button" class="fuel-calc-tab" data-unit="kg" aria-pressed="false">Килограммы</button>
-                </div>
-                <div class="fuel-calc-input-wrap">
-                    <label for="fuel-calc-value" class="fuel-calc-label">Объём, л</label>
-                    <input type="number" id="fuel-calc-value" class="fuel-calc-input" min="0" step="1" placeholder="0" inputmode="decimal">
-                    <span class="fuel-calc-unit">л</span>
-                </div>
-                <div class="fuel-calc-convert" aria-live="polite">
-                    <span class="fuel-calc-convert-text">≈ <strong id="fuel-calc-other">0</strong> <span id="fuel-calc-other-unit">кг</span></span>
-                </div>
-                <div class="fuel-calc-result">
-                    <span class="fuel-calc-result-label">Сумма</span>
-                    <span id="fuel-calc-sum" class="fuel-calc-sum">0 ₽</span>
+    <div class="fuel-calc-request-row">
+        <section class="fuel-calculator-block" id="fuel-calculator">
+            <div class="container">
+                <h2 class="section-title">Калькулятор стоимости</h2>
+                <p class="lead-text">Укажите объём в литрах или массу в кг — рассчитаем сумму. Цена: 26 ₽/л, 30 ₽/кг.</p>
+                <div class="fuel-calc">
+                    <div class="fuel-calc-tabs">
+                        <button type="button" class="fuel-calc-tab active" data-unit="liters" aria-pressed="true">Литры</button>
+                        <button type="button" class="fuel-calc-tab" data-unit="kg" aria-pressed="false">Килограммы</button>
+                    </div>
+                    <div class="fuel-calc-input-wrap">
+                        <label for="fuel-calc-value" class="fuel-calc-label">Объём, л</label>
+                        <input type="number" id="fuel-calc-value" class="fuel-calc-input" min="0" step="1" placeholder="0" inputmode="decimal">
+                        <span class="fuel-calc-unit">л</span>
+                    </div>
+                    <div class="fuel-calc-convert" aria-live="polite">
+                        <span class="fuel-calc-convert-text">≈ <strong id="fuel-calc-other">0</strong> <span id="fuel-calc-other-unit">кг</span></span>
+                    </div>
+                    <div class="fuel-calc-result">
+                        <span class="fuel-calc-result-label">Сумма</span>
+                        <span id="fuel-calc-sum" class="fuel-calc-sum">0 ₽</span>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="request-block" id="request">
-        <div class="container">
-            <h2 class="section-title">Получить расчёт по печному топливу</h2>
-            <p class="lead-text">Оставьте контакты — уточним объём, адрес доставки и подготовим коммерческое предложение.</p>
-            <form id="request-form" class="request-form" novalidate>
-                <label for="request-name">Имя *</label>
-                <input type="text" id="request-name" name="name" required autocomplete="name">
+        <section class="request-block" id="request">
+            <div class="container">
+                <h2 class="section-title">Получить расчёт по печному топливу</h2>
+                <p class="lead-text">Оставьте контакты — уточним объём, адрес доставки и подготовим коммерческое предложение.</p>
+                <form id="request-form" class="request-form" novalidate>
+                    <div class="request-form-row">
+                        <div class="request-form-field">
+                            <label for="request-name">Имя *</label>
+                            <input type="text" id="request-name" name="name" required autocomplete="name">
+                        </div>
+                        <div class="request-form-field">
+                            <label for="request-phone">Телефон *</label>
+                            <input type="tel" id="request-phone" name="phone" required autocomplete="tel">
+                        </div>
+                    </div>
+                    <div class="request-form-field">
+                        <label for="request-message">Комментарий</label>
+                        <textarea id="request-message" name="message" rows="4" placeholder="Например: объем, желаемые сроки, адрес доставки"></textarea>
+                    </div>
 
-                <label for="request-phone">Телефон *</label>
-                <input type="tel" id="request-phone" name="phone" required autocomplete="tel">
-
-                <label for="request-message">Комментарий</label>
-                <textarea id="request-message" name="message" rows="4" placeholder="Например: объем, желаемые сроки, адрес доставки"></textarea>
-
-                <div id="request-form-status"></div>
-                <button type="submit" class="btn" id="request-submit">Отправить заявку</button>
-            </form>
-        </div>
-    </section>
+                    <div id="request-form-status"></div>
+                    <button type="submit" class="btn" id="request-submit">Отправить заявку</button>
+                </form>
+            </div>
+        </section>
+    </div>
 </main>
 
 <div id="site-footer"></div>
