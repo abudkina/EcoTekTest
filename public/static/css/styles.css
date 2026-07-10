@@ -370,6 +370,7 @@ nav a:hover::after {
     margin: 0 auto 28px;
     color: #4a5568;
     font-size: 1rem;
+    font-weight: 600;
     line-height: 1.6;
 }
 
@@ -829,6 +830,18 @@ nav a:hover::after {
     text-align: left;
 }
 
+.request-form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.request-form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
 .request-form label {
     font-weight: 600;
     color: #333;
@@ -852,6 +865,64 @@ nav a:hover::after {
 .request-form .btn {
     margin-top: 8px;
     align-self: center;
+}
+
+/* Калькулятор + форма в одну строку на десктопе */
+.fuel-calc-request-row {
+    background: linear-gradient(180deg, rgba(232, 245, 233, 0.95) 0%, rgba(255, 255, 255, 0.92) 100%);
+}
+
+@media (min-width: 992px) {
+    .fuel-calc-request-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px 48px;
+        align-items: start;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 40px 24px 60px;
+    }
+
+    .fuel-calc-request-row .fuel-calculator-block,
+    .fuel-calc-request-row .request-block {
+        padding: 0;
+        background: transparent;
+    }
+
+    .fuel-calc-request-row .fuel-calculator-block .container,
+    .fuel-calc-request-row .request-block .container {
+        max-width: none;
+        padding: 0;
+    }
+
+    .fuel-calc-request-row .fuel-calculator-block .lead-text,
+    .fuel-calc-request-row .request-block .lead-text {
+        margin-left: 0;
+        margin-right: 0;
+        text-align: left;
+    }
+
+    .fuel-calc-request-row .fuel-calc {
+        max-width: none;
+        margin: 0;
+    }
+
+    .fuel-calc-request-row .request-form {
+        max-width: none;
+        margin: 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .request-form-row {
+        flex-direction: row;
+        gap: 16px;
+    }
+
+    .request-form-row .request-form-field {
+        flex: 1;
+        min-width: 0;
+    }
 }
 
 .about-details {
@@ -1513,10 +1584,14 @@ nav a:hover::after {
 }
 
 .fuel-promo-text {
-    margin: 0 0 24px;
+    margin: 0 0 10px;
     color: #4a5568;
     font-size: 0.98rem;
     line-height: 1.6;
+}
+
+.fuel-promo-text:last-of-type {
+    margin-bottom: 24px;
 }
 
 .fuel-promo-link {
