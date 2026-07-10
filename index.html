@@ -791,6 +791,20 @@
         </div>
     </div>
 
+    <!-- Модалка: новое легкое топливо -->
+    <div id="fuel-promo-modal" class="modal-overlay fuel-promo-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="fuel-promo-title">
+        <div class="fuel-promo-content modal-content">
+            <button type="button" class="modal-close fuel-promo-close" id="fuel-promo-close" aria-label="Закрыть">×</button>
+            <div class="fuel-promo-body">
+                <span class="fuel-promo-badge">Новинка 2026</span>
+                <img src="static/images/fuel-light-brown.png" alt="ЭКОТЭК Лайт — легкое печное топливо" class="fuel-promo-image" width="400" height="400" loading="eager" decoding="async">
+                <h2 id="fuel-promo-title" class="fuel-promo-title">В продаже — легкое печное топливо</h2>
+                <p class="fuel-promo-text">У нас появилось в продаже <strong>ЭКОТЭК Лайт</strong> — легкое печное топливо. Жидкое, чище классического, горит жарче — подходит для домашних котлов.</p>
+                <a href="/EcoTekTest/toplivo/" class="btn fuel-promo-link">Подробности</a>
+            </div>
+        </div>
+    </div>
+
     <!-- Главный блок -->
     <main>
         <section class="hero" id="home">
@@ -1246,7 +1260,41 @@
 
         document.addEventListener('DOMContentLoaded', function () {
             initCarousel();
+            initFuelPromoModal();
         });
+
+        function initFuelPromoModal() {
+            var modal = document.getElementById('fuel-promo-modal');
+            var closeBtn = document.getElementById('fuel-promo-close');
+            if (!modal) return;
+
+            var storageKey = 'ecotek-fuel-promo-dismissed';
+
+            function openPromo() {
+                modal.classList.add('active');
+                modal.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closePromo() {
+                modal.classList.remove('active');
+                modal.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+                try { sessionStorage.setItem(storageKey, '1'); } catch (e) {}
+            }
+
+            if (!sessionStorage.getItem(storageKey)) {
+                setTimeout(openPromo, 600);
+            }
+
+            if (closeBtn) closeBtn.addEventListener('click', closePromo);
+            modal.addEventListener('click', function (e) {
+                if (e.target === modal) closePromo();
+            });
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && modal.classList.contains('active')) closePromo();
+            });
+        }
     </script>
     <script src="static/js/include-partials.js"></script>
     <script src="static/js/request-form.js"></script>
