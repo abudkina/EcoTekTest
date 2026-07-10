@@ -1,0 +1,46 @@
+# Боты Яндекса
+User-agent: Yandex
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /cgi-bin/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /search/
+Disallow: /seo-schema-faq.html
+Clean-param: utm_source&utm_medium&utm_campaign /
+
+# Боты Google
+User-agent: Googlebot
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /cgi-bin/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /search/
+Disallow: /seo-schema-faq.html
+
+# Все остальные боты
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /cgi-bin/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /search/
+Disallow: /seo-schema-faq.html
+
+# Предпочтительное зеркало (Яндекс)
+Host: https://ecotek-as.ru
+
+# Sitemap
+Sitemap: https://ecotek-as.ru/sitemap.xml
+
+# IndexNow - для ускорения индексации изменений
+# Ключ IndexNow: ecotek-as-2024-indexnow-key-abc123xyz789
+# Файл ключа должен быть доступен по адресу: https://ecotek-as.ru/ecotek-as-2024-indexnow-key-abc123xyz789.txt
