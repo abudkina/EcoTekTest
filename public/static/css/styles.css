@@ -230,6 +230,36 @@ nav a:hover::after {
     margin-right: 10px;
 }
 
+.btn .brand-icon {
+    margin-right: 10px;
+}
+
+.brand-icon {
+    flex: 0 0 auto;
+    width: 22px;
+    height: 22px;
+    transform: translateY(-0.5px);
+    object-fit: contain;
+    display: inline-block;
+}
+
+.btn-social.btn-outline i {
+    transition: color 0.2s ease;
+}
+
+.btn-social--telegram.btn-outline i {
+    color: #229ED9; /* Telegram official */
+}
+
+.btn-social--whatsapp.btn-outline i {
+    color: #25D366; /* WhatsApp official */
+}
+
+.btn-social.btn-outline:hover i,
+.btn-social.btn-outline:hover .brand-icon {
+    color: #fff;
+}
+
 .btn:hover {
     background-color: #1b5e20;
     transform: translateY(-3px);

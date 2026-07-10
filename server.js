@@ -4,6 +4,23 @@ const nodemailer = require('nodemailer');
 const path = require('path');
 
 const app = express();
+const CANONICAL_HOST = 'ecotek-as.ru';
+const ENFORCE_CANONICAL = process.env.ENFORCE_CANONICAL === 'true';
+
+if (ENFORCE_CANONICAL) {
+    app.use(function (req, res, next) {
+        const host = (req.get('host') || '').split(':')[0].toLowerCase();
+        const proto = (req.get('x-forwarded-proto') || req.protocol).split(',')[0].trim();
+        const isIndexHtml = req.path === '/index.html' || req.path === '/index.html/';
+        const needsHostFix = proto !== 'https' || host !== CANONICAL_HOST;
+        if (needsHostFix || isIndexHtml) {
+            const targetPath = isIndexHtml ? '/' : req.originalUrl;
+            return res.redirect(301, 'https://' + CANONICAL_HOST + targetPath);
+        }
+        next();
+    });
+}
+
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 

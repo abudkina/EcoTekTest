@@ -1,0 +1,21 @@
+# Канонический URL: https://ecotek-as.ru/ (HTTPS, без www, без index.html)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # HTTP и www → https://ecotek-as.ru
+    RewriteCond %{HTTPS} off [OR]
+    RewriteCond %{HTTP_HOST} ^www\. [NC]
+    RewriteRule ^ https://ecotek-as.ru%{REQUEST_URI} [R=301,L,NE]
+
+    # /index.html → /
+    RewriteRule ^index\.html$ https://ecotek-as.ru/ [R=301,L,NC]
+
+    # Каталоги без завершающего слэша → со слэшем
+    RewriteRule ^(toplivo|utilizaciya)$ https://ecotek-as.ru/$1/ [R=301,L,NC]
+</IfModule>
+
+# HSTS (если mod_headers включён на хостинге)
+<IfModule mod_headers.c>
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains" env=HTTPS
+</IfModule>
