@@ -354,6 +354,219 @@ nav a:hover::after {
     padding: 50px 0 45px;
 }
 
+/* Сравнение видов топлива */
+.fuel-types {
+    padding: 40px 0 50px;
+    background: linear-gradient(180deg, rgba(241, 248, 233, 0.6) 0%, rgba(255, 255, 255, 0.95) 100%);
+}
+
+.fuel-types .section-title {
+    margin-bottom: 10px;
+}
+
+.fuel-types__lead {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 28px;
+    color: #4a5568;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.fuel-types__scroll-wrap {
+    position: relative;
+    padding: 0 0 8px;
+}
+
+.fuel-types__track {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 20px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: #a5d6a7 transparent;
+    padding: 8px 20px 20px;
+}
+
+.fuel-types__track::-webkit-scrollbar {
+    height: 6px;
+}
+
+.fuel-types__track::-webkit-scrollbar-thumb {
+    background: #a5d6a7;
+    border-radius: 3px;
+}
+
+.fuel-type-card {
+    flex: 0 0 min(420px, calc(100vw - 48px));
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 24px rgba(27, 94, 32, 0.1);
+    border: 1px solid rgba(46, 125, 50, 0.15);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.fuel-type-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 32px rgba(27, 94, 32, 0.14);
+}
+
+.fuel-type-card__image {
+    aspect-ratio: 1;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+
+.fuel-type-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.fuel-type-card__body {
+    padding: 22px 22px 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.fuel-type-card__badge {
+    display: inline-block;
+    align-self: flex-start;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 10px;
+}
+
+.fuel-type-card__badge--classic {
+    background: #eceff1;
+    color: #455a64;
+}
+
+.fuel-type-card__badge--new {
+    background: #e8f5e9;
+    color: #1b5e20;
+}
+
+.fuel-type-card__title {
+    font-size: 1.35rem;
+    color: #1b5e20;
+    margin: 0 0 6px;
+    font-weight: 700;
+}
+
+.fuel-type-card__subtitle {
+    margin: 0 0 16px;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.fuel-type-card__specs {
+    list-style: none;
+    margin: 0 0 18px;
+    padding: 0;
+    flex: 1;
+}
+
+.fuel-type-card__specs li {
+    padding: 7px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 0.92rem;
+    line-height: 1.5;
+    color: #2d3748;
+}
+
+.fuel-type-card__specs li:last-child {
+    border-bottom: none;
+}
+
+.fuel-type-card__specs--minus {
+    color: #c62828;
+}
+
+.fuel-type-card__specs--plus {
+    color: #2e7d32;
+    font-weight: 500;
+}
+
+.fuel-type-card__doc {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: auto;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #1b5e20;
+    text-decoration: none;
+}
+
+.fuel-type-card__doc:hover {
+    text-decoration: underline;
+}
+
+.fuel-types__hint {
+    display: none;
+    text-align: center;
+    margin: 4px 0 0;
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.fuel-types__hint i {
+    margin-right: 6px;
+}
+
+@media (min-width: 900px) {
+    .fuel-types__track {
+        justify-content: center;
+        overflow-x: visible;
+        scroll-snap-type: none;
+        flex-wrap: nowrap;
+    }
+
+    .fuel-type-card {
+        flex: 0 1 420px;
+        max-width: 420px;
+    }
+
+    .fuel-types__hint {
+        display: none !important;
+    }
+}
+
+@media (max-width: 899px) {
+    .fuel-types__hint {
+        display: block;
+    }
+
+    .fuel-type-card {
+        flex: 0 0 min(340px, calc(100vw - 40px));
+    }
+
+    .fuel-type-card__body {
+        padding: 18px 16px 20px;
+    }
+
+    .fuel-type-card__title {
+        font-size: 1.2rem;
+    }
+
+    .fuel-type-card__specs li {
+        font-size: 0.88rem;
+    }
+}
+
 .fuel-details,
 .services-list {
     padding: 50px 0 60px;
@@ -1247,6 +1460,92 @@ nav a:hover::after {
     .request-modal-content { max-width: calc(100% - 24px); margin: 12px; }
     .request-modal-body { padding: 24px 20px; }
     .request-modal-body form { max-width: 100%; }
+}
+
+/* Промо-модалка нового топлива */
+.fuel-promo-overlay.active {
+    display: flex;
+    z-index: 1001;
+}
+
+.fuel-promo-content {
+    max-width: 420px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.fuel-promo-body {
+    padding: 28px 28px 32px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fuel-promo-badge {
+    display: inline-block;
+    padding: 5px 12px;
+    margin-bottom: 16px;
+    background: #e8f5e9;
+    color: #1b5e20;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 6px;
+}
+
+.fuel-promo-image {
+    width: 100%;
+    max-width: 280px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.fuel-promo-title {
+    margin: 0 0 12px;
+    font-size: 1.35rem;
+    color: #1b5e20;
+    line-height: 1.3;
+}
+
+.fuel-promo-text {
+    margin: 0 0 24px;
+    color: #4a5568;
+    font-size: 0.98rem;
+    line-height: 1.6;
+}
+
+.fuel-promo-link {
+    min-width: 180px;
+}
+
+.fuel-promo-close {
+    top: 12px;
+    right: 12px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 480px) {
+    .fuel-promo-content {
+        max-width: calc(100% - 24px);
+        margin: 12px;
+    }
+
+    .fuel-promo-body {
+        padding: 24px 20px 28px;
+    }
+
+    .fuel-promo-title {
+        font-size: 1.2rem;
+    }
+
+    .fuel-promo-image {
+        max-width: 220px;
+    }
 }
 
 .modal-overlay {
