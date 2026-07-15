@@ -145,7 +145,7 @@
                         <p class="fuel-type-card__subtitle">Тёмное печное топливо для котлов с масляными горелками</p>
                         <ul class="fuel-type-card__specs">
                             <li><strong>Цена:</strong> 30&nbsp;₽/л (≈&nbsp;34,5&nbsp;₽/кг) без НДС</li>
-                            <li><strong>Применение:</strong> отопление котельных и котлов с масляными горелками</li>
+                            <li><strong>Применение:</strong> отопление складских помещений, сушильных камер, АБЗ — котлы с масляными горелками</li>
                             <li><strong>Чистота:</strong> без механических примесей, воды и антифриза — <strong>3-ступенчатая фильтрация</strong></li>
                             <li><strong>Консистенция:</strong> умеренная, не слишком густая; плотность 0,860–0,875&nbsp;г/см³</li>
                             <li><strong>Вспышка:</strong> 109&nbsp;°C (закрытый тигель) — безопасно для котельной</li>
@@ -161,10 +161,10 @@
                     <div class="fuel-type-card__body">
                         <span class="fuel-type-card__badge fuel-type-card__badge--new">Легкое</span>
                         <h3 class="fuel-type-card__title">ЭКОТЭК Лайт</h3>
-                        <p class="fuel-type-card__subtitle">Дизельное печное топливо — качественный аналог ДТ</p>
+                        <p class="fuel-type-card__subtitle">Подходит для котлов с дизельными горелками</p>
                         <ul class="fuel-type-card__specs">
                             <li><strong>Цена:</strong> 45&nbsp;₽/л без НДС</li>
-                            <li><strong>Применение:</strong> котельные, зерносушилки, АБЗ и промышленное оборудование</li>
+                            <li><strong>Применение:</strong> котлы с дизельными горелками</li>
                             <li><strong>Теплоотдача:</strong> высокая — эффективное отопление</li>
                             <li><strong>Состав:</strong> стабильный, минимальное содержание серы, без примесей</li>
                             <li class="fuel-type-card__specs--plus"><strong>Выгода:</strong> дешевле дизельного топлива без потери качества</li>
@@ -213,9 +213,9 @@
                 <div class="fuel-card">
                     <h3>Для кого наше топливо идеально</h3>
                     <ul>
-                        <li>Промышленные и частные котельные</li>
-                        <li>Автоматические котлы и горелки (Buderus, Viessmann и др.)</li>
-                        <li>Складские, производственные, сельскохозяйственные помещения</li>
+                        <li>Отопление складских помещений, сушильных камер, АБЗ</li>
+                        <li>Котлы с масляными горелками (Buderus, Viessmann и др.)</li>
+                        <li>Производственные и сельскохозяйственные объекты</li>
                         <li>Строительные площадки для обогрева</li>
                     </ul>
                 </div>
@@ -230,7 +230,7 @@
                 <div class="fuel-card">
                     <h3>ЭКОТЭК Лайт — аналог ДТ</h3>
                     <ul>
-                        <li>Дизельное печное топливо для котельных, зерносушилок и АБЗ.</li>
+                        <li>Подходит для котлов с дизельными горелками.</li>
                         <li>Высокая теплоотдача, стабильный состав, минимальное содержание серы.</li>
                         <li>Дешевле дизельного топлива без потери качества. Цена 45&nbsp;₽/л без НДС.</li>
                     </ul>
@@ -251,11 +251,15 @@
         <section class="fuel-calculator-block" id="fuel-calculator">
             <div class="container">
                 <h2 class="section-title">Калькулятор стоимости</h2>
-                <p class="lead-text">Укажите объём в литрах или массу в кг — рассчитаем сумму. Цена: 30 ₽/л, ≈ 34,5 ₽/кг.</p>
+                <p class="lead-text" id="fuel-calc-lead">Укажите объём в литрах или массу в кг — рассчитаем сумму. Цена: 30 ₽/л, ≈ 34,5 ₽/кг.</p>
                 <div class="fuel-calc">
-                    <div class="fuel-calc-tabs">
-                        <button type="button" class="fuel-calc-tab active" data-unit="liters" aria-pressed="true">Литры</button>
-                        <button type="button" class="fuel-calc-tab" data-unit="kg" aria-pressed="false">Килограммы</button>
+                    <div class="fuel-calc-tabs fuel-calc-tabs--type" role="group" aria-label="Тип топлива">
+                        <button type="button" class="fuel-calc-tab fuel-calc-type active" data-fuel="dark" aria-pressed="true">Тёмное</button>
+                        <button type="button" class="fuel-calc-tab fuel-calc-type" data-fuel="light" aria-pressed="false">Лайт</button>
+                    </div>
+                    <div class="fuel-calc-tabs" role="group" aria-label="Единицы измерения">
+                        <button type="button" class="fuel-calc-tab fuel-calc-unit-tab active" data-unit="liters" aria-pressed="true">Литры</button>
+                        <button type="button" class="fuel-calc-tab fuel-calc-unit-tab" data-unit="kg" aria-pressed="false">Килограммы</button>
                     </div>
                     <div class="fuel-calc-input-wrap">
                         <label for="fuel-calc-value" class="fuel-calc-label">Объём, л</label>
@@ -307,15 +311,24 @@
 <script src="/static/js/request-form.js"></script>
 <script>
 (function() {
-    var PRICE_PER_L = 30, PRICE_PER_KG = 34.5;
-    var DENSITY = 0.87; // плотность по паспорту, г/см³ (кг/л)
+    var FUELS = {
+        dark: { priceL: 30, priceKg: 34.5, density: 0.87, lead: 'Укажите объём в литрах или массу в кг — рассчитаем сумму. Цена: 30 ₽/л, ≈ 34,5 ₽/кг.' },
+        light: { priceL: 45, priceKg: 56, density: 0.804, lead: 'Укажите объём в литрах или массу в кг — рассчитаем сумму. Цена: 45 ₽/л, ≈ 56 ₽/кг.' }
+    };
     var input = document.getElementById('fuel-calc-value');
     var label = document.querySelector('.fuel-calc-label');
     var unitSpan = document.querySelector('.fuel-calc-unit');
     var otherEl = document.getElementById('fuel-calc-other');
     var otherUnitEl = document.getElementById('fuel-calc-other-unit');
     var sumEl = document.getElementById('fuel-calc-sum');
-    var tabs = document.querySelectorAll('.fuel-calc-tab');
+    var leadEl = document.getElementById('fuel-calc-lead');
+    var unitTabs = document.querySelectorAll('.fuel-calc-unit-tab');
+    var typeTabs = document.querySelectorAll('.fuel-calc-type');
+
+    function currentFuel() {
+        var active = document.querySelector('.fuel-calc-type.active');
+        return FUELS[active ? active.getAttribute('data-fuel') : 'dark'];
+    }
 
     function formatNum(x) {
         if (x >= 1000) return Math.round(x).toLocaleString('ru-RU');
@@ -324,30 +337,41 @@
     }
 
     function update() {
-        var isLiters = document.querySelector('.fuel-calc-tab[data-unit="liters"]').classList.contains('active');
+        var fuel = currentFuel();
+        var isLiters = document.querySelector('.fuel-calc-unit-tab[data-unit="liters"]').classList.contains('active');
         var raw = parseFloat(input.value) || 0;
         var liters, kg, sum;
         if (isLiters) {
             liters = raw;
-            kg = liters * DENSITY;
-            sum = liters * PRICE_PER_L;
+            kg = liters * fuel.density;
+            sum = liters * fuel.priceL;
         } else {
             kg = raw;
-            liters = kg / DENSITY;
-            sum = kg * PRICE_PER_KG;
+            liters = kg / fuel.density;
+            sum = kg * fuel.priceKg;
         }
         otherEl.textContent = formatNum(isLiters ? kg : liters);
         otherUnitEl.textContent = isLiters ? 'кг' : 'л';
         sumEl.textContent = (Math.round(sum)).toLocaleString('ru-RU') + ' ₽';
+        if (leadEl) leadEl.textContent = fuel.lead;
     }
 
-    tabs.forEach(function(tab) {
+    typeTabs.forEach(function(tab) {
         tab.addEventListener('click', function() {
+            typeTabs.forEach(function(t) { t.classList.remove('active'); t.setAttribute('aria-pressed', 'false'); });
+            tab.classList.add('active');
+            tab.setAttribute('aria-pressed', 'true');
+            update();
+        });
+    });
+
+    unitTabs.forEach(function(tab) {
+        tab.addEventListener('click', function() {
+            var fuel = currentFuel();
             var unit = tab.getAttribute('data-unit');
-            var isLitersNow = document.querySelector('.fuel-calc-tab[data-unit="liters"]').classList.contains('active');
             var raw = parseFloat(input.value) || 0;
-            var valToSet = unit === 'liters' ? (raw / DENSITY) : (raw * DENSITY);
-            tabs.forEach(function(t) { t.classList.remove('active'); t.setAttribute('aria-pressed', 'false'); });
+            var valToSet = unit === 'liters' ? (raw / fuel.density) : (raw * fuel.density);
+            unitTabs.forEach(function(t) { t.classList.remove('active'); t.setAttribute('aria-pressed', 'false'); });
             tab.classList.add('active');
             tab.setAttribute('aria-pressed', 'true');
             if (unit === 'liters') {
