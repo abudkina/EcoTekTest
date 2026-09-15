@@ -102,9 +102,9 @@
                     <li><strong>Доставка:</strong> 1–2 дня / самовывоз</li>
                 </ul>
                     <div class="product-page__actions">
-                        <button type="button" class="btn" id="btn-open-request" aria-label="Оставить заявку">
+                        <a href="#request" class="btn" aria-label="Оставить заявку">
                             <i class="fas fa-pen" aria-hidden="true"></i> Оставить заявку
-                        </button>
+                        </a>
                         <a href="tel:+79266150077" class="btn btn-outline" aria-label="Позвонить">
                             <i class="fas fa-phone" aria-hidden="true"></i> +7 (926) 615-00-77
                         </a>
@@ -165,30 +165,138 @@
             </section>
         </div>
     </section>
+    
+    <section class="fuel-details" id="fuel-details">
+        <div class="container">
+            <h2 class="section-title">Почему выбирают наше печное топливо</h2>
+            <p class="fuel-types__lead">Стабильная котельная и меньшие затраты на обслуживание — без посредников и сюрпризов в партии.</p>
+            <div class="fuel-grid">
+                <div class="fuel-card">
+                    <h3>1. Защита вашего оборудования</h3>
+                    <ul>
+                        <li>Глубокая <strong>3-ступенчатая фильтрация</strong> — удаляем механические примеси, металлическую стружку, воду и антифриз. Минимальная зольность.</li>
+                        <li>Результат: чище горелки, меньше нагара, реже чистка котла, экономия на ремонте.</li>
+                    </ul>
+                </div>
+                <div class="fuel-card">
+                    <h3>2. Стабильность тепла в любой мороз</h3>
+                    <ul>
+                        <li>Низкая температура застывания (−38&nbsp;°C) — топливо не густеет, система работает бесперебойно даже в сильные холода.</li>
+                        <li>Высокая теплоотдача — эффективный обогрев при оптимальном расходе.</li>
+                    </ul>
+                </div>
+                <div class="fuel-card">
+                    <h3>3. Полная документальная ответственность</h3>
+                    <ul>
+                        <li>С каждой партией — официальный паспорт качества. Вы точно знаете, что заливаете в котельную.</li>
+                        <li>Работаем с юридическими лицами по всем правилам.</li>
+                    </ul>
+                </div>
+                <div class="fuel-card">
+                    <h3>4. Экономия без посредников</h3>
+                    <ul>
+                        <li>Цена от производителя — платите за качественное топливо, а не за накрутки перекупщиков.</li>
+                        <li>Гибкие условия опта — пробная партия от 1 тонны, индивидуальный расчёт для постоянных клиентов.</li>
+                    </ul>
+                </div>
+                <div class="fuel-card">
+                    <h3>Для кого наше топливо идеально</h3>
+                    <ul>
+                        <li>Отопление складских помещений, сушильных камер, АБЗ</li>
+                        <li>Котлы с масляными горелками (Buderus, Viessmann и др.)</li>
+                        <li>Производственные и сельскохозяйственные объекты</li>
+                        <li>Строительные площадки для обогрева</li>
+                    </ul>
+                </div>
+                <div class="fuel-card">
+                    <h3>Условия поставки</h3>
+                    <ul>
+                        <li>Минимальный заказ — от 1 тонны</li>
+                        <li>Доставка топливовозами по Москве и МО</li>
+                        <li>Самовывоз в Старой Купавне</li>
+                    </ul>
+                </div>
+                <div class="fuel-card">
+                    <h3>ЭКОТЭК Лайт — аналог ДТ</h3>
+                    <ul>
+                        <li>Подходит для котлов с дизельными горелками.</li>
+                        <li>Высокая теплоотдача, стабильный состав, минимальное содержание серы.</li>
+                        <li>Дешевле дизельного топлива без потери качества. Цена 45&nbsp;₽/л без НДС.</li>
+                    </ul>
+                </div>
+                <div class="fuel-card">
+                    <h3>Работаем с юрлицами</h3>
+                    <ul>
+                        <li>Договор, отсрочка платежа и закрывающие документы для бухгалтерии.</li>
+                        <li>Паспорт качества готовы выслать по запросу — на каждую партию.</li>
+                        <li>Мы производитель: своя лаборатория и производство в Старой Купавне.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="fuel-calc-request-row">
+        <section class="fuel-calculator-block" id="fuel-calculator" data-fuel="light">
+            <div class="container">
+                <h2 class="section-title">Калькулятор стоимости</h2>
+                <p class="lead-text" id="fuel-calc-lead">Укажите объём в литрах или массу в кг — рассчитаем сумму. Цена: 45 ₽/л, ≈ 56 ₽/кг.</p>
+                <div class="fuel-calc">
+                    <div class="fuel-calc-tabs fuel-calc-tabs--type" role="group" aria-label="Тип топлива">
+                        <button type="button" class="fuel-calc-tab fuel-calc-type" data-fuel="dark" aria-pressed="false">Тёмное</button>
+                        <button type="button" class="fuel-calc-tab fuel-calc-type active" data-fuel="light" aria-pressed="true">Лайт</button>
+                    </div>
+                    <div class="fuel-calc-tabs" role="group" aria-label="Единицы измерения">
+                        <button type="button" class="fuel-calc-tab fuel-calc-unit-tab active" data-unit="liters" aria-pressed="true">Литры</button>
+                        <button type="button" class="fuel-calc-tab fuel-calc-unit-tab" data-unit="kg" aria-pressed="false">Килограммы</button>
+                    </div>
+                    <div class="fuel-calc-input-wrap">
+                        <label for="fuel-calc-value" class="fuel-calc-label">Объём, л</label>
+                        <input type="number" id="fuel-calc-value" class="fuel-calc-input" min="0" step="1" placeholder="0" inputmode="decimal">
+                        <span class="fuel-calc-unit">л</span>
+                    </div>
+                    <div class="fuel-calc-convert" aria-live="polite">
+                        <span class="fuel-calc-convert-text">≈ <strong id="fuel-calc-other">0</strong> <span id="fuel-calc-other-unit">кг</span></span>
+                    </div>
+                    <div class="fuel-calc-result">
+                        <span class="fuel-calc-result-label">Сумма</span>
+                        <span id="fuel-calc-sum" class="fuel-calc-sum">0 ₽</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="request-block" id="request">
+            <div class="container">
+                <h2 class="section-title">Получить расчёт по печному топливу</h2>
+                <p class="lead-text">Оставьте контакты — уточним объём, адрес доставки и подготовим коммерческое предложение.</p>
+                <form id="request-form" class="request-form" novalidate>
+                    <div class="request-form-row">
+                        <div class="request-form-field">
+                            <label for="request-name">Имя *</label>
+                            <input type="text" id="request-name" name="name" required autocomplete="name">
+                        </div>
+                        <div class="request-form-field">
+                            <label for="request-phone">Телефон *</label>
+                            <input type="tel" id="request-phone" name="phone" required autocomplete="tel">
+                        </div>
+                    </div>
+                    <div class="request-form-field">
+                        <label for="request-message">Комментарий</label>
+                        <textarea id="request-message" name="message" rows="4" placeholder="Например: объем, желаемые сроки, адрес доставки"></textarea>
+                    </div>
+                    <div id="request-form-status"></div>
+                    <button type="submit" class="btn" id="request-submit">Отправить заявку</button>
+                </form>
+            </div>
+        </section>
+    </div>
 </main>
 
-<div id="request-modal-overlay" class="modal-overlay request-modal-overlay" aria-hidden="true">
-    <div class="request-modal-content modal-content">
-        <button type="button" class="modal-close" id="request-modal-close" aria-label="Закрыть">×</button>
-        <div class="request-modal-body">
-            <h2>Оставить заявку</h2>
-            <p>Оставьте контакты — перезвоним и обсудим задачу.</p>
-            <form id="request-form" novalidate>
-                <label for="request-name">Имя *</label>
-                <input type="text" id="request-name" name="name" required autocomplete="name">
-                <label for="request-phone">Телефон *</label>
-                <input type="tel" id="request-phone" name="phone" required autocomplete="tel">
-                <label for="request-message">Сообщение</label>
-                <textarea id="request-message" name="message" rows="4" placeholder="Кратко опишите задачу или вопрос"></textarea>
-                <div id="request-form-status"></div>
-                <button type="submit" class="btn" id="request-submit">Отправить заявку</button>
-            </form>
-        </div>
-    </div>
-</div>
 
 <div id="site-footer"></div>
 <script src="/static/js/include-partials.js"></script>
 <script src="/static/js/request-form.js"></script>
+<script src="/static/js/fuel-calculator.js"></script>
 </body>
 </html>
