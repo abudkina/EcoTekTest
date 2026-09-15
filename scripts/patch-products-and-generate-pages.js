@@ -111,8 +111,15 @@ function buildPage(product) {
     const title = product.name + ' | ЭКОТЭК АС Москва и МО';
     const descHtml = formatDescription(product.fullDescription);
     const pdf = product.pdfFile ? absUrl(product.pdfFile) : '';
+    const licensePdf = absUrl('/docs/Лицензия_Экотек.pdf');
+    const isLicenseExtract = /Выписка/i.test(pdf);
     const pdfBlock = pdf
-        ? `<a href="${escapeHtml(pdf)}" target="_blank" rel="noopener noreferrer" class="btn btn-disk product-page__doc"><i class="fas fa-file-pdf" aria-hidden="true"></i> Открыть подробный файл (PDF)</a>`
+        ? (isLicenseExtract
+            ? `<div class="product-page__docs">
+                    <a href="${escapeHtml(pdf)}" target="_blank" rel="noopener noreferrer" class="btn btn-disk product-page__doc"><i class="fas fa-file-pdf" aria-hidden="true"></i> Выписка из реестра лицензий</a>
+                    <a href="${escapeHtml(licensePdf)}" target="_blank" rel="noopener noreferrer" class="btn btn-disk product-page__doc"><i class="fas fa-file-pdf" aria-hidden="true"></i> Лицензия</a>
+                </div>`
+            : `<a href="${escapeHtml(pdf)}" target="_blank" rel="noopener noreferrer" class="btn btn-disk product-page__doc"><i class="fas fa-file-pdf" aria-hidden="true"></i> Открыть подробный файл (PDF)</a>`)
         : '';
 
     const schema = product.category === 'fuel'

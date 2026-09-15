@@ -3055,11 +3055,22 @@ footer {
     background: #f3f5f4;
 }
 
+.product-page__docs {
+    margin-top: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
 .product-page__doc {
     margin-top: 16px;
     display: inline-flex;
     align-items: center;
     gap: 8px;
+}
+
+.product-page__docs .product-page__doc {
+    margin-top: 0;
 }
 
 .product-page__category {
