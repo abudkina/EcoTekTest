@@ -64,9 +64,14 @@
                     <div class="modal-images">
                         <img id="modal-image" src="" alt="Изображение товара или услуги ЭКОТЭК АС" loading="lazy" decoding="async">
                         <div class="modal-thumbnails" id="modal-thumbnails" role="group" aria-label="Миниатюры изображений"></div>
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-disk" id="disk-link" style="margin-top: 15px; display: inline-block;">
-                            <i class="fas fa-external-link-alt" aria-hidden="true"></i> Открыть подробный файл
-                        </a>
+                        <div id="modal-docs" style="margin-top: 15px; display: none; flex-wrap: wrap; gap: 10px;">
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-disk" id="disk-link">
+                                <i class="fas fa-file-pdf" aria-hidden="true"></i> Выписка из реестра лицензий
+                            </a>
+                            <a href="/EcoTekTest/docs/Лицензия_Экотек.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-disk" id="license-link" style="display: none;">
+                                <i class="fas fa-file-pdf" aria-hidden="true"></i> Лицензия
+                            </a>
+                        </div>
                     </div>
                     <div class="modal-info">
                         <h2 id="modal-title"></h2>
@@ -164,6 +169,8 @@
             var modalPrice = document.getElementById('modal-price');
             var modalDescription = document.getElementById('modal-description');
             var diskLink = document.getElementById('disk-link');
+            var licenseLink = document.getElementById('license-link');
+            var modalDocs = document.getElementById('modal-docs');
             var requestCallBtn = document.getElementById('request-call');
             function openProductModal(productId) {
                 var product = products.filter(function(p){ return p.id == productId; })[0];
@@ -174,7 +181,24 @@
                 modalTitle.textContent = product.name;
                 modalPrice.textContent = product.price;
                 if (modalDescription) modalDescription.innerHTML = (product.fullDescription || '').indexOf('<') >= 0 ? product.fullDescription : (product.fullDescription || '').replace(/\n/g, '<br>');
-                if (diskLink && product.pdfFile) { diskLink.href = product.pdfFile; diskLink.target = '_blank'; diskLink.rel = 'noopener noreferrer'; diskLink.style.display = 'inline-block'; diskLink.innerHTML = '<i class="fas fa-file-pdf"></i> Открыть подробный файл (PDF)'; } else if (diskLink) diskLink.style.display = 'none';
+                if (diskLink && product.pdfFile) {
+                    var isExtract = /Выписка/i.test(product.pdfFile);
+                    diskLink.href = product.pdfFile;
+                    diskLink.target = '_blank';
+                    diskLink.rel = 'noopener noreferrer';
+                    diskLink.style.display = 'inline-flex';
+                    diskLink.innerHTML = isExtract
+                        ? '<i class="fas fa-file-pdf"></i> Выписка из реестра лицензий'
+                        : '<i class="fas fa-file-pdf"></i> Открыть подробный файл (PDF)';
+                    if (licenseLink) {
+                        licenseLink.style.display = isExtract ? 'inline-flex' : 'none';
+                    }
+                    if (modalDocs) modalDocs.style.display = 'flex';
+                } else {
+                    if (diskLink) diskLink.style.display = 'none';
+                    if (licenseLink) licenseLink.style.display = 'none';
+                    if (modalDocs) modalDocs.style.display = 'none';
+                }
                 if (modal) { modal.removeAttribute('hidden'); modal.style.display = 'flex'; document.body.style.overflow = 'hidden'; modal.focus(); }
                 document.addEventListener('keydown', handleEscapeKey);
             }
