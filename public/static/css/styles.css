@@ -3244,6 +3244,23 @@ footer {
 .product-page {
     padding-bottom: 60px;
     background: var(--page-surface);
+    /* BFC: FAQ margin-top не выпадает наружу — иначе полоска фона dolina между секциями */
+    display: flow-root;
+}
+
+/* Соседние product-page без лишнего зазора (описание → FAQ) */
+.product-page:has(+ .product-page) {
+    padding-bottom: 0;
+}
+
+.product-page + .product-page,
+.fuel-details + .product-page {
+    padding-top: 32px;
+}
+
+.product-page + .product-page .product-page__faq,
+.fuel-details + .product-page .product-page__faq {
+    margin-top: 0;
 }
 
 .product-page__breadcrumbs {
