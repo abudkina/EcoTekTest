@@ -58,11 +58,7 @@ function escapeHtml(str) {
         .replace(/"/g, '&quot;');
 }
 
-function formatDescription(fullDescription) {
-    if (!fullDescription) return '';
-    if (fullDescription.indexOf('<') >= 0) return fullDescription;
-    return escapeHtml(fullDescription).replace(/\n/g, '<br>\n');
-}
+const { formatDescription } = require('../public/static/js/desc-icons.js');
 
 function stripHtml(raw) {
     return String(raw || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();

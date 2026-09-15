@@ -3342,6 +3342,66 @@ footer {
     max-width: none;
 }
 
+.desc-icon-list {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 20px;
+}
+
+.product-page__description-body li,
+.desc-icon-list li,
+.modal-description li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.desc-icon {
+    flex-shrink: 0;
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+    background: #e8f5e9;
+    color: #2e7d32;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+}
+
+.desc-icon i {
+    font-size: 0.95rem;
+}
+
+.desc-icon-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.desc-subhead {
+    font-weight: 700;
+    color: #1a2e22;
+    margin: 18px 0 6px;
+}
+
+.desc-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 16px 0 0;
+    font-weight: 600;
+}
+
+.desc-area-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #fff;
+    padding: 12px;
+    border-left: 4px solid #2e7d32;
+    border-radius: 4px;
+}
+
 .fuel-spec-cols {
     display: grid;
     grid-template-columns: 1fr 1fr;
