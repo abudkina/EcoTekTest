@@ -105,9 +105,9 @@
                     <li><strong>Цена:</strong> договорная</li>
                 </ul>
                     <div class="product-page__actions">
-                        <button type="button" class="btn" id="btn-open-request" aria-label="Оставить заявку">
+                        <a href="#request" class="btn" aria-label="Оставить заявку">
                             <i class="fas fa-pen" aria-hidden="true"></i> Оставить заявку
-                        </button>
+                        </a>
                         <a href="tel:+79266150077" class="btn btn-outline" aria-label="Позвонить">
                             <i class="fas fa-phone" aria-hidden="true"></i> +7 (926) 615-00-77
                         </a>
@@ -190,27 +190,28 @@
         </div>
     </section>
     
-</main>
-
-<div id="request-modal-overlay" class="modal-overlay request-modal-overlay" aria-hidden="true">
-    <div class="request-modal-content modal-content">
-        <button type="button" class="modal-close" id="request-modal-close" aria-label="Закрыть">×</button>
-        <div class="request-modal-body">
-            <h2>Оставить заявку</h2>
-            <p>Оставьте контакты — перезвоним и обсудим задачу.</p>
-            <form id="request-form" novalidate>
+    
+    <section class="request-block" id="request">
+        <div class="container">
+            <h2 class="section-title">Запросить расчёт на утилизацию отходов</h2>
+            <p class="lead-text">Опишите тип отходов, примерный объём и адрес — мы рассчитаем стоимость и предложим удобный график вывоза.</p>
+            <form id="request-form" class="request-form" novalidate>
                 <label for="request-name">Имя *</label>
                 <input type="text" id="request-name" name="name" required autocomplete="name">
+
                 <label for="request-phone">Телефон *</label>
                 <input type="tel" id="request-phone" name="phone" required autocomplete="tel">
-                <label for="request-message">Сообщение</label>
-                <textarea id="request-message" name="message" rows="4" placeholder="Кратко опишите задачу или вопрос"></textarea>
+
+                <label for="request-message">Комментарий</label>
+                <textarea id="request-message" name="message" rows="4" placeholder="Например: тип отходов, объём, желаемая периодичность вывоза"></textarea>
+
                 <div id="request-form-status"></div>
                 <button type="submit" class="btn" id="request-submit">Отправить заявку</button>
             </form>
         </div>
-    </div>
-</div>
+    </section>
+</main>
+
 
 <div id="site-footer"></div>
 <script src="/static/js/include-partials.js"></script>

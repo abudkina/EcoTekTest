@@ -450,6 +450,30 @@ function geoSummaryHtml(product) {
                 </div>`;
 }
 
+function utilizationRequestHtml(product) {
+    if (product.category !== 'utilization') return '';
+    return `
+    <section class="request-block" id="request">
+        <div class="container">
+            <h2 class="section-title">Запросить расчёт на утилизацию отходов</h2>
+            <p class="lead-text">Опишите тип отходов, примерный объём и адрес — мы рассчитаем стоимость и предложим удобный график вывоза.</p>
+            <form id="request-form" class="request-form" novalidate>
+                <label for="request-name">Имя *</label>
+                <input type="text" id="request-name" name="name" required autocomplete="name">
+
+                <label for="request-phone">Телефон *</label>
+                <input type="tel" id="request-phone" name="phone" required autocomplete="tel">
+
+                <label for="request-message">Комментарий</label>
+                <textarea id="request-message" name="message" rows="4" placeholder="Например: тип отходов, объём, желаемая периодичность вывоза"></textarea>
+
+                <div id="request-form-status"></div>
+                <button type="submit" class="btn" id="request-submit">Отправить заявку</button>
+            </form>
+        </div>
+    </section>`;
+}
+
 function fuelDefaultType(product) {
     if (/legkoe|lait|лайт/i.test(product.slug + ' ' + product.name)) return 'light';
     return 'dark';
@@ -781,7 +805,7 @@ function buildPage(product, allProducts) {
                     </p>
                     ${geoFactsHtml(product)}
                     <div class="product-page__actions">
-                        ${product.category === 'fuel'
+                        ${product.category === 'fuel' || product.category === 'utilization'
         ? `<a href="#request" class="btn" aria-label="Оставить заявку">
                             <i class="fas fa-pen" aria-hidden="true"></i> Оставить заявку
                         </a>`
@@ -810,9 +834,10 @@ function buildPage(product, allProducts) {
         </div>
     </section>
     ${fuelMarketingHtml(product)}
+    ${utilizationRequestHtml(product)}
 </main>
 
-${product.category === 'fuel' ? '' : `<div id="request-modal-overlay" class="modal-overlay request-modal-overlay" aria-hidden="true">
+${product.category === 'fuel' || product.category === 'utilization' ? '' : `<div id="request-modal-overlay" class="modal-overlay request-modal-overlay" aria-hidden="true">
     <div class="request-modal-content modal-content">
         <button type="button" class="modal-close" id="request-modal-close" aria-label="Закрыть">×</button>
         <div class="request-modal-body">
