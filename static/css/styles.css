@@ -1570,12 +1570,26 @@ nav a:focus-visible::after {
     padding: 30px 20px;
     background-color: #e8f5e9;
     border-radius: 10px;
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.service-item:hover {
+a.service-item--link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.service-item:hover,
+a.service-item--link:hover,
+a.service-item--link:focus-visible {
     transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+a.service-item--link:focus-visible {
+    outline: 2px solid #2e7d32;
+    outline-offset: 3px;
 }
 
 .service-item i {
