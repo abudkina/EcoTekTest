@@ -92,7 +92,7 @@
     </main>
 
     <div id="site-footer"></div>
-    <script src="static/js/products-data.js"></script>
+    <script src="static/js/products-data.js?v=20260915"></script>
     <script>
         (function() {
             let products = [];
@@ -144,7 +144,11 @@
                     }
                     var shortTitle = truncateTitle(p.name, 6);
                     var shortDesc = truncateText(p.shortDescription || p.fullDescription || '', 4, 150);
-                    el.innerHTML = '<div class="catalog-img"><img src="'+p.image+'" alt="'+p.name.replace(/"/g,'&quot;')+'" loading="lazy" width="300" height="200"></div><div class="catalog-info"><h3 title="'+p.name.replace(/"/g,'&quot;')+'">'+shortTitle+'</h3><div class="catalog-price"><span>'+p.price+'</span></div><p class="catalog-description">'+shortDesc+'</p><div class="catalog-badges"><span class="badge">'+getCategoryName(p.category)+'</span><span class="badge badge-more"><i class="fas fa-eye" aria-hidden="true"></i> Подробнее</span></div></div>';
+                    var imgSrc = p.image || '';
+                    if (window.ecotekUrl && imgSrc && imgSrc.charAt(0) !== 'h') {
+                        imgSrc = window.ecotekUrl('/' + imgSrc.replace(/^\//, ''));
+                    }
+                    el.innerHTML = '<div class="catalog-img"><img src="'+imgSrc+'" alt="'+p.name.replace(/"/g,'&quot;')+'" loading="lazy" width="300" height="200"></div><div class="catalog-info"><h3 title="'+p.name.replace(/"/g,'&quot;')+'">'+shortTitle+'</h3><div class="catalog-price"><span>'+p.price+'</span></div><p class="catalog-description">'+shortDesc+'</p><div class="catalog-badges"><span class="badge">'+getCategoryName(p.category)+'</span><span class="badge badge-more"><i class="fas fa-eye" aria-hidden="true"></i> Подробнее</span></div></div>';
                     if (!pageUrl) {
                         el.addEventListener('click', function(){ openProductModal(p.id); });
                     }
