@@ -243,7 +243,7 @@ const NEW_PRODUCTS = [
         slug: 'pishchevye-othody',
         category: 'utilization',
         price: 'Договорная',
-        image: 'static/images/10.jpg',
+        image: 'static/images/pishchevye-othody.jpg',
         pdfFile: 'docs/Выписка.pdf',
         fullDescription:
             'Утилизация пищевых и жировых отходов организаций общественного питания и смежных производств.\n\n' +
