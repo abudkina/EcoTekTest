@@ -34,48 +34,47 @@ body {
     padding: 0 24px;
 }
 
-/* Шапка и меню */
+/* Шапка и меню — светлая, как у референса */
 header {
-    padding: 15px 0;
+    padding: 14px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    background-color: green;
+    background-color: #ffffff;
+    border-bottom: 1px solid rgba(27, 94, 32, 0.08);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 28px;
     position: relative;
 }
 
-.header-container .header-spacer {
-    flex: 0 0 140px;
-    min-width: 140px;
-}
-
 .header-container nav {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    min-width: 0;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
     text-decoration: none;
-    color: white;
+    color: #1b5e20;
+    flex: 0 0 auto;
 }
 
 .logo-image {
     display: block;
-    height: 40px;
+    height: 44px;
     width: auto;
     object-fit: contain;
-    border-radius: 30%;
+    border-radius: 8px;
 }
 
 .logo1 {
@@ -87,23 +86,26 @@ header {
     height: 150px;
     width: auto;
     object-fit: contain;
-    /* Делает белый логотип */
 }
 
 .logo-text {
-    font-size: 1.8rem;
-    font-weight: bold;
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
     line-height: 1;
-    color: white;
+    color: #1b5e20;
 }
 
 nav ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     list-style: none;
-    gap: 4px 24px;
-    max-width: 720px;
+    gap: 0 22px;
+    max-width: none;
+    margin: 0;
+    padding: 0;
 }
 
 nav li {
@@ -111,17 +113,20 @@ nav li {
 }
 
 nav a {
-    color: white;
+    color: #222;
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s;
-    padding: 5px 0;
+    font-size: 0.95rem;
+    letter-spacing: 0.01em;
+    transition: color 0.2s ease;
+    padding: 6px 0;
     position: relative;
     white-space: nowrap;
 }
 
-nav a:hover {
-    color: #c8e6c9;
+nav a:hover,
+nav a:focus-visible {
+    color: #1b5e20;
 }
 
 nav a::after {
@@ -131,11 +136,29 @@ nav a::after {
     left: 0;
     width: 0;
     height: 2px;
-    transition: width 0.3s;
+    background: #2e7d32;
+    transition: width 0.25s ease;
 }
 
-nav a:hover::after {
+nav a:hover::after,
+nav a:focus-visible::after {
     width: 100%;
+}
+
+.header-phone {
+    flex: 0 0 auto;
+    color: #111;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+}
+
+.header-phone:hover,
+.header-phone:focus-visible {
+    color: #1b5e20;
 }
 
 /* Герой-блок */
@@ -2166,6 +2189,20 @@ footer {
     }
 }
 
+@media (max-width: 1100px) {
+    nav ul {
+        gap: 0 14px;
+    }
+
+    nav a {
+        font-size: 0.88rem;
+    }
+
+    .header-phone {
+        font-size: 0.95rem;
+    }
+}
+
 @media (max-width: 768px) {
     header {
         padding: 10px 0;
@@ -2173,39 +2210,39 @@ footer {
 
     .header-container {
         flex-direction: column;
-        gap: 12px;
-    }
-
-    .header-container .header-spacer {
-        display: none;
+        gap: 10px;
     }
 
     .header-container nav {
-        position: static;
-        transform: none;
         width: 100%;
+        justify-content: center;
     }
 
     nav ul {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 4px 0;
+        gap: 6px 14px;
     }
 
     nav li {
-        margin: 0 8px;
+        margin: 0;
     }
 
     nav a {
-        font-size: 0.9rem;
+        font-size: 0.88rem;
     }
 
     .logo-text {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 
     .logo-image {
         height: 36px;
+    }
+
+    .header-phone {
+        font-size: 1rem;
+        order: 3;
     }
 
     .company-name {
