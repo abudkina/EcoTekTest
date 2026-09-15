@@ -479,10 +479,8 @@ function fuelDefaultType(product) {
     return 'dark';
 }
 
-function fuelMarketingHtml(product) {
+function fuelWhyHtml(product) {
     if (product.category !== 'fuel') return '';
-    const fuelType = fuelDefaultType(product);
-    const darkActive = fuelType === 'dark';
     return `
     <section class="fuel-details" id="fuel-details">
         <div class="container">
@@ -552,8 +550,14 @@ function fuelMarketingHtml(product) {
                 </div>
             </div>
         </div>
-    </section>
+    </section>`;
+}
 
+function fuelCalcRequestHtml(product) {
+    if (product.category !== 'fuel') return '';
+    const fuelType = fuelDefaultType(product);
+    const darkActive = fuelType === 'dark';
+    return `
     <div class="fuel-calc-request-row">
         <section class="fuel-calculator-block" id="fuel-calculator" data-fuel="${fuelType}">
             <div class="container">
@@ -611,6 +615,10 @@ function fuelMarketingHtml(product) {
             </div>
         </section>
     </div>`;
+}
+
+function fuelMarketingHtml(product) {
+    return fuelWhyHtml(product) + fuelCalcRequestHtml(product);
 }
 
 function geoFactsHtml(product) {
@@ -828,12 +836,16 @@ function buildPage(product, allProducts) {
                 <h2>Описание</h2>
                 <div class="product-page__description-body">${descHtml}</div>
             </div>
-
+        </div>
+    </section>
+    ${fuelWhyHtml(product)}
+    <section class="product-page">
+        <div class="container">
             ${faqHtml(faqs)}
             ${relatedLinksHtml(product, allProducts)}
         </div>
     </section>
-    ${fuelMarketingHtml(product)}
+    ${fuelCalcRequestHtml(product)}
     ${utilizationRequestHtml(product)}
 </main>
 
