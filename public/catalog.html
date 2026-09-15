@@ -119,6 +119,7 @@
                 var path = null;
                 if (p.category === 'fuel') path = '/toplivo/' + p.slug + '/';
                 else if (p.category === 'utilization') path = '/utilizaciya/' + p.slug + '/';
+                else if (p.category === 'products') path = '/sredstva/' + p.slug + '/';
                 if (!path) return null;
                 return window.ecotekUrl ? window.ecotekUrl(path) : path;
             }

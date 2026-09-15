@@ -74,14 +74,22 @@ function clip(str, max) {
     return s.slice(0, max - 1).replace(/\s+\S*$/, '') + '…';
 }
 
+function categoryBase(product) {
+    if (product.category === 'fuel') return 'toplivo';
+    if (product.category === 'products') return 'sredstva';
+    return 'utilizaciya';
+}
+
 function pagePath(product) {
-    const base = product.category === 'fuel' ? 'toplivo' : 'utilizaciya';
-    return '/' + base + '/' + product.slug + '/';
+    return '/' + categoryBase(product) + '/' + product.slug + '/';
 }
 
 function parentMeta(product) {
     if (product.category === 'fuel') {
         return { name: 'Печное топливо', url: '/toplivo/', schemaName: 'Печное топливо' };
+    }
+    if (product.category === 'products') {
+        return { name: 'Средства', url: '/catalog.html?filter=products', schemaName: 'Средства' };
     }
     return { name: 'Утилизация отходов', url: '/utilizaciya/', schemaName: 'Утилизация отходов' };
 }
@@ -110,6 +118,18 @@ function keywordBase(product) {
             geo
         ].join(', ');
     }
+    if (product.category === 'products') {
+        return [
+            name,
+            'G-12 смазка',
+            'проникающая смазка G-12',
+            'универсальное смазывающее средство',
+            'купить G-12 Москва',
+            'средство G-12 ЭКОТЭК',
+            'смазка от ржавчины',
+            geo
+        ].join(', ');
+    }
     return [
         name,
         name + ' Москва',
@@ -127,7 +147,9 @@ function seoTitle(product) {
     if (product.category === 'fuel') {
         return product.name + ' в Москве и МО | ЭКОТЭК АС';
     }
-    // Shorten long names for title length
+    if (product.category === 'products') {
+        return 'Смазка G-12 — купить в Москве и МО | ЭКОТЭК АС';
+    }
     const short = product.name
         .replace(/^Утилизация\s+/i, 'Утилизация ')
         .replace(/^Обезвреживание\s+/i, 'Обезвреживание ');
@@ -139,12 +161,18 @@ function seoDescription(product) {
         return product.name + ' от ЭКОТЭК АС. Цена ' + product.price +
             '. Доставка Москва и МО, от 1 т, без НДС. Старая Купавна. ☎ ' + COMPANY.phone;
     }
+    if (product.category === 'products') {
+        return 'Многофункциональное проникающее смазывающее средство G-12 от ЭКОТЭК АС в Москве и МО. Очистка, смазка, защита от коррозии. Цена договорная. ☎ ' + COMPANY.phone;
+    }
     return product.name + ' в Москве и МО: лицензии, вывоз, договор и акты. ЭКОТЭК АС, Старая Купавна. ☎ ' + COMPANY.phone;
 }
 
 function h1Text(product) {
     if (product.category === 'fuel') {
         return product.name + ' в Москве и Московской области';
+    }
+    if (product.category === 'products') {
+        return product.name + ' в Москве и МО';
     }
     return product.name + ' в Москве и МО';
 }
@@ -170,6 +198,30 @@ function buildFaqs(product) {
             },
             {
                 q: 'Где находится склад ЭКОТЭК АС?',
+                a: 'Адрес: ' + COMPANY.address + '. Режим работы: ' + COMPANY.hours + '. Email: ' + COMPANY.email + '.'
+            }
+        ];
+    }
+    if (product.category === 'products') {
+        return [
+            {
+                q: 'Где купить смазку G-12 в Москве?',
+                a: 'Многофункциональное проникающее смазывающее средство G-12 продаёт ЭКОТЭК АС в Москве и Московской области. Самовывоз в Старой Купавне или доставка. Телефон: ' + COMPANY.phone + '.'
+            },
+            {
+                q: 'Для чего нужно средство G-12?',
+                a: 'G-12 сочетает свойства очистителя, смазки и защитного покрытия: проникает в ржавчину, удаляет грязь и влагу, устраняет скрип, защищает от коррозии. Подходит для автомобилей, дома и производства.'
+            },
+            {
+                q: 'Какая цена на G-12?',
+                a: 'Стоимость договорная. Уточните актуальные условия по телефону ' + COMPANY.phone + ' или оставьте заявку на сайте.'
+            },
+            {
+                q: 'Есть ли сертификат на средство G-12?',
+                a: 'Да. Сертификат доступен на странице товара и в разделе лицензий сайта ЭКОТЭК АС.'
+            },
+            {
+                q: 'Где забрать заказ?',
                 a: 'Адрес: ' + COMPANY.address + '. Режим работы: ' + COMPANY.hours + '. Email: ' + COMPANY.email + '.'
             }
         ];
@@ -261,7 +313,7 @@ function productOrServiceSchema(product, url, image, desc) {
         { '@type': 'City', name: 'Старая Купавна' }
     ];
 
-    if (product.category === 'fuel') {
+    if (product.category === 'fuel' || product.category === 'products') {
         const offer = {
             '@type': 'Offer',
             priceCurrency: 'RUB',
@@ -270,8 +322,11 @@ function productOrServiceSchema(product, url, image, desc) {
             priceValidUntil: '2026-12-31',
             itemCondition: 'https://schema.org/NewCondition',
             seller: provider,
-            areaServed: areaServed,
-            shippingDetails: {
+            areaServed: areaServed
+        };
+        if (price != null) offer.price = price;
+        if (product.category === 'fuel') {
+            offer.shippingDetails = {
                 '@type': 'OfferShippingDetails',
                 shippingDestination: {
                     '@type': 'DefinedRegion',
@@ -283,9 +338,14 @@ function productOrServiceSchema(product, url, image, desc) {
                     handlingTime: { '@type': 'QuantitativeValue', minValue: 1, maxValue: 2, unitCode: 'DAY' },
                     transitTime: { '@type': 'QuantitativeValue', minValue: 0, maxValue: 1, unitCode: 'DAY' }
                 }
-            }
-        };
-        if (price != null) offer.price = price;
+            };
+        } else {
+            offer.priceSpecification = {
+                '@type': 'PriceSpecification',
+                priceCurrency: 'RUB',
+                description: 'Договорная стоимость'
+            };
+        }
         return {
             '@context': 'https://schema.org',
             '@type': 'Product',
@@ -295,7 +355,7 @@ function productOrServiceSchema(product, url, image, desc) {
             sku: String(product.id),
             brand: { '@type': 'Brand', name: COMPANY.name },
             manufacturer: provider,
-            category: 'Печное топливо',
+            category: product.category === 'fuel' ? 'Печное топливо' : 'Смазочные средства',
             offers: offer
         };
     }
@@ -331,7 +391,11 @@ function relatedLinksHtml(product, allProducts) {
     const items = related.map(function (p) {
         return '<li><a href="' + pagePath(p) + '">' + escapeHtml(p.name) + '</a></li>';
     }).join('\n');
-    const title = product.category === 'fuel' ? 'Другие виды топлива' : 'Другие виды утилизации';
+    const title = product.category === 'fuel'
+        ? 'Другие виды топлива'
+        : product.category === 'products'
+            ? 'Другие товары'
+            : 'Другие виды утилизации';
     return `
             <section class="product-page__related" aria-labelledby="related-title">
                 <h2 id="related-title">${title}</h2>
@@ -368,6 +432,15 @@ function geoSummaryHtml(product) {
                     <p><strong>Как заказать:</strong> позвонить или оставить заявку на сайте. Юрлицо — ${COMPANY.legalName}, работает с 2021 года.</p>
                 </div>`;
     }
+    if (product.category === 'products') {
+        return `<div class="geo-summary" role="complementary">
+                    <p><strong>${escapeHtml(product.name)} — ЭКОТЭК АС:</strong> универсальное проникающее смазывающее средство (очиститель, смазка, защита от коррозии). Продажа в Москве и Московской области. Цена договорная.</p>
+                    <p><strong>Где купить:</strong> ${escapeHtml(COMPANY.address)}. Самовывоз и доставка по Москве и МО.</p>
+                    <p><strong>Зона обслуживания:</strong> ${escapeHtml(cities)}.</p>
+                    <p><strong>Контакты:</strong> <a href="tel:${COMPANY.phoneTel}">${COMPANY.phone}</a>, <a href="mailto:${COMPANY.email}">${COMPANY.email}</a>. Сертификат в комплекте документов.</p>
+                    <p><strong>Применение:</strong> резьбовые соединения, петли, замки, электрические контакты, автомобили, дом и производство.</p>
+                </div>`;
+    }
     return `<div class="geo-summary" role="complementary">
                     <p><strong>${escapeHtml(product.name)} — ЭКОТЭК АС:</strong> лицензированная услуга в Москве и Московской области. Вывоз собственным транспортом, договор, акты, отчётность. Стоимость договорная.</p>
                     <p><strong>Адрес компании:</strong> ${escapeHtml(COMPANY.address)}.</p>
@@ -384,6 +457,14 @@ function geoFactsHtml(product) {
                     <li><strong>Склад:</strong> Старая Купавна</li>
                     <li><strong>Цена:</strong> ${escapeHtml(product.price)}</li>
                     <li><strong>Доставка:</strong> 1–2 дня / самовывоз</li>
+                </ul>`;
+    }
+    if (product.category === 'products') {
+        return `<ul class="product-page__geo-facts" aria-label="Условия продажи">
+                    <li><strong>Регион:</strong> Москва и Московская область</li>
+                    <li><strong>Склад:</strong> Старая Купавна</li>
+                    <li><strong>Цена:</strong> договорная</li>
+                    <li><strong>Документ:</strong> сертификат</li>
                 </ul>`;
     }
     return `<ul class="product-page__geo-facts" aria-label="Условия услуги">
@@ -409,6 +490,7 @@ function buildPage(product, allProducts) {
     const licensePdf = absUrl('/docs/Лицензия_Экотек.pdf');
     const isLicenseExtract = /Выписка/i.test(pdf);
     const isFuelPassport = product.category === 'fuel';
+    const isProductCert = product.category === 'products';
     const pdfBlock = pdf
         ? (isLicenseExtract
             ? `<div class="product-page__docs">
@@ -417,11 +499,14 @@ function buildPage(product, allProducts) {
                 </div>`
             : isFuelPassport
                 ? `<a href="${escapeHtml(pdf)}" target="_blank" rel="noopener noreferrer" class="btn btn-disk product-page__doc"><i class="fas fa-file-pdf" aria-hidden="true"></i> Паспорт качества</a>`
-                : `<a href="${escapeHtml(pdf)}" target="_blank" rel="noopener noreferrer" class="btn btn-disk product-page__doc"><i class="fas fa-file-pdf" aria-hidden="true"></i> Открыть подробный файл (PDF)</a>`)
+                : isProductCert
+                    ? `<a href="${escapeHtml(pdf)}" target="_blank" rel="noopener noreferrer" class="btn btn-disk product-page__doc"><i class="fas fa-file-pdf" aria-hidden="true"></i> Сертификат</a>`
+                    : `<a href="${escapeHtml(pdf)}" target="_blank" rel="noopener noreferrer" class="btn btn-disk product-page__doc"><i class="fas fa-file-pdf" aria-hidden="true"></i> Открыть подробный файл (PDF)</a>`)
         : '';
-    const imgAlt = product.category === 'fuel'
-        ? product.name + ' купить в Москве — ЭКОТЭК АС'
-        : product.name + ' в Москве и МО — ЭКОТЭК АС';
+    const imgAlt = product.category === 'utilization'
+        ? product.name + ' в Москве и МО — ЭКОТЭК АС'
+        : product.name + ' купить в Москве — ЭКОТЭК АС';
+    const schemaItemType = product.category === 'utilization' ? 'Service' : 'Product';
 
     const webPageSchema = {
         '@context': 'https://schema.org',
@@ -530,7 +615,7 @@ function buildPage(product, allProducts) {
 <div id="site-header"></div>
 
 <main>
-    <section class="product-page page-top" itemscope itemtype="https://schema.org/${product.category === 'fuel' ? 'Product' : 'Service'}">
+    <section class="product-page page-top" itemscope itemtype="https://schema.org/${schemaItemType}">
         <div class="container">
             ${geoSummaryHtml(product)}
 
@@ -613,13 +698,12 @@ function buildPage(product, allProducts) {
 
 function generatePages(products) {
     const targets = products.filter(function (p) {
-        return (p.category === 'fuel' || p.category === 'utilization') && p.slug;
+        return (p.category === 'fuel' || p.category === 'utilization' || p.category === 'products') && p.slug;
     });
 
     let count = 0;
     for (const product of targets) {
-        const base = product.category === 'fuel' ? 'toplivo' : 'utilizaciya';
-        const dir = path.join(root, 'public', base, product.slug);
+        const dir = path.join(root, 'public', categoryBase(product), product.slug);
         fs.mkdirSync(dir, { recursive: true });
         fs.writeFileSync(path.join(dir, 'index.html'), buildPage(product, targets), 'utf8');
         count++;
