@@ -966,18 +966,8 @@ nav a:hover::after {
 
 .about-details {
     padding: 0px 0;
-    background: rgba(255, 255, 255, 0.9);
+    background: transparent;
     position: relative;
-}
-
-.about-details::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 5px;
-    background: rgba(255, 255, 255, 0.9);
 }
 
 .about-content {
