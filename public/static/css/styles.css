@@ -1,3 +1,8 @@
+/* Page surface opacity 70% */
+:root {
+    --page-surface: rgba(255, 255, 255, 0.7);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -136,7 +141,7 @@ nav a:hover::after {
 .hero {
     padding: 60px 0 40px;
     text-align: center;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.7);
 }
 
 .stats {
@@ -326,7 +331,7 @@ nav a:hover::after {
 .geo-faq .faq-a { margin: 0; color: #4a5568; line-height: 1.6; }
 
 /* FAQ page */
-.faq-page { background: rgba(255, 255, 255, 0.92); padding-bottom: 3rem; }
+.faq-page { background: rgba(255, 255, 255, 0.7); padding-bottom: 3rem; }
 .faq-hero { text-align: center; max-width: 640px; margin: 0 auto 2.5rem; }
 .faq-hero .section-title { margin-bottom: 0.75rem; }
 .faq-lead { color: #4a5568; font-size: 1.05rem; line-height: 1.65; }
@@ -361,7 +366,7 @@ nav a:hover::after {
 /* Сравнение видов топлива */
 .fuel-types {
     padding: 40px 0 50px;
-    background: linear-gradient(180deg, rgba(241, 248, 233, 0.6) 0%, rgba(255, 255, 255, 0.95) 100%);
+    background: linear-gradient(180deg, rgba(241, 248, 233, 0.7) 0%, rgba(255, 255, 255, 0.7) 100%);
 }
 
 .fuel-types .section-title {
@@ -578,7 +583,7 @@ nav a:hover::after {
 .fuel-details,
 .services-list {
     padding: 50px 0 60px;
-    background: rgba(255, 255, 255, 0.88);
+    background: rgba(255, 255, 255, 0.7);
 }
 
 .fuel-grid,
@@ -634,7 +639,7 @@ nav a:hover::after {
 /* Калькулятор топлива */
 .fuel-calculator-block {
     padding: 24px 0;
-    background: linear-gradient(180deg, rgba(232, 245, 233, 0.95) 0%, rgba(255, 255, 255, 0.92) 100%);
+    background: linear-gradient(180deg, rgba(232, 245, 233, 0.7) 0%, rgba(255, 255, 255, 0.7) 100%);
 }
 
 .fuel-calculator-block .section-title {
@@ -838,7 +843,7 @@ nav a:hover::after {
 
 .request-block {
     padding: 50px 0 60px;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.7);
 }
 
 .request-block .section-title {
@@ -899,7 +904,7 @@ nav a:hover::after {
 
 /* Калькулятор + форма в одну строку на десктопе */
 .fuel-calc-request-row {
-    background: linear-gradient(180deg, rgba(232, 245, 233, 0.95) 0%, rgba(255, 255, 255, 0.92) 100%);
+    background: linear-gradient(180deg, rgba(232, 245, 233, 0.7) 0%, rgba(255, 255, 255, 0.7) 100%);
 }
 
 @media (min-width: 992px) {
@@ -957,7 +962,7 @@ nav a:hover::after {
 
 .about-details {
     padding: 0px 0;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.7);
     position: relative;
 }
 
@@ -968,7 +973,7 @@ nav a:hover::after {
     left: 0;
     right: 0;
     height: 5px;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.7);
 }
 
 .about-content {
@@ -1352,7 +1357,7 @@ nav a:hover::after {
 /* Блок опыта и лицензий после «Наши направления» */
 .experience-block {
     padding: 50px 0 60px;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.7);
 }
 
 .experience-block .container {
@@ -1405,7 +1410,7 @@ nav a:hover::after {
 
 .services-icons {
     padding: 60px 0;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.7);
 }
 
 .services-grid {
@@ -1440,7 +1445,7 @@ nav a:hover::after {
 }
 
 .catalog {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.7);
 }
 
 /* Каталог товаров */
@@ -1634,7 +1639,7 @@ nav a:hover::after {
 .fuel-promo-close {
     top: 12px;
     right: 12px;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.7);
 }
 
 @media (max-width: 480px) {
@@ -1825,7 +1830,7 @@ nav a:hover::after {
 /* Стили для блока отзывов */
 .reviews {
     padding: 60px 0;
-    background: rgba(255, 255, 255, 0.75);
+    background: rgba(255, 255, 255, 0.7);
 }
 
 .reviews-intro {
@@ -1970,7 +1975,7 @@ nav a:hover::after {
 /* Контакты */
 .contacts {
     padding: 0px 0;
-    background: rgba(255, 255, 255, 0.75);
+    background: rgba(255, 255, 255, 0.7);
 }
 
 .contacts-grid {
@@ -2237,7 +2242,7 @@ footer {
 /* Стили для секции лицензий */
 .licenses-section {
     padding: 60px 0;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.7);
 }
 
 .licenses-description {
@@ -2670,7 +2675,7 @@ footer {
 /* ========== Секция галереи ========== */
 .gallery-section {
     padding: 60px 0;
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.7);
 }
 
 .gallery-intro {
@@ -3012,6 +3017,7 @@ footer {
 /* Product detail pages */
 .product-page {
     padding-bottom: 60px;
+    background: var(--page-surface);
 }
 
 .product-page__breadcrumbs {
