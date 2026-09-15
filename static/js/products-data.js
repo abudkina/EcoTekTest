@@ -57,6 +57,7 @@
                     {
                         id: 6,
                         name: "Многофункциональное проникающее смазывающее средство G-12",
+                        slug: "g-12",
                         category: "products",
                         price: "Договорная",
                         image: "static/images/7.jpg",
