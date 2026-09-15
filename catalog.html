@@ -78,7 +78,7 @@
                         <div class="modal-price" id="modal-price"></div>
                         <div class="modal-description">
                             <h3>Описание</h3>
-                            <div id="modal-description"></div>
+                            <div id="modal-description" class="product-page__description-body"></div>
                         </div>
                         <div class="modal-actions">
                             <button class="btn btn-outline" id="request-call">
@@ -93,6 +93,7 @@
 
     <div id="site-footer"></div>
     <script src="static/js/products-data.js?v=20260915b"></script>
+    <script src="static/js/desc-icons.js"></script>
     <script>
         (function() {
             let products = [];
@@ -185,7 +186,12 @@
                 modalImage.alt = product.name;
                 modalTitle.textContent = product.name;
                 modalPrice.textContent = product.price;
-                if (modalDescription) modalDescription.innerHTML = (product.fullDescription || '').indexOf('<') >= 0 ? product.fullDescription : (product.fullDescription || '').replace(/\n/g, '<br>');
+                if (modalDescription) {
+                    var rawDesc = product.fullDescription || '';
+                    modalDescription.innerHTML = window.EcotekDescIcons
+                        ? window.EcotekDescIcons.formatDescription(rawDesc)
+                        : (rawDesc.indexOf('<') >= 0 ? rawDesc : rawDesc.replace(/\n/g, '<br>'));
+                }
                 if (diskLink && product.pdfFile) {
                     var isExtract = /Выписка/i.test(product.pdfFile);
                     diskLink.href = product.pdfFile;
