@@ -2,6 +2,7 @@
                     {
                         id: 1,
                         name: "Темное печное топливо",
+                        slug: "temnoe-pechnoe-toplivo",
                         category: "fuel",
                         price: "30 ₽/л или ≈ 34,5 ₽/кг",
                         image: "static/images/5.jpg",
@@ -12,6 +13,7 @@
                     {
                         id: 2,
                         name: "Утилизация промышленных отходов",
+                        slug: "promyshlennye-othody",
                         category: "utilization",
                         price: "Договорная",
                         image: "static/images/6.png",
@@ -22,6 +24,7 @@
                     {
                         id: 3,
                         name: "Утилизация лакокрасочных отходов",
+                        slug: "lakokrasochnye-othody",
                         category: "utilization",
                         price: "Договорная",
                         image: "static/images/9.jpg",
@@ -32,6 +35,7 @@
                     {
                         id: 4,
                         name: "Утилизация отработанных масел",
+                        slug: "otrabotannye-masla",
                         category: "utilization",
                         price: "Договорная",
                         image: "static/images/8.png",
@@ -42,6 +46,7 @@
                     {
                         id: 5,
                         name: "Обезвреживание медицинских отходов",
+                        slug: "medicinskie-othody",
                         category: "utilization",
                         price: "Договорная",
                         image: "static/images/4.jpeg",
@@ -62,6 +67,7 @@
                     {
                         id: 7,
                         name: "Утилизация воды, загрязненной нефтепродуктами",
+                        slug: "voda-nefteprodukty",
                         category: "utilization",
                         price: "Договорная",
                         image: "static/images/13.jpg",
@@ -72,6 +78,7 @@
                     {
                         id: 8,
                         name: "Утилизация грунта, загрязненного нефтепродуктами",
+                        slug: "grunt-nefteprodukty",
                         category: "utilization",
                         price: "Договорная",
                         image: "static/images/17.jpg",
@@ -82,6 +89,7 @@
                     {
                         id: 9,
                         name: "Утилизация резины",
+                        slug: "rezina",
                         category: "utilization",
                         price: "Договорная",
                         image: "static/images/15.jpg",
@@ -92,6 +100,7 @@
                     {
                         id: 10,
                         name: "Утилизация дизельного топлива",
+                        slug: "dizelnoe-toplivo",
                         category: "utilization",
                         price: "Договорная",
                         image: "static/images/14.jpg",
@@ -102,6 +111,7 @@
                     {
                         id: 11,
                         name: "Утилизация песка",
+                        slug: "pesok",
                         category: "utilization",
                         price: "Договорная",
                         image: "static/images/18.jpg",
@@ -112,6 +122,7 @@
                     {
                         id: 12,
                         name: "Утилизация спецодежды",
+                        slug: "specodezhda",
                         category: "utilization",
                         price: "Договорная",
                         image: "static/images/20.jpg",
@@ -122,6 +133,7 @@
                     {
                         id: 13,
                         name: "Утилизация шлама",
+                        slug: "shlam",
                         category: "utilization",
                         price: "Договорная",
                         image: "static/images/22.jpg",
@@ -132,6 +144,7 @@
                     {
                         id: 14,
                         name: "Утилизация масляных фильтров",
+                        slug: "maslyanye-filtry",
                         category: "utilization",
                         price: "Договорная",
                         image: "static/images/21.jpg",
@@ -142,6 +155,7 @@
                     {
                         id: 15,
                         name: "Утилизация нефтепродуктов",
+                        slug: "nefteprodukty",
                         category: "utilization",
                         price: "Договорная",
                         image: "static/images/19.jpg",
@@ -152,6 +166,7 @@
                     {
                         id: 16,
                         name: "Утилизация трансформаторного масла",
+                        slug: "transformatornoe-maslo",
                         category: "utilization",
                         price: "Договорная",
                         image: "static/images/16.jpg",
@@ -162,11 +177,24 @@
                     {
                         id: 17,
                         name: "Утилизация моторного масла",
+                        slug: "motornoe-maslo",
                         category: "utilization",
                         price: "Договорная",
                         image: "static/images/23.jpg",
                         pdfFile: "docs/Выписка.pdf",
                         fullDescription: "Утилизация отработанного моторного масла. Обеспечиваем прием и переработку моторного масла от автомобилей и техники.\n\nПринимаем на утилизацию:\n• Отработанное моторное масло автомобильное\n• Моторное масло от промышленной техники\n• Моторное масло от генераторов и двигателей\n• Некондиционное моторное масло\n\nУслуги:\n• Прием на возмездной основе\n• Вывоз собственным транспортом (от 1 тонны)\n• Прием на нашей площадке (любой объем)\n• Безопасная переработка\n• Полный пакет документов",
                         shortDescription: "Утилизация отработанного моторного масла. Прием и переработка моторного масла от автомобилей и техники на возмездной основе..."
+                    }
+,
+                    {
+                        id: 18,
+                        name: "Легкое печное топливо ЭКОТЭК Лайт",
+                        slug: "legkoe-pechnoe-toplivo",
+                        category: "fuel",
+                        price: "45 ₽/л",
+                        image: "static/images/fuel-light-brown.png",
+                        pdfFile: "docs/Паспорт_темное_печное_топливо_2026.pdf",
+                        fullDescription: "<p style='font-size: 1.1em; font-weight: 600; color: #2c3e50; margin-bottom: 20px;'>Дизельное печное топливо — тепло без переплат</p><div style='background: #f8f9fa; padding: 15px; border-radius: 8px; margin-bottom: 20px;'><p style='margin: 0;'><strong>ЭКОТЭК Лайт</strong> — качественный аналог ДТ для котлов с дизельными горелками.</p><p style='margin: 10px 0 0 0;'>Высокая теплоотдача, минимум серы. Цена 45 ₽/л без НДС. Самовывоз в Старой Купавне. Паспорт качества по запросу.</p></div><h4 style='color: #2c3e50; margin: 25px 0 15px 0; font-size: 1.2em; border-bottom: 2px solid #3498db; padding-bottom: 8px;'>Характеристики:</h4><ul style='list-style: none; padding: 0; margin: 0 0 25px 0;'><li style='padding: 10px 0; border-bottom: 1px solid #ecf0f1;'><strong>Цена:</strong> 45 ₽/л без НДС</li><li style='padding: 10px 0; border-bottom: 1px solid #ecf0f1;'><strong>Применение:</strong> котлы с дизельными горелками</li><li style='padding: 10px 0; border-bottom: 1px solid #ecf0f1;'><strong>Теплоотдача:</strong> высокая — эффективное отопление</li><li style='padding: 10px 0; border-bottom: 1px solid #ecf0f1;'><strong>Состав:</strong> стабильный, минимальное содержание серы, без примесей</li><li style='padding: 10px 0;'><strong>Выгода:</strong> дешевле дизельного топлива без потери качества</li></ul><h4 style='color: #2c3e50; margin: 25px 0 15px 0; font-size: 1.2em; border-bottom: 2px solid #3498db; padding-bottom: 8px;'>Условия продажи:</h4><div style='background: #e8f5e9; padding: 15px; border-radius: 8px; border-left: 4px solid #27ae60;'><ul style='list-style: none; padding: 0; margin: 0;'><li style='padding: 8px 0;'><strong>Оптовые поставки</strong> от 1 тонны</li><li style='padding: 8px 0;'><strong>Доставка</strong> собственным транспортом / самовывоз в Старой Купавне</li><li style='padding: 8px 0;'><strong>Форма оплаты:</strong> наличный и безналичный расчет</li><li style='padding: 8px 0;'><strong>Документы:</strong> паспорт качества по запросу</li></ul></div>",
+                        shortDescription: "ЭКОТЭК Лайт — легкое печное топливо для котлов с дизельными горелками. Цена 45 ₽/л без НДС, высокая теплоотдача, минимум серы..."
                     }
 ];

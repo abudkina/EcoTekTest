@@ -83,4 +83,209 @@
         <priority>0.8</priority>
     </url>
 
+    <!-- product-pages-start -->
+    <url>
+        <loc>https://ecotek-as.ru/toplivo/temnoe-pechnoe-toplivo/</loc>
+        <lastmod>2026-09-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+        <image:image>
+            <image:loc>https://ecotek-as.ru/static/images/5.jpg</image:loc>
+            <image:title>Темное печное топливо — Москва и МО</image:title>
+            <image:caption>Темное печное топливо от ЭКОТЭК АС. Цена 30 ₽/л или ≈ 34,5 ₽/кг. Доставка Москва и МО, от 1 т, без НДС. Старая…</image:caption>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://ecotek-as.ru/utilizaciya/promyshlennye-othody/</loc>
+        <lastmod>2026-09-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+        <image:image>
+            <image:loc>https://ecotek-as.ru/static/images/6.png</image:loc>
+            <image:title>Утилизация промышленных отходов — Москва и МО</image:title>
+            <image:caption>Утилизация промышленных отходов в Москве и МО: лицензии, вывоз, договор и акты. ЭКОТЭК АС, Старая Купавна. ☎ +7 (926)…</image:caption>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://ecotek-as.ru/utilizaciya/lakokrasochnye-othody/</loc>
+        <lastmod>2026-09-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+        <image:image>
+            <image:loc>https://ecotek-as.ru/static/images/9.jpg</image:loc>
+            <image:title>Утилизация лакокрасочных отходов — Москва и МО</image:title>
+            <image:caption>Утилизация лакокрасочных отходов в Москве и МО: лицензии, вывоз, договор и акты. ЭКОТЭК АС, Старая Купавна. ☎ +7 (926)…</image:caption>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://ecotek-as.ru/utilizaciya/otrabotannye-masla/</loc>
+        <lastmod>2026-09-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+        <image:image>
+            <image:loc>https://ecotek-as.ru/static/images/8.png</image:loc>
+            <image:title>Утилизация отработанных масел — Москва и МО</image:title>
+            <image:caption>Утилизация отработанных масел в Москве и МО: лицензии, вывоз, договор и акты. ЭКОТЭК АС, Старая Купавна. ☎ +7 (926)…</image:caption>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://ecotek-as.ru/utilizaciya/medicinskie-othody/</loc>
+        <lastmod>2026-09-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+        <image:image>
+            <image:loc>https://ecotek-as.ru/static/images/4.jpeg</image:loc>
+            <image:title>Обезвреживание медицинских отходов — Москва и МО</image:title>
+            <image:caption>Обезвреживание медицинских отходов в Москве и МО: лицензии, вывоз, договор и акты. ЭКОТЭК АС, Старая Купавна. ☎ +7…</image:caption>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://ecotek-as.ru/utilizaciya/voda-nefteprodukty/</loc>
+        <lastmod>2026-09-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+        <image:image>
+            <image:loc>https://ecotek-as.ru/static/images/13.jpg</image:loc>
+            <image:title>Утилизация воды, загрязненной нефтепродуктами — Москва и МО</image:title>
+            <image:caption>Утилизация воды, загрязненной нефтепродуктами в Москве и МО: лицензии, вывоз, договор и акты. ЭКОТЭК АС, Старая…</image:caption>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://ecotek-as.ru/utilizaciya/grunt-nefteprodukty/</loc>
+        <lastmod>2026-09-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+        <image:image>
+            <image:loc>https://ecotek-as.ru/static/images/17.jpg</image:loc>
+            <image:title>Утилизация грунта, загрязненного нефтепродуктами — Москва и МО</image:title>
+            <image:caption>Утилизация грунта, загрязненного нефтепродуктами в Москве и МО: лицензии, вывоз, договор и акты. ЭКОТЭК АС, Старая…</image:caption>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://ecotek-as.ru/utilizaciya/rezina/</loc>
+        <lastmod>2026-09-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+        <image:image>
+            <image:loc>https://ecotek-as.ru/static/images/15.jpg</image:loc>
+            <image:title>Утилизация резины — Москва и МО</image:title>
+            <image:caption>Утилизация резины в Москве и МО: лицензии, вывоз, договор и акты. ЭКОТЭК АС, Старая Купавна. ☎ +7 (926) 615-00-77</image:caption>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://ecotek-as.ru/utilizaciya/dizelnoe-toplivo/</loc>
+        <lastmod>2026-09-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+        <image:image>
+            <image:loc>https://ecotek-as.ru/static/images/14.jpg</image:loc>
+            <image:title>Утилизация дизельного топлива — Москва и МО</image:title>
+            <image:caption>Утилизация дизельного топлива в Москве и МО: лицензии, вывоз, договор и акты. ЭКОТЭК АС, Старая Купавна. ☎ +7 (926)…</image:caption>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://ecotek-as.ru/utilizaciya/pesok/</loc>
+        <lastmod>2026-09-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+        <image:image>
+            <image:loc>https://ecotek-as.ru/static/images/18.jpg</image:loc>
+            <image:title>Утилизация песка — Москва и МО</image:title>
+            <image:caption>Утилизация песка в Москве и МО: лицензии, вывоз, договор и акты. ЭКОТЭК АС, Старая Купавна. ☎ +7 (926) 615-00-77</image:caption>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://ecotek-as.ru/utilizaciya/specodezhda/</loc>
+        <lastmod>2026-09-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+        <image:image>
+            <image:loc>https://ecotek-as.ru/static/images/20.jpg</image:loc>
+            <image:title>Утилизация спецодежды — Москва и МО</image:title>
+            <image:caption>Утилизация спецодежды в Москве и МО: лицензии, вывоз, договор и акты. ЭКОТЭК АС, Старая Купавна. ☎ +7 (926) 615-00-77</image:caption>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://ecotek-as.ru/utilizaciya/shlam/</loc>
+        <lastmod>2026-09-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+        <image:image>
+            <image:loc>https://ecotek-as.ru/static/images/22.jpg</image:loc>
+            <image:title>Утилизация шлама — Москва и МО</image:title>
+            <image:caption>Утилизация шлама в Москве и МО: лицензии, вывоз, договор и акты. ЭКОТЭК АС, Старая Купавна. ☎ +7 (926) 615-00-77</image:caption>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://ecotek-as.ru/utilizaciya/maslyanye-filtry/</loc>
+        <lastmod>2026-09-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+        <image:image>
+            <image:loc>https://ecotek-as.ru/static/images/21.jpg</image:loc>
+            <image:title>Утилизация масляных фильтров — Москва и МО</image:title>
+            <image:caption>Утилизация масляных фильтров в Москве и МО: лицензии, вывоз, договор и акты. ЭКОТЭК АС, Старая Купавна. ☎ +7 (926)…</image:caption>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://ecotek-as.ru/utilizaciya/nefteprodukty/</loc>
+        <lastmod>2026-09-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+        <image:image>
+            <image:loc>https://ecotek-as.ru/static/images/19.jpg</image:loc>
+            <image:title>Утилизация нефтепродуктов — Москва и МО</image:title>
+            <image:caption>Утилизация нефтепродуктов в Москве и МО: лицензии, вывоз, договор и акты. ЭКОТЭК АС, Старая Купавна. ☎ +7 (926)…</image:caption>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://ecotek-as.ru/utilizaciya/transformatornoe-maslo/</loc>
+        <lastmod>2026-09-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+        <image:image>
+            <image:loc>https://ecotek-as.ru/static/images/16.jpg</image:loc>
+            <image:title>Утилизация трансформаторного масла — Москва и МО</image:title>
+            <image:caption>Утилизация трансформаторного масла в Москве и МО: лицензии, вывоз, договор и акты. ЭКОТЭК АС, Старая Купавна. ☎ +7…</image:caption>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://ecotek-as.ru/utilizaciya/motornoe-maslo/</loc>
+        <lastmod>2026-09-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+        <image:image>
+            <image:loc>https://ecotek-as.ru/static/images/23.jpg</image:loc>
+            <image:title>Утилизация моторного масла — Москва и МО</image:title>
+            <image:caption>Утилизация моторного масла в Москве и МО: лицензии, вывоз, договор и акты. ЭКОТЭК АС, Старая Купавна. ☎ +7 (926)…</image:caption>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://ecotek-as.ru/toplivo/legkoe-pechnoe-toplivo/</loc>
+        <lastmod>2026-09-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+        <image:image>
+            <image:loc>https://ecotek-as.ru/static/images/fuel-light-brown.png</image:loc>
+            <image:title>Легкое печное топливо ЭКОТЭК Лайт — Москва и МО</image:title>
+            <image:caption>Легкое печное топливо ЭКОТЭК Лайт от ЭКОТЭК АС. Цена 45 ₽/л. Доставка Москва и МО, от 1 т, без НДС. Старая Купавна. ☎…</image:caption>
+        </image:image>
+    </url>
+    <!-- product-pages-end -->
 </urlset>
