@@ -111,9 +111,11 @@
             }
             function getProductPageUrl(p) {
                 if (!p || !p.slug) return null;
-                if (p.category === 'fuel') return '/toplivo/' + p.slug + '/';
-                if (p.category === 'utilization') return '/utilizaciya/' + p.slug + '/';
-                return null;
+                var path = null;
+                if (p.category === 'fuel') path = '/toplivo/' + p.slug + '/';
+                else if (p.category === 'utilization') path = '/utilizaciya/' + p.slug + '/';
+                if (!path) return null;
+                return window.ecotekUrl ? window.ecotekUrl(path) : path;
             }
             function loadProducts() {
                 if (window.ecotekCatalogProducts && window.ecotekCatalogProducts.length) {
