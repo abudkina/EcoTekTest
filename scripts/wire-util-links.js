@@ -33,10 +33,17 @@ const cards = list.map(function (p) {
 const utilPath = path.join(root, 'public/utilizaciya/index.html');
 let html = fs.readFileSync(utilPath, 'utf8');
 
-html = html.replace(
-    /<div class="util-catalog-grid" id="util-catalog-grid"><\/div>/,
-    '<div class="util-catalog-grid" id="util-catalog-grid">\n' + cards + '\n            </div>'
-);
+if (/<div class="util-catalog-grid" id="util-catalog-grid"><\/div>/.test(html)) {
+    html = html.replace(
+        /<div class="util-catalog-grid" id="util-catalog-grid"><\/div>/,
+        '<div class="util-catalog-grid" id="util-catalog-grid">\n' + cards + '\n            </div>'
+    );
+} else {
+    html = html.replace(
+        /<div class="util-catalog-grid" id="util-catalog-grid">[\s\S]*?<\/div>\s*(?=\s*<\/section>|\s*<section|\s*<\/div>\s*<div id="site-footer")/,
+        '<div class="util-catalog-grid" id="util-catalog-grid">\n' + cards + '\n            </div>\n'
+    );
+}
 
 // Remove JS that filled the grid dynamically
 html = html.replace(
