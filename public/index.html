@@ -856,6 +856,45 @@
                     </strong>
                 </div>
 
+                <section class="advantages-block" id="advantages" aria-labelledby="advantages-title">
+                    <h2 id="advantages-title" class="section-title advantages-block__title">Наши преимущества</h2>
+                    <div class="advantages-grid">
+                        <article class="advantage-card is-active">
+                            <div class="advantage-card__icon" aria-hidden="true"><i class="fas fa-clipboard-check"></i></div>
+                            <h3 class="advantage-card__title">В реестре обращения с отходами</h3>
+                            <p class="advantage-card__text">
+                                Состоим в Реестре обращения с отходами согласно
+                                <a href="http://www.kremlin.ru/acts/bank/12555" target="_blank" rel="noopener noreferrer">Федеральному закону №&nbsp;89-ФЗ</a>
+                                и
+                                <a href="http://kremlin.ru/acts/bank/51029" target="_blank" rel="noopener noreferrer">Федеральному закону №&nbsp;306-ФЗ</a>.
+                            </p>
+                        </article>
+                        <article class="advantage-card">
+                            <div class="advantage-card__icon" aria-hidden="true"><i class="fas fa-certificate"></i></div>
+                            <h3 class="advantage-card__title">Лицензия II–IV класса</h3>
+                            <p class="advantage-card__text">
+                                Обезвреживание, сбор, утилизация и транспортировка отходов.
+                                <a href="docs/Лицензия_Экотек.pdf" target="_blank" rel="noopener noreferrer">Открыть лицензию (PDF)</a>
+                            </p>
+                        </article>
+                        <article class="advantage-card">
+                            <div class="advantage-card__icon" aria-hidden="true"><i class="fas fa-infinity"></i></div>
+                            <h3 class="advantage-card__title">2 бессрочные ГЭЭ</h3>
+                            <p class="advantage-card__text">
+                                Государственная экологическая экспертиза: бессрочно, <strong>73 кода отходов</strong>.
+                                <a href="docs/Лицензия_Экотек.pdf" target="_blank" rel="noopener noreferrer">Документ (PDF)</a>
+                            </p>
+                        </article>
+                        <article class="advantage-card">
+                            <div class="advantage-card__icon" aria-hidden="true"><i class="fas fa-industry"></i></div>
+                            <h3 class="advantage-card__title">Установки последнего поколения</h3>
+                            <p class="advantage-card__text">
+                                Сертифицированные промышленные установки последнего поколения.
+                            </p>
+                        </article>
+                    </div>
+                </section>
+
                 <!-- Карусель баннеров -->
                 <section class="carousel-section" aria-label="Карусель баннеров с предложениями">
                     <div class="container">
@@ -945,47 +984,6 @@
                         </div>
                     </div>
                 </section>
-            </div>
-        </section>
-
-        <section class="advantages-block" id="advantages" aria-labelledby="advantages-title">
-            <div class="container">
-                <h2 id="advantages-title" class="section-title advantages-block__title">Наши преимущества</h2>
-                <div class="advantages-grid">
-                    <article class="advantage-card">
-                        <div class="advantage-card__icon" aria-hidden="true"><i class="fas fa-clipboard-check"></i></div>
-                        <h3 class="advantage-card__title">В реестре обращения с отходами</h3>
-                        <p class="advantage-card__text">
-                            Состоим в Реестре обращения с отходами согласно
-                            <a href="http://www.kremlin.ru/acts/bank/12555" target="_blank" rel="noopener noreferrer">Федеральному закону №&nbsp;89-ФЗ</a>
-                            и
-                            <a href="http://kremlin.ru/acts/bank/51029" target="_blank" rel="noopener noreferrer">Федеральному закону №&nbsp;306-ФЗ</a>.
-                        </p>
-                    </article>
-                    <article class="advantage-card">
-                        <div class="advantage-card__icon" aria-hidden="true"><i class="fas fa-certificate"></i></div>
-                        <h3 class="advantage-card__title">Лицензия II–IV класса</h3>
-                        <p class="advantage-card__text">
-                            Обезвреживание, сбор, утилизация и транспортировка отходов.
-                            <a href="docs/Лицензия_Экотек.pdf" target="_blank" rel="noopener noreferrer">Открыть лицензию (PDF)</a>
-                        </p>
-                    </article>
-                    <article class="advantage-card">
-                        <div class="advantage-card__icon" aria-hidden="true"><i class="fas fa-infinity"></i></div>
-                        <h3 class="advantage-card__title">2 бессрочные ГЭЭ</h3>
-                        <p class="advantage-card__text">
-                            Государственная экологическая экспертиза: бессрочно, <strong>73 кода отходов</strong>.
-                            <a href="docs/Лицензия_Экотек.pdf" target="_blank" rel="noopener noreferrer">Документ (PDF)</a>
-                        </p>
-                    </article>
-                    <article class="advantage-card">
-                        <div class="advantage-card__icon" aria-hidden="true"><i class="fas fa-industry"></i></div>
-                        <h3 class="advantage-card__title">Установки последнего поколения</h3>
-                        <p class="advantage-card__text">
-                            Сертифицированные промышленные установки последнего поколения.
-                        </p>
-                    </article>
-                </div>
             </div>
         </section>
 
@@ -1321,8 +1319,24 @@
             }, { passive: true });
         }
 
+        function initAdvantagesHighlight() {
+            const cards = document.querySelectorAll('.advantages-grid .advantage-card');
+            if (cards.length < 2) return;
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+            let index = Array.from(cards).findIndex(card => card.classList.contains('is-active'));
+            if (index < 0) index = 0;
+
+            setInterval(() => {
+                cards[index].classList.remove('is-active');
+                index = (index + 1) % cards.length;
+                cards[index].classList.add('is-active');
+            }, 1000);
+        }
+
         document.addEventListener('DOMContentLoaded', function () {
             initCarousel();
+            initAdvantagesHighlight();
             initFuelPromoModal();
         });
 
