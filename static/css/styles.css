@@ -3234,9 +3234,24 @@ footer {
     color: #2c3e50;
 }
 
+.product-page__description {
+    margin-top: 40px;
+    width: 100%;
+}
+
 .product-page__description-body {
     color: #444;
     line-height: 1.65;
+    width: 100%;
+}
+
+.product-page__description-body [style*="grid-template-columns"] {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
+    gap: 12px !important;
+}
+
+.product-page__description-body ul {
+    max-width: none;
 }
 
 .product-page__actions {
