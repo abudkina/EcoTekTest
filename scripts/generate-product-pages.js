@@ -408,13 +408,16 @@ function buildPage(product, allProducts) {
     const pdf = product.pdfFile ? absUrl(product.pdfFile) : '';
     const licensePdf = absUrl('/docs/Лицензия_Экотек.pdf');
     const isLicenseExtract = /Выписка/i.test(pdf);
+    const isFuelPassport = product.category === 'fuel';
     const pdfBlock = pdf
         ? (isLicenseExtract
             ? `<div class="product-page__docs">
                     <a href="${escapeHtml(pdf)}" target="_blank" rel="noopener noreferrer" class="btn btn-disk product-page__doc"><i class="fas fa-file-pdf" aria-hidden="true"></i> Выписка из реестра лицензий</a>
                     <a href="${escapeHtml(licensePdf)}" target="_blank" rel="noopener noreferrer" class="btn btn-disk product-page__doc"><i class="fas fa-file-pdf" aria-hidden="true"></i> Лицензия</a>
                 </div>`
-            : `<a href="${escapeHtml(pdf)}" target="_blank" rel="noopener noreferrer" class="btn btn-disk product-page__doc"><i class="fas fa-file-pdf" aria-hidden="true"></i> Открыть подробный файл (PDF)</a>`)
+            : isFuelPassport
+                ? `<a href="${escapeHtml(pdf)}" target="_blank" rel="noopener noreferrer" class="btn btn-disk product-page__doc"><i class="fas fa-file-pdf" aria-hidden="true"></i> Паспорт качества</a>`
+                : `<a href="${escapeHtml(pdf)}" target="_blank" rel="noopener noreferrer" class="btn btn-disk product-page__doc"><i class="fas fa-file-pdf" aria-hidden="true"></i> Открыть подробный файл (PDF)</a>`)
         : '';
     const imgAlt = product.category === 'fuel'
         ? product.name + ' купить в Москве — ЭКОТЭК АС'
@@ -553,10 +556,6 @@ function buildPage(product, allProducts) {
                         <span ${parsePrice(product) != null ? 'itemprop="price" content="' + parsePrice(product) + '"' : ''}>${escapeHtml(product.price)}</span>
                     </p>
                     ${geoFactsHtml(product)}
-                    <div class="product-page__description" itemprop="description">
-                        <h2>Описание</h2>
-                        <div class="product-page__description-body">${descHtml}</div>
-                    </div>
                     <div class="product-page__actions">
                         <button type="button" class="btn" id="btn-open-request" aria-label="Оставить заявку">
                             <i class="fas fa-pen" aria-hidden="true"></i> Оставить заявку
@@ -571,6 +570,11 @@ function buildPage(product, allProducts) {
                         <a href="/contacts.html">Контакты</a>
                     </p>
                 </div>
+            </div>
+
+            <div class="product-page__description" itemprop="description">
+                <h2>Описание</h2>
+                <div class="product-page__description-body">${descHtml}</div>
             </div>
 
             ${faqHtml(faqs)}
