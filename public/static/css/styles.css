@@ -1330,7 +1330,7 @@ nav a:focus-visible::after {
 /* Адаптивность */
 @media (max-width: 768px) {
     .about-details {
-        padding: 50px 0;
+        padding: 0;
     }
 
     .lead-text {
@@ -3326,6 +3326,29 @@ footer {
 
 .product-page__description-body ul {
     max-width: none;
+}
+
+.fuel-spec-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 40px;
+    align-items: start;
+    margin: 8px 0 28px;
+}
+
+.fuel-spec-cols__col h4 {
+    margin-top: 0 !important;
+}
+
+.fuel-spec-cols__col ul {
+    margin-bottom: 0 !important;
+}
+
+@media (max-width: 800px) {
+    .fuel-spec-cols {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 }
 
 .product-page__faq {
