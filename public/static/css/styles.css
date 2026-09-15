@@ -1781,15 +1781,17 @@ a.service-item--link:focus-visible {
 
 .fuel-promo-badge {
     display: inline-block;
-    padding: 5px 12px;
+    padding: 8px 16px;
     margin-bottom: 16px;
-    background: #e8f5e9;
-    color: #1b5e20;
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    border-radius: 6px;
+    background: linear-gradient(145deg, #eaf8ee 0%, #d5f0dd 100%);
+    color: #0f6b2c;
+    font-size: 1.15rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    border: 1px solid #a9d9b8;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(15, 107, 44, 0.1);
+    text-transform: none;
 }
 
 .fuel-promo-image {
@@ -3318,6 +3320,52 @@ footer {
     font-size: 1.35rem;
     font-weight: 700;
     color: #2c7a4a;
+}
+
+.product-page__price--fuel {
+    display: inline-flex;
+    align-items: baseline;
+    margin: 4px 0 22px;
+    padding: 12px 18px;
+    font-size: clamp(1.65rem, 3.2vw, 2.15rem);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: #0f6b2c;
+    background: linear-gradient(145deg, #eaf8ee 0%, #d5f0dd 100%);
+    border: 1px solid #a9d9b8;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(15, 107, 44, 0.1);
+}
+
+.product-page__geo-facts__price {
+    background: #eaf8ee !important;
+    border: 1px solid #a9d9b8;
+    color: #0f6b2c;
+    font-weight: 700;
+}
+
+.product-page__geo-facts__price strong {
+    color: #0f6b2c;
+}
+
+.fuel-type-card__price {
+    display: inline-block;
+    margin: 0 0 14px;
+    padding: 10px 14px;
+    font-size: 1.4rem;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: #0f6b2c;
+    background: linear-gradient(145deg, #eaf8ee 0%, #d5f0dd 100%);
+    border: 1px solid #a9d9b8;
+    border-radius: 10px;
+}
+
+.fuel-type-card__price-note {
+    font-weight: 700;
+    font-size: 0.85em;
 }
 
 .product-page__description h2 {

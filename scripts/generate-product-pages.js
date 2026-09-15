@@ -622,7 +622,7 @@ function geoFactsHtml(product) {
         return `<ul class="product-page__geo-facts" aria-label="Условия поставки">
                     <li><strong>Регион:</strong> Москва и Московская область</li>
                     <li><strong>Склад:</strong> Старая Купавна</li>
-                    <li><strong>Цена:</strong> ${escapeHtml(product.price)}</li>
+                    <li class="product-page__geo-facts__price"><strong>Цена:</strong> ${escapeHtml(product.price)}</li>
                     <li><strong>Доставка:</strong> 1–2 дня / самовывоз</li>
                 </ul>`;
     }
@@ -802,7 +802,7 @@ function buildPage(product, allProducts) {
                 <div class="product-page__info">
                     <p class="product-page__category">${escapeHtml(parent.name)} · Москва и МО</p>
                     <h1 class="product-page__title" itemprop="name">${escapeHtml(h1)}</h1>
-                    <p class="product-page__price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                    <p class="product-page__price${product.category === 'fuel' ? ' product-page__price--fuel' : ''}" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                         <span itemprop="priceCurrency" content="RUB"></span>
                         <meta itemprop="availability" content="https://schema.org/InStock">
                         <span ${parsePrice(product) != null ? 'itemprop="price" content="' + parsePrice(product) + '"' : ''}>${escapeHtml(product.price)}</span>
