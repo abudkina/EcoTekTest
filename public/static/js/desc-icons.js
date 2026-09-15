@@ -87,7 +87,6 @@
         [/ремонт(?:а)? и обслуживан|ремонт(?:а)? оборудован/i, 'fa-tools'],
         [/опасн(?:ыми|ых) веществ/i, 'fa-biohazard'],
         [/некондицион|истекш(?:им|им)? срок/i, 'fa-hourglass-end'],
-        [/нефтесодержащ|промаслен/i, 'fa-oil-can'],
         [/^\s*жидк/i, 'fa-tint'],
         [/^\s*вод/i, 'fa-tint'],
         [/фильтр/i, 'fa-filter'],
@@ -160,7 +159,7 @@
         out = out.replace(/<li([^>]*)>([\s\S]*?)<\/li>/gi, function (m, attrs, inner) {
             return wrapLi(attrs, inner);
         });
-        out = out.replace(/<div style='background: #fff; padding: 12px; border-left: 4px solid #3498db; border-radius: 4px;'>([\s\S]*?)<\/div>/g, function (m, inner) {
+        out = out.replace(/<div style='background: #fff; padding: 12px; border-left: 4px solid #3498db; border-radius: 4px;'>([^<]*)<\/div>/g, function (m, inner) {
             if (/desc-icon/.test(inner)) return m;
             var cleaned = stripLeadingDecorators(inner);
             return '<div class="desc-area-card">' + iconHtml(iconForItem(stripTags(cleaned))) + '<span class="desc-icon-text">' + cleaned + '</span></div>';
