@@ -339,6 +339,7 @@ nav a:focus-visible::after {
 /* Стили для блока "О компании подробно" */
 /* GEO: блоки для генеративных поисковиков */
 .geo-summary {
+    display: none;
     max-width: 800px;
     margin: 0 auto 2rem;
     padding: 1.25rem 1.5rem;
@@ -1007,8 +1008,10 @@ nav a:focus-visible::after {
 }
 
 .about-details--seo {
-    padding: 8px 0 28px;
+    padding: 0;
     margin: 0;
+    height: 0;
+    overflow: hidden;
 }
 
 .about-content {
@@ -1352,7 +1355,9 @@ nav a:focus-visible::after {
     }
 
     .about-details--seo {
-        padding: 8px 0 20px;
+        padding: 0;
+        height: 0;
+        overflow: hidden;
     }
 
     .about-content {
@@ -2221,39 +2226,9 @@ footer {
 
 .footer-details {
     flex: 1;
-    min-width: 260px;
+    min-width: 300px;
     font-size: 0.9rem;
     line-height: 1.8;
-}
-
-.footer-nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 28px 40px;
-}
-
-.footer-nav p {
-    margin: 0 0 0.5rem;
-}
-
-.footer-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.footer-nav li {
-    margin: 0.3rem 0;
-}
-
-.footer-nav a {
-    color: #c8e6c9;
-    text-decoration: none;
-}
-
-.footer-nav a:hover {
-    color: #fff;
-    text-decoration: underline;
 }
 
 .footer-copy {
