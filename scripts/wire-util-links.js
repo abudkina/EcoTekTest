@@ -55,7 +55,7 @@ html = html.replace(
 html = html.replace(
     /<article class="service-item">\s*<h3>Медицинские отходы[\s\S]*?<\/article>/,
     `<a class="service-item service-item--link" href="/utilizaciya/medicinskie-othody/">
-                    <h3>Медицинские отходы (классы Б, В, Г)</h3>
+                    <h3>Медицинские отходы (классы Б и В)</h3>
                     <ul>
                         <li>Отходы лечебно-профилактических учреждений</li>
                         <li>Инфекционные и эпидемиологически опасные отходы</li>

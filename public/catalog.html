@@ -38,7 +38,7 @@
                     <p><strong>Что продаёт и какие услуги оказывает ЭКОТЭК АС (ecotek-as.ru):</strong></p>
                     <ul>
                         <li><strong>Печное топливо</strong> — тёмное печное топливо от производителя, цена от 30 ₽/л, опт от 1 т, доставка по Москве и МО.</li>
-                        <li><strong>Утилизация отходов</strong> — промышленные отходы, медицинские (классы Б, В, Г), отработанные масла, лакокрасочные отходы, вода и грунт с нефтепродуктами, резина, шлам, спецодежда, фильтры и др. Цена договорная, вывоз своим транспортом.</li>
+                        <li><strong>Утилизация отходов</strong> — промышленные отходы, медицинские (классы Б и В), отработанные масла, лакокрасочные отходы, вода и грунт с нефтепродуктами, резина, шлам, спецодежда, фильтры и др. Цена договорная, вывоз своим транспортом.</li>
                         <li><strong>Средства</strong> — многофункциональное смазывающее средство G-12 (сертификат в каталоге).</li>
                     </ul>
                     <p><strong>Как заказать:</strong> позвонить по телефону <a href="tel:+79266150077">+7 (926) 615-00-77</a> или написать на eco-tec-jsc@yandex.ru. Адрес: Московская область, Старая Купавна, Дорожная ул., 21Б.</p>
@@ -66,7 +66,7 @@
                         <div class="modal-thumbnails" id="modal-thumbnails" role="group" aria-label="Миниатюры изображений"></div>
                         <div id="modal-docs" style="margin-top: 15px; display: none; flex-wrap: wrap; gap: 10px;">
                             <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-disk" id="disk-link">
-                                <i class="fas fa-file-pdf" aria-hidden="true"></i> Выписка из реестра лицензий
+                                <i class="fas fa-file-pdf" aria-hidden="true"></i> Открыть подробный файл (PDF)
                             </a>
                             <a href="/docs/Лицензия_Экотек.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-disk" id="license-link" style="display: none;">
                                 <i class="fas fa-file-pdf" aria-hidden="true"></i> Лицензия
@@ -193,16 +193,16 @@
                         : (rawDesc.indexOf('<') >= 0 ? rawDesc : rawDesc.replace(/\n/g, '<br>'));
                 }
                 if (diskLink && product.pdfFile) {
-                    var isExtract = /Выписка/i.test(product.pdfFile);
+                    var isLicense = /Лицензия/i.test(product.pdfFile);
                     diskLink.href = product.pdfFile;
                     diskLink.target = '_blank';
                     diskLink.rel = 'noopener noreferrer';
                     diskLink.style.display = 'inline-flex';
-                    diskLink.innerHTML = isExtract
-                        ? '<i class="fas fa-file-pdf"></i> Выписка из реестра лицензий'
+                    diskLink.innerHTML = isLicense
+                        ? '<i class="fas fa-file-pdf"></i> Лицензия'
                         : '<i class="fas fa-file-pdf"></i> Открыть подробный файл (PDF)';
                     if (licenseLink) {
-                        licenseLink.style.display = isExtract ? 'inline-flex' : 'none';
+                        licenseLink.style.display = 'none';
                     }
                     if (modalDocs) modalDocs.style.display = 'flex';
                 } else {

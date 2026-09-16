@@ -1406,9 +1406,10 @@ nav a:focus-visible::after {
 
 .advantages-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 320px));
     gap: 18px;
     align-items: stretch;
+    justify-content: center;
 }
 
 .advantage-card {
@@ -1497,7 +1498,14 @@ nav a:focus-visible::after {
 
 @media (max-width: 1024px) {
     .advantages-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 320px));
+    }
+
+    .advantage-card:last-child {
+        grid-column: 1 / -1;
+        max-width: 320px;
+        justify-self: center;
+        width: 100%;
     }
 }
 
