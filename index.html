@@ -791,7 +791,7 @@
         </div>
     </div>
 
-    <!-- Модалка: легкое печное топливо -->
+    <!-- Временно отключено: заставка ЭКОТЭК Лайт (акцент на утилизацию)
     <div id="fuel-promo-modal" class="modal-overlay fuel-promo-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="fuel-promo-title">
         <div class="fuel-promo-content modal-content">
             <button type="button" class="modal-close fuel-promo-close" id="fuel-promo-close" aria-label="Закрыть">×</button>
@@ -808,6 +808,7 @@
             </div>
         </div>
     </div>
+    -->
 
     <!-- Главный блок -->
     <main>
@@ -875,14 +876,6 @@
                             <p class="advantage-card__text">
                                 Обезвреживание, сбор, утилизация и транспортировка отходов.
                                 <a href="docs/Лицензия_Экотек.pdf" target="_blank" rel="noopener noreferrer">Открыть лицензию (PDF)</a>
-                            </p>
-                        </article>
-                        <article class="advantage-card">
-                            <div class="advantage-card__icon" aria-hidden="true"><i class="fas fa-infinity"></i></div>
-                            <h3 class="advantage-card__title">2 бессрочные ГЭЭ</h3>
-                            <p class="advantage-card__text">
-                                Государственная экологическая экспертиза: бессрочно, <strong>73 кода отходов</strong>.
-                                <a href="docs/Лицензия_Экотек.pdf" target="_blank" rel="noopener noreferrer">Документ (PDF)</a>
                             </p>
                         </article>
                         <article class="advantage-card">
@@ -1013,7 +1006,7 @@
                     <a href="/EcoTekTest/utilizaciya/medicinskie-othody/" class="service-item service-item--link" itemscope itemtype="https://schema.org/Service">
                         <i class="fas fa-biohazard" aria-hidden="true"></i>
                         <h3 itemprop="name">Опасные отходы</h3>
-                        <p itemprop="description">Безопасная утилизация опасных отходов классов Б, В, Г для медицинских
+                        <p itemprop="description">Безопасная утилизация опасных отходов классов Б и В для медицинских
                             учреждений.</p>
                     </a>
                     <a href="/EcoTekTest/toplivo/" class="service-item service-item--link" itemscope itemtype="https://schema.org/Service">
@@ -1319,9 +1312,10 @@
         document.addEventListener('DOMContentLoaded', function () {
             initCarousel();
             initAdvantagesHighlight();
-            initFuelPromoModal();
+            // initFuelPromoModal(); // временно отключено — акцент на утилизацию
         });
 
+        /* Временно отключено: заставка ЭКОТЭК Лайт
         function initFuelPromoModal() {
             var modal = document.getElementById('fuel-promo-modal');
             var closeBtn = document.getElementById('fuel-promo-close');
@@ -1354,6 +1348,7 @@
                 if (e.key === 'Escape' && modal.classList.contains('active')) closePromo();
             });
         }
+        */
     </script>
     <script src="static/js/include-partials.js"></script>
     <script src="static/js/request-form.js"></script>
