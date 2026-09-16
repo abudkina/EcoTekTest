@@ -339,7 +339,6 @@ nav a:focus-visible::after {
 /* Стили для блока "О компании подробно" */
 /* GEO: блоки для генеративных поисковиков */
 .geo-summary {
-    display: none; /* скрыто от пользователя, остаётся для SEO */
     max-width: 800px;
     margin: 0 auto 2rem;
     padding: 1.25rem 1.5rem;
@@ -352,6 +351,19 @@ nav a:focus-visible::after {
 .geo-summary p { margin: 0.5rem 0; }
 .geo-summary p:first-child { margin-top: 0; }
 .geo-summary ul { margin: 0.5rem 0; padding-left: 1.25rem; }
+.product-page__seo-extra {
+    margin-top: 1.5rem;
+}
+.product-page__seo-extra h2 {
+    font-size: 1.35rem;
+    color: #1b5e20;
+    margin: 0 0 0.75rem;
+}
+.product-page__seo-extra p {
+    margin: 0;
+    color: #2d3748;
+    line-height: 1.7;
+}
 .geo-faq { max-width: 800px; margin: 2rem auto; }
 .geo-faq h2 { font-size: 1.35rem; color: #1b5e20; margin-bottom: 1rem; }
 .geo-faq .faq-item { margin-bottom: 1.25rem; }
@@ -994,12 +1006,9 @@ nav a:focus-visible::after {
     position: relative;
 }
 
-/* На главной — только SEO-текст (display:none), без видимой полосы фона */
 .about-details--seo {
-    padding: 0;
+    padding: 8px 0 28px;
     margin: 0;
-    height: 0;
-    overflow: hidden;
 }
 
 .about-content {
@@ -1343,9 +1352,7 @@ nav a:focus-visible::after {
     }
 
     .about-details--seo {
-        padding: 0;
-        height: 0;
-        overflow: hidden;
+        padding: 8px 0 20px;
     }
 
     .about-content {
@@ -2214,9 +2221,39 @@ footer {
 
 .footer-details {
     flex: 1;
-    min-width: 300px;
+    min-width: 260px;
     font-size: 0.9rem;
     line-height: 1.8;
+}
+
+.footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px 40px;
+}
+
+.footer-nav p {
+    margin: 0 0 0.5rem;
+}
+
+.footer-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-nav li {
+    margin: 0.3rem 0;
+}
+
+.footer-nav a {
+    color: #c8e6c9;
+    text-decoration: none;
+}
+
+.footer-nav a:hover {
+    color: #fff;
+    text-decoration: underline;
 }
 
 .footer-copy {

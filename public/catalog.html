@@ -29,7 +29,31 @@
     <link rel="stylesheet" href="static/css/styles.css">
 </head>
 <body>
-    <div id="site-header"></div>
+    <div id="site-header">
+<header itemscope itemtype="https://schema.org/WPHeader">
+    <div class="container header-container">
+        <a href="/" class="logo" itemprop="url">
+            <img src="/static/images/Screenshot_1.jpg" alt="Логотип ЭКОТЭК АС — печное топливо и утилизация отходов" class="logo-image" width="50" height="50" loading="eager" decoding="async">
+            <span class="logo-text" itemprop="name">ЭКОТЭК АС</span>
+        </a>
+        <nav aria-label="Основная навигация" itemscope itemtype="https://schema.org/SiteNavigationElement">
+            <ul>
+                <li><a href="/" itemprop="url"><span itemprop="name">Главная</span></a></li>
+                <li><a href="/toplivo/" itemprop="url"><span itemprop="name">Печное топливо</span></a></li>
+                <li><a href="/utilizaciya/" itemprop="url"><span itemprop="name">Утилизация</span></a></li>
+                <li><a href="/about.html" itemprop="url"><span itemprop="name">О нас</span></a></li>
+                <li><a href="/catalog.html" itemprop="url"><span itemprop="name">Каталог</span></a></li>
+                <li><a href="/gallery.html" itemprop="url"><span itemprop="name">Галерея</span></a></li>
+                <li><a href="/licenses.html" itemprop="url"><span itemprop="name">Лицензии</span></a></li>
+                <li><a href="/reviews.html" itemprop="url"><span itemprop="name">Отзывы</span></a></li>
+                <li><a href="/faq.html" itemprop="url"><span itemprop="name">Вопросы</span></a></li>
+                <li><a href="/contacts.html" itemprop="url"><span itemprop="name">Контакты</span></a></li>
+            </ul>
+        </nav>
+        <a href="tel:+79266150077" class="header-phone" aria-label="Позвонить +7 (926) 615-00-77">+7 (926) 615-00-77</a>
+    </div>
+</header>
+    </div>
 
     <main>
         <section class="catalog page-top" id="catalog" itemscope itemtype="https://schema.org/ItemList">
@@ -53,7 +77,24 @@
                     <button class="filter-btn" data-filter="utilization" aria-pressed="false">Утилизация</button>
                     <button class="filter-btn" data-filter="products" aria-pressed="false">Средства</button>
                 </div>
-                <div class="catalog-grid" id="catalog-grid"></div>
+                <div class="catalog-grid" id="catalog-grid">
+                    <a class="catalog-item" href="/toplivo/temnoe-pechnoe-toplivo/" data-category="fuel"><div class="catalog-info"><h3>Темное печное топливо</h3><p>От 30 ₽/л, опт от 1 т, доставка Москва и МО</p></div></a>
+                    <a class="catalog-item" href="/toplivo/legkoe-pechnoe-toplivo/" data-category="fuel"><div class="catalog-info"><h3>Легкое печное топливо ЭКОТЭК Лайт</h3><p>45 ₽/л для котлов с дизельными горелками</p></div></a>
+                    <a class="catalog-item" href="/utilizaciya/promyshlennye-othody/" data-category="utilization"><div class="catalog-info"><h3>Утилизация промышленных отходов</h3></div></a>
+                    <a class="catalog-item" href="/utilizaciya/medicinskie-othody/" data-category="utilization"><div class="catalog-info"><h3>Обезвреживание медицинских отходов</h3></div></a>
+                    <a class="catalog-item" href="/utilizaciya/otrabotannye-masla/" data-category="utilization"><div class="catalog-info"><h3>Утилизация отработанных масел</h3></div></a>
+                    <a class="catalog-item" href="/utilizaciya/lakokrasochnye-othody/" data-category="utilization"><div class="catalog-info"><h3>Утилизация лакокрасочных отходов</h3></div></a>
+                    <a class="catalog-item" href="/utilizaciya/grunt-nefteprodukty/" data-category="utilization"><div class="catalog-info"><h3>Утилизация загрязненного грунта и песка</h3></div></a>
+                    <a class="catalog-item" href="/utilizaciya/rezina/" data-category="utilization"><div class="catalog-info"><h3>Утилизация шин</h3></div></a>
+                    <a class="catalog-item" href="/utilizaciya/pesok/" data-category="utilization"><div class="catalog-info"><h3>Утилизация загрязненного песка</h3></div></a>
+                    <a class="catalog-item" href="/utilizaciya/specodezhda/" data-category="utilization"><div class="catalog-info"><h3>Утилизация спецодежды</h3></div></a>
+                    <a class="catalog-item" href="/utilizaciya/shlam/" data-category="utilization"><div class="catalog-info"><h3>Утилизация промышленного шлама</h3></div></a>
+                    <a class="catalog-item" href="/utilizaciya/otrabotannye-filtry/" data-category="utilization"><div class="catalog-info"><h3>Утилизация отработанных фильтров</h3></div></a>
+                    <a class="catalog-item" href="/utilizaciya/akkumuliatory/" data-category="utilization"><div class="catalog-info"><h3>Утилизация аккумуляторов</h3></div></a>
+                    <a class="catalog-item" href="/utilizaciya/polietilenovaya-upakovka/" data-category="utilization"><div class="catalog-info"><h3>Утилизация полиэтиленовой упаковки</h3></div></a>
+                    <a class="catalog-item" href="/utilizaciya/pishchevye-othody/" data-category="utilization"><div class="catalog-info"><h3>Утилизация пищевых отходов</h3></div></a>
+                    <a class="catalog-item" href="/sredstva/g-12/" data-category="products"><div class="catalog-info"><h3>Смазка G-12</h3></div></a>
+                </div>
             </div>
         </section>
 
@@ -91,7 +132,72 @@
         </div>
     </main>
 
-    <div id="site-footer"></div>
+    <div id="site-footer">
+<footer itemscope itemtype="https://schema.org/WPFooter">
+    <div class="container">
+        <div class="footer-container">
+            <div>
+                <div class="footer-logo">
+                    <img src="/static/images/Screenshot_1.jpg" alt="Логотип ЭКОТЭК АС" class="logo-image" width="50" height="50" loading="lazy" decoding="async">
+                </div>
+                <p><strong itemprop="name">ЭКОТЭК АС</strong></p>
+                <p itemprop="description">Производитель печного топлива и лицензированная утилизация отходов в Москве и Московской области. ООО «ЭКОТЭК АС», Старая Купавна.</p>
+            </div>
+            <nav class="footer-nav" aria-label="Разделы сайта">
+                <div>
+                    <p><strong>Печное топливо</strong></p>
+                    <ul>
+                        <li><a href="/toplivo/">Купить печное топливо оптом</a></li>
+                        <li><a href="/toplivo/temnoe-pechnoe-toplivo/">Тёмное печное топливо</a></li>
+                        <li><a href="/toplivo/legkoe-pechnoe-toplivo/">ЭКОТЭК Лайт (аналог ДТ)</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p><strong>Утилизация отходов</strong></p>
+                    <ul>
+                        <li><a href="/utilizaciya/">Все виды утилизации</a></li>
+                        <li><a href="/utilizaciya/medicinskie-othody/">Медицинские отходы</a></li>
+                        <li><a href="/utilizaciya/promyshlennye-othody/">Промышленные отходы</a></li>
+                        <li><a href="/utilizaciya/otrabotannye-masla/">Отработанные масла</a></li>
+                        <li><a href="/utilizaciya/lakokrasochnye-othody/">Лакокрасочные отходы</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p><strong>Компания</strong></p>
+                    <ul>
+                        <li><a href="/about.html">О компании</a></li>
+                        <li><a href="/licenses.html">Лицензии</a></li>
+                        <li><a href="/catalog.html">Каталог</a></li>
+                        <li><a href="/faq.html">Вопросы и ответы</a></li>
+                        <li><a href="/reviews.html">Отзывы</a></li>
+                        <li><a href="/contacts.html">Контакты и схема проезда</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="footer-details" itemscope itemtype="https://schema.org/Organization">
+                <p><strong>Реквизиты компании:</strong></p>
+                <p itemprop="legalName">ООО "ЭКОТЭК АС"</p>
+                <p>ИНН: <span itemprop="taxID">5042157588</span></p>
+                <p>ОГРН: <span itemprop="identifier">1215000106221</span></p>
+                <p>Телефон: <a href="tel:+79266150077" itemprop="telephone">+7 (926) 615-00-77</a></p>
+                <p>Email: <a href="mailto:eco-tec-jsc@yandex.ru" itemprop="email">eco-tec-jsc@yandex.ru</a></p>
+                <p itemprop="location" itemscope itemtype="https://schema.org/Place">
+                    <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                        <span itemprop="postalCode">142450</span>,
+                        <span itemprop="addressRegion">Московская область</span>,
+                        Богородский городской округ,
+                        <span itemprop="addressLocality">г. Старая Купавна</span>,
+                        <span itemprop="streetAddress">ул. Дорожная, 21Б</span>
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="footer-copy">
+            &copy; <span id="current-year"></span> ООО "ЭКОТЭК АС". Все права защищены.
+        </div>
+    </div>
+</footer>
+    </div>
     <script src="static/js/products-data.js?v=20260915b"></script>
     <script src="static/js/desc-icons.js"></script>
     <script>

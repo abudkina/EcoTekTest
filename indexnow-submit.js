@@ -20,7 +20,19 @@ const INDEXNOW_ENDPOINTS = [
 // URL страниц для уведомления об обновлении
 const URLs_TO_NOTIFY = [
     'https://ecotek-as.ru/',
-    // Добавьте сюда другие URL при необходимости
+    'https://ecotek-as.ru/toplivo/',
+    'https://ecotek-as.ru/utilizaciya/',
+    'https://ecotek-as.ru/catalog.html',
+    'https://ecotek-as.ru/about.html',
+    'https://ecotek-as.ru/contacts.html',
+    'https://ecotek-as.ru/faq.html',
+    'https://ecotek-as.ru/licenses.html',
+    'https://ecotek-as.ru/toplivo/temnoe-pechnoe-toplivo/',
+    'https://ecotek-as.ru/toplivo/legkoe-pechnoe-toplivo/',
+    'https://ecotek-as.ru/utilizaciya/promyshlennye-othody/',
+    'https://ecotek-as.ru/utilizaciya/medicinskie-othody/',
+    'https://ecotek-as.ru/utilizaciya/otrabotannye-masla/',
+    'https://ecotek-as.ru/utilizaciya/lakokrasochnye-othody/'
 ];
 
 /**
