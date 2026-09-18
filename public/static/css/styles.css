@@ -344,7 +344,7 @@ nav a:focus-visible::after {
     max-width: 800px;
     margin: 0 auto 1.5rem;
     padding: 1.15rem 1.35rem;
-    background: #f0f7f0;
+    background: rgba(240, 247, 240, 0.7);
     border-left: 4px solid #2e7d32;
     border-radius: 0 8px 8px 0;
     font-size: 1rem;
@@ -414,7 +414,7 @@ nav a:focus-visible::after {
 .faq-lead a { color: #1b5e20; font-weight: 600; text-decoration: none; }
 .faq-lead a:hover { text-decoration: underline; }
 .faq-accordion { max-width: 780px; margin: 0 auto; }
-.faq-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; margin-bottom: 0.75rem; box-shadow: 0 1px 3px rgba(0,0,0,0.06); overflow: hidden; }
+.faq-card { background: rgba(255, 255, 255, 0.7); border: 1px solid #e2e8f0; border-radius: 12px; margin-bottom: 0.75rem; box-shadow: 0 1px 3px rgba(0,0,0,0.06); overflow: hidden; }
 .faq-card summary { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1rem 1.25rem; cursor: pointer; font-weight: 600; color: #1a202c; list-style: none; transition: background 0.2s; }
 .faq-card summary::-webkit-details-marker { display: none; }
 .faq-card summary:hover { background: #f7fafc; }
@@ -490,7 +490,7 @@ nav a:focus-visible::after {
     scroll-snap-align: center;
     display: flex;
     flex-direction: column;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.7);
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 6px 24px rgba(27, 94, 32, 0.1);
@@ -733,7 +733,7 @@ nav a:focus-visible::after {
     max-width: 360px;
     margin: 0 auto;
     padding: 28px 24px;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.7);
     border-radius: 16px;
     box-shadow: 0 4px 20px rgba(27, 94, 32, 0.12);
     border: 1px solid rgba(46, 125, 50, 0.2);
@@ -1108,7 +1108,7 @@ nav a:focus-visible::after {
 
 /* Стили для блока "О компании" */
 .about-text-block {
-    background: white;
+    background: rgba(255, 255, 255, 0.7);
     border-radius: 12px;
     padding: 35px;
     margin: 30px 0;
@@ -1171,7 +1171,7 @@ nav a:focus-visible::after {
     align-items: center;
     gap: 10px;
     padding: 12px 18px;
-    background: white;
+    background: rgba(255, 255, 255, 0.7);
     border-radius: 8px;
     border: 1px solid #c8e6c9;
     transition: all 0.3s ease;
@@ -1260,7 +1260,7 @@ nav a:focus-visible::after {
 }
 
 .expertise-card {
-    background: white;
+    background: rgba(255, 255, 255, 0.7);
     border-radius: 15px;
     padding: 30px;
     display: flex;
@@ -1460,7 +1460,7 @@ nav a:focus-visible::after {
 }
 
 .advantage-card {
-    background: #fff;
+    background: rgba(255, 255, 255, 0.7);
     color: #1b5e20;
     border-radius: 14px;
     padding: 26px 20px 24px;
@@ -1587,7 +1587,7 @@ nav a:focus-visible::after {
 }
 
 .experience-card {
-    background: #fff;
+    background: rgba(255, 255, 255, 0.7);
     border-radius: 16px;
     padding: 40px 45px;
     box-shadow: 0 8px 32px rgba(46, 125, 50, 0.12);
@@ -1644,7 +1644,7 @@ nav a:focus-visible::after {
 
 .service-item {
     padding: 30px 20px;
-    background-color: #e8f5e9;
+    background-color: rgba(232, 245, 233, 0.7);
     border-radius: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -1700,7 +1700,7 @@ a.service-item--link:focus-visible {
 }
 
 .catalog-item {
-    background: white;
+    background: rgba(255, 255, 255, 0.7);
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
@@ -2102,7 +2102,7 @@ a.service-item--link:focus-visible {
 }
 
 .reviews-widget-wrapper {
-    background: white;
+    background: rgba(255, 255, 255, 0.7);
     border-radius: 12px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
     padding: 25px;
@@ -2550,7 +2550,7 @@ footer {
 }
 
 .license-item {
-    background: white;
+    background: rgba(255, 255, 255, 0.7);
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -3449,7 +3449,7 @@ footer {
     margin-top: 40px;
     width: 100%;
     padding: 28px 28px 32px;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.7);
     border-radius: 12px;
     box-shadow: 0 2px 12px rgba(31, 45, 36, 0.06);
 }
@@ -3529,7 +3529,7 @@ footer {
     display: flex;
     align-items: center;
     gap: 12px;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.7);
     padding: 12px;
     border-left: 4px solid #2e7d32;
     border-radius: 4px;
@@ -3561,7 +3561,7 @@ footer {
 .product-page__faq {
     margin-top: 32px;
     padding: 28px;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.7);
     border-radius: 12px;
     box-shadow: 0 2px 12px rgba(31, 45, 36, 0.06);
 }
@@ -3697,7 +3697,7 @@ a.catalog-item:focus-visible {
     border: 1px solid #e5ebe7;
     border-radius: 12px;
     overflow: hidden;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.7);
     transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
