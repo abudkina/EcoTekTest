@@ -9,7 +9,7 @@
 
     <url>
         <loc>https://ecotek-as.ru/</loc>
-        <lastmod>2026-09-16</lastmod>
+        <lastmod>2026-09-18</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <image:image>
@@ -20,7 +20,7 @@
 
     <url>
         <loc>https://ecotek-as.ru/toplivo/</loc>
-        <lastmod>2026-09-16</lastmod>
+        <lastmod>2026-09-18</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.95</priority>
         <image:image>
@@ -31,7 +31,7 @@
 
     <url>
         <loc>https://ecotek-as.ru/utilizaciya/</loc>
-        <lastmod>2026-09-16</lastmod>
+        <lastmod>2026-09-18</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.95</priority>
         <image:image>
@@ -42,49 +42,49 @@
 
     <url>
         <loc>https://ecotek-as.ru/about.html</loc>
-        <lastmod>2026-09-16</lastmod>
+        <lastmod>2026-09-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
         <loc>https://ecotek-as.ru/contacts.html</loc>
-        <lastmod>2026-09-16</lastmod>
+        <lastmod>2026-09-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
         <loc>https://ecotek-as.ru/catalog.html</loc>
-        <lastmod>2026-09-16</lastmod>
+        <lastmod>2026-09-18</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
         <loc>https://ecotek-as.ru/faq.html</loc>
-        <lastmod>2026-09-16</lastmod>
+        <lastmod>2026-09-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
 
     <url>
         <loc>https://ecotek-as.ru/licenses.html</loc>
-        <lastmod>2026-09-16</lastmod>
+        <lastmod>2026-09-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
 
     <url>
         <loc>https://ecotek-as.ru/reviews.html</loc>
-        <lastmod>2026-09-16</lastmod>
+        <lastmod>2026-09-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
         <loc>https://ecotek-as.ru/gallery.html</loc>
-        <lastmod>2026-09-16</lastmod>
+        <lastmod>2026-09-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -92,7 +92,7 @@
     <!-- product-pages-start -->
     <url>
         <loc>https://ecotek-as.ru/toplivo/temnoe-pechnoe-toplivo/</loc>
-        <lastmod>2026-09-16</lastmod>
+        <lastmod>2026-09-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -104,7 +104,7 @@
 
     <url>
         <loc>https://ecotek-as.ru/utilizaciya/promyshlennye-othody/</loc>
-        <lastmod>2026-09-16</lastmod>
+        <lastmod>2026-09-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -116,7 +116,7 @@
 
     <url>
         <loc>https://ecotek-as.ru/utilizaciya/lakokrasochnye-othody/</loc>
-        <lastmod>2026-09-16</lastmod>
+        <lastmod>2026-09-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -128,7 +128,7 @@
 
     <url>
         <loc>https://ecotek-as.ru/utilizaciya/otrabotannye-masla/</loc>
-        <lastmod>2026-09-16</lastmod>
+        <lastmod>2026-09-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -140,7 +140,7 @@
 
     <url>
         <loc>https://ecotek-as.ru/utilizaciya/medicinskie-othody/</loc>
-        <lastmod>2026-09-16</lastmod>
+        <lastmod>2026-09-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -152,7 +152,7 @@
 
     <url>
         <loc>https://ecotek-as.ru/sredstva/g-12/</loc>
-        <lastmod>2026-09-16</lastmod>
+        <lastmod>2026-09-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -164,7 +164,7 @@
 
     <url>
         <loc>https://ecotek-as.ru/utilizaciya/grunt-nefteprodukty/</loc>
-        <lastmod>2026-09-16</lastmod>
+        <lastmod>2026-09-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -176,7 +176,7 @@
 
     <url>
         <loc>https://ecotek-as.ru/utilizaciya/rezina/</loc>
-        <lastmod>2026-09-16</lastmod>
+        <lastmod>2026-09-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -188,7 +188,7 @@
 
     <url>
         <loc>https://ecotek-as.ru/utilizaciya/pesok/</loc>
-        <lastmod>2026-09-16</lastmod>
+        <lastmod>2026-09-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -200,7 +200,7 @@
 
     <url>
         <loc>https://ecotek-as.ru/utilizaciya/specodezhda/</loc>
-        <lastmod>2026-09-16</lastmod>
+        <lastmod>2026-09-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -212,7 +212,7 @@
 
     <url>
         <loc>https://ecotek-as.ru/utilizaciya/shlam/</loc>
-        <lastmod>2026-09-16</lastmod>
+        <lastmod>2026-09-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -224,7 +224,7 @@
 
     <url>
         <loc>https://ecotek-as.ru/utilizaciya/otrabotannye-filtry/</loc>
-        <lastmod>2026-09-16</lastmod>
+        <lastmod>2026-09-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -236,7 +236,7 @@
 
     <url>
         <loc>https://ecotek-as.ru/toplivo/legkoe-pechnoe-toplivo/</loc>
-        <lastmod>2026-09-16</lastmod>
+        <lastmod>2026-09-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -248,7 +248,7 @@
 
     <url>
         <loc>https://ecotek-as.ru/utilizaciya/akkumuliatory/</loc>
-        <lastmod>2026-09-16</lastmod>
+        <lastmod>2026-09-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -260,7 +260,7 @@
 
     <url>
         <loc>https://ecotek-as.ru/utilizaciya/polietilenovaya-upakovka/</loc>
-        <lastmod>2026-09-16</lastmod>
+        <lastmod>2026-09-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -272,7 +272,7 @@
 
     <url>
         <loc>https://ecotek-as.ru/utilizaciya/pishchevye-othody/</loc>
-        <lastmod>2026-09-16</lastmod>
+        <lastmod>2026-09-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
         <image:image>

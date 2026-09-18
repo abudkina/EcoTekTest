@@ -21,6 +21,14 @@ if (ENFORCE_CANONICAL) {
     });
 }
 
+app.use(function (req, res, next) {
+    const host = (req.get('host') || '').split(':')[0].toLowerCase();
+    if (host === 'localhost' || host === '127.0.0.1' || host === '::1') {
+        res.set('X-Robots-Tag', 'noindex, nofollow');
+    }
+    next();
+});
+
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 

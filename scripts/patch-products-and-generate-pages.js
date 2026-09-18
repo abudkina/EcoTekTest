@@ -166,7 +166,7 @@ function buildPage(product) {
     <link rel="canonical" href="${url}">
     <link rel="alternate" hreflang="ru" href="${url}">
     <link rel="alternate" hreflang="x-default" href="${url}">
-    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://ecotek-as.ru/sitemap.xml">
 
     <meta property="og:title" content="${escapeHtml(product.name)} | ЭКОТЭК АС">
     <meta property="og:description" content="${escapeHtml(desc)}">
