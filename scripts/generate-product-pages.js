@@ -893,7 +893,6 @@ ${geoHead}
                 <div class="product-page__info">
                     <p class="product-page__category">${escapeHtml(parent.name)} · Москва и МО</p>
                     <h1 class="product-page__title" itemprop="name">${escapeHtml(h1)}</h1>
-                    ${geoSummaryHtml(product)}
                     <p class="product-page__price${product.category === 'fuel' ? ' product-page__price--fuel' : ''}" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                         <span itemprop="priceCurrency" content="RUB"></span>
                         <meta itemprop="availability" content="https://schema.org/InStock">
@@ -937,6 +936,11 @@ ${geoHead}
     </section>
     ${fuelCalcRequestHtml(product)}
     ${utilizationRequestHtml(product)}
+    <section class="aeo-block">
+        <div class="container">
+            ${geoSummaryHtml(product)}
+        </div>
+    </section>
 </main>
 
 ${product.category === 'fuel' || product.category === 'utilization' ? '' : `<div id="request-modal-overlay" class="modal-overlay request-modal-overlay" aria-hidden="true">
