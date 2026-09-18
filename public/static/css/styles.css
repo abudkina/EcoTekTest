@@ -1,5 +1,6 @@
+/* Page surface opacity 70% */
 :root {
-    --page-surface: #fff;
+    --page-surface: rgba(255, 255, 255, 0.7);
 }
 
 * {
@@ -164,7 +165,7 @@ nav a:focus-visible::after {
 .hero {
     padding: 40px 0 24px;
     text-align: center;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.7);
 }
 
 .stats {
@@ -376,7 +377,7 @@ nav a:focus-visible::after {
 }
 .aeo-block {
     padding: 40px 0 24px;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.7);
 }
 .aeo-block .aeo-answer { margin-bottom: 1rem; }
 .product-page__info .aeo-answer,
@@ -406,7 +407,7 @@ nav a:focus-visible::after {
 .geo-faq .faq-a { margin: 0; color: #4a5568; line-height: 1.6; }
 
 /* FAQ page */
-.faq-page { background: #fff; padding-bottom: 3rem; }
+.faq-page { background: rgba(255, 255, 255, 0.7); padding-bottom: 3rem; }
 .faq-hero { text-align: center; max-width: 640px; margin: 0 auto 2.5rem; }
 .faq-hero .section-title { margin-bottom: 0.75rem; }
 .faq-lead { color: #4a5568; font-size: 1.05rem; line-height: 1.65; }
@@ -441,7 +442,7 @@ nav a:focus-visible::after {
 /* Сравнение видов топлива */
 .fuel-types {
     padding: 24px 0 40px;
-    background: linear-gradient(180deg, #f1f8e9 0%, #fff 100%);
+    background: linear-gradient(180deg, rgba(241, 248, 233, 0.7) 0%, rgba(255, 255, 255, 0.7) 100%);
 }
 
 .fuel-types .section-title {
@@ -658,7 +659,7 @@ nav a:focus-visible::after {
 .fuel-details,
 .services-list {
     padding: 24px 0 48px;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.7);
 }
 
 .fuel-grid,
@@ -714,7 +715,7 @@ nav a:focus-visible::after {
 /* Калькулятор топлива */
 .fuel-calculator-block {
     padding: 24px 0;
-    background: linear-gradient(180deg, #e8f5e9 0%, #fff 100%);
+    background: linear-gradient(180deg, rgba(232, 245, 233, 0.7) 0%, rgba(255, 255, 255, 0.7) 100%);
 }
 
 .fuel-calculator-block .section-title {
@@ -918,7 +919,7 @@ nav a:focus-visible::after {
 
 .request-block {
     padding: 28px 0 48px;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.7);
 }
 
 .request-block .section-title {
@@ -979,7 +980,7 @@ nav a:focus-visible::after {
 
 /* Калькулятор + форма в одну строку на десктопе */
 .fuel-calc-request-row {
-    background: linear-gradient(180deg, #e8f5e9 0%, #fff 100%);
+    background: linear-gradient(180deg, rgba(232, 245, 233, 0.7) 0%, rgba(255, 255, 255, 0.7) 100%);
 }
 
 @media (min-width: 992px) {
@@ -1037,7 +1038,7 @@ nav a:focus-visible::after {
 
 .about-details {
     padding: 56px 0 48px;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.7);
     position: relative;
 }
 
@@ -1052,7 +1053,7 @@ nav a:focus-visible::after {
     max-width: 1100px;
     margin: 0 auto;
     padding: 40px 48px 44px;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.7);
     border-radius: 16px;
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.14);
 }
@@ -1441,7 +1442,7 @@ nav a:focus-visible::after {
 /* Преимущества — на месте слайдов */
 .advantages-block {
     padding: 28px 0 36px;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.7);
 }
 
 .advantages-block__title,
@@ -1578,7 +1579,7 @@ nav a:focus-visible::after {
 /* Блок опыта и лицензий после «Наши направления» */
 .experience-block {
     padding: 50px 0 60px;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.7);
 }
 
 .experience-block .container {
@@ -1631,7 +1632,7 @@ nav a:focus-visible::after {
 
 .services-icons {
     padding: 60px 0;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.7);
 }
 
 .services-grid {
@@ -1687,7 +1688,7 @@ a.service-item--link:focus-visible {
 }
 
 .catalog {
-    background: #fff;
+    background: rgba(255, 255, 255, 0.7);
 }
 
 /* Каталог товаров */
@@ -1883,7 +1884,7 @@ a.service-item--link:focus-visible {
 .fuel-promo-close {
     top: 12px;
     right: 12px;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.7);
 }
 
 @media (max-width: 480px) {
@@ -2074,7 +2075,7 @@ a.service-item--link:focus-visible {
 /* Стили для блока отзывов */
 .reviews {
     padding: 60px 0;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.7);
 }
 
 .reviews-intro {
@@ -2219,7 +2220,7 @@ a.service-item--link:focus-visible {
 /* Контакты */
 .contacts {
     padding: 0px 0;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.7);
 }
 
 .contacts-grid {
@@ -2500,7 +2501,7 @@ footer {
 /* Стили для секции лицензий */
 .licenses-section {
     padding: 60px 0;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.7);
 }
 
 .licenses-description {
@@ -2882,7 +2883,7 @@ footer {
         margin-right: 20px;
         text-align: center;
         /* Добавляем фон для лучшей читаемости текста */
-        background: #fff;
+        background: rgba(255, 255, 255, 0.6);
         padding: 20px;
         border-radius: 10px;
         /* Делаем текст черным для контраста */
@@ -2920,8 +2921,7 @@ footer {
     .main-desc-sl {
         margin: 20px;
         padding: 15px;
-        background: #fff;
-        /* Поднимаем блок выше, чтобы он был поверх изображения */
+        background: rgba(255, 255, 255, 0.6);
         position: relative;
         z-index: 2;
     }
@@ -2955,7 +2955,7 @@ footer {
 /* ========== Секция галереи ========== */
 .gallery-section {
     padding: 60px 0;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.7);
 }
 
 .gallery-intro {
