@@ -337,56 +337,14 @@ nav a:focus-visible::after {
 }
 
 /* Стили для блока "О компании подробно" */
-/* GEO/AEO: прямые ответы для нейросетей, сниппетов и голосового поиска */
+/* GEO/AEO-блоки скрыты с экрана: факты остаются в JSON-LD, llms.txt и видимом тексте страницы */
 .geo-summary,
-.aeo-answer {
-    display: block;
-    max-width: 800px;
-    margin: 0 auto 1.5rem;
-    padding: 1.15rem 1.35rem;
-    background: rgba(240, 247, 240, 0.7);
-    border-left: 4px solid #2e7d32;
-    border-radius: 0 8px 8px 0;
-    font-size: 1rem;
-    line-height: 1.65;
-}
-.geo-summary p,
-.aeo-answer p { margin: 0.5rem 0; }
-.geo-summary p:first-child,
-.aeo-answer p:first-child { margin-top: 0; }
-.geo-summary ul,
-.aeo-answer ul,
-.aeo-howto ol { margin: 0.5rem 0; padding-left: 1.25rem; }
-.aeo-answer__q,
-.aeo-answer h2,
-.aeo-answer h3 {
-    font-size: 1.15rem;
-    color: #1b5e20;
-    margin: 0 0 0.5rem;
-    font-weight: 700;
-}
-.aeo-answer__a { margin: 0; color: #2d3748; }
-.aeo-howto {
-    max-width: 800px;
-    margin: 1.5rem auto 0;
-}
-.aeo-howto h2 {
-    font-size: 1.35rem;
-    color: #1b5e20;
-    margin: 0 0 0.75rem;
-}
+.aeo-answer,
+.aeo-howto,
 .aeo-block {
-    padding: 40px 0 24px;
-    background: rgba(255, 255, 255, 0.7);
+    display: none !important;
 }
-.aeo-block .aeo-answer { margin-bottom: 1rem; }
-.product-page__info .aeo-answer,
-.product-page__info .geo-summary {
-    max-width: none;
-    margin: 0.75rem 0 1rem;
-    padding: 0.85rem 1rem;
-    font-size: 0.95rem;
-}
+
 .product-page__seo-extra {
     margin-top: 1.5rem;
 }
