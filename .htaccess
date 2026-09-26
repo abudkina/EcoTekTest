@@ -11,11 +11,24 @@
     # /index.html → /
     RewriteRule ^index\.html$ https://ecotek-as.ru/ [R=301,L,NC]
 
+    # Старые URL категорий → актуальные посадочные
+    RewriteRule ^utilizaciya/motornoe-maslo/?$ /utilizaciya/otrabotannye-masla/ [R=301,L,NC]
+    RewriteRule ^utilizaciya/transformatornoe-maslo/?$ /utilizaciya/otrabotannye-masla/ [R=301,L,NC]
+    RewriteRule ^utilizaciya/maslyanye-filtry/?$ /utilizaciya/otrabotannye-filtry/ [R=301,L,NC]
+    RewriteRule ^utilizaciya/dizelnoe-toplivo/?$ /utilizaciya/ [R=301,L,NC]
+    RewriteRule ^utilizaciya/nefteprodukty/?$ /utilizaciya/ [R=301,L,NC]
+    RewriteRule ^utilizaciya/voda-nefteprodukty/?$ /utilizaciya/ [R=301,L,NC]
+
     # Каталоги без завершающего слэша → со слэшем
-    RewriteRule ^(toplivo|utilizaciya)$ https://ecotek-as.ru/$1/ [R=301,L,NC]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(toplivo|utilizaciya|sredstva)(/[A-Za-z0-9-]+)?$ https://ecotek-as.ru/$1$2/ [R=301,L,NC]
 </IfModule>
+
+Options -Indexes
 
 # HSTS (если mod_headers включён на хостинге)
 <IfModule mod_headers.c>
     Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains" env=HTTPS
+    Header set X-Content-Type-Options "nosniff"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
 </IfModule>

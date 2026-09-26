@@ -9,30 +9,30 @@
 
     <url>
         <loc>https://ecotek-as.ru/</loc>
-        <lastmod>2026-06-09</lastmod>
+        <lastmod>2026-09-26</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <image:image>
             <image:loc>https://ecotek-as.ru/static/images/Screenshot_1.jpg</image:loc>
-            <image:title>ЭКОТЭК АС - Утилизация отходов и печное топливо</image:title>
+            <image:title>ЭКОТЭК АС — печное топливо и утилизация отходов</image:title>
         </image:image>
     </url>
 
     <url>
         <loc>https://ecotek-as.ru/toplivo/</loc>
-        <lastmod>2026-06-09</lastmod>
-        <changefreq>monthly</changefreq>
+        <lastmod>2026-09-26</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>0.95</priority>
         <image:image>
             <image:loc>https://ecotek-as.ru/static/images/5.jpg</image:loc>
-            <image:title>Темное печное топливо оптом в Москве и МО — ЭКОТЭК АС</image:title>
+            <image:title>Печное топливо оптом в Москве и МО — ЭКОТЭК АС</image:title>
         </image:image>
     </url>
 
     <url>
         <loc>https://ecotek-as.ru/utilizaciya/</loc>
-        <lastmod>2026-06-09</lastmod>
-        <changefreq>monthly</changefreq>
+        <lastmod>2026-09-26</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>0.95</priority>
         <image:image>
             <image:loc>https://ecotek-as.ru/static/images/6.png</image:loc>
@@ -42,43 +42,49 @@
 
     <url>
         <loc>https://ecotek-as.ru/about.html</loc>
-        <lastmod>2026-06-09</lastmod>
+        <lastmod>2026-09-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
+
     <url>
         <loc>https://ecotek-as.ru/contacts.html</loc>
-        <lastmod>2026-06-09</lastmod>
+        <lastmod>2026-09-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
+
     <url>
         <loc>https://ecotek-as.ru/catalog.html</loc>
-        <lastmod>2026-06-09</lastmod>
-        <changefreq>monthly</changefreq>
+        <lastmod>2026-09-26</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
+
     <url>
         <loc>https://ecotek-as.ru/faq.html</loc>
-        <lastmod>2026-06-09</lastmod>
+        <lastmod>2026-09-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
+
     <url>
         <loc>https://ecotek-as.ru/licenses.html</loc>
-        <lastmod>2026-06-09</lastmod>
+        <lastmod>2026-09-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
+
     <url>
         <loc>https://ecotek-as.ru/reviews.html</loc>
-        <lastmod>2026-06-09</lastmod>
+        <lastmod>2026-09-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
+
     <url>
         <loc>https://ecotek-as.ru/gallery.html</loc>
-        <lastmod>2026-06-09</lastmod>
+        <lastmod>2026-09-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -86,7 +92,7 @@
     <!-- product-pages-start -->
     <url>
         <loc>https://ecotek-as.ru/toplivo/temnoe-pechnoe-toplivo/</loc>
-        <lastmod>2026-09-15</lastmod>
+        <lastmod>2026-09-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -98,7 +104,7 @@
 
     <url>
         <loc>https://ecotek-as.ru/utilizaciya/promyshlennye-othody/</loc>
-        <lastmod>2026-09-15</lastmod>
+        <lastmod>2026-09-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -110,43 +116,43 @@
 
     <url>
         <loc>https://ecotek-as.ru/utilizaciya/lakokrasochnye-othody/</loc>
-        <lastmod>2026-09-15</lastmod>
+        <lastmod>2026-09-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
         <image:image>
             <image:loc>https://ecotek-as.ru/static/images/9.jpg</image:loc>
-            <image:title>Утилизация лакокрасочных отходов — Москва и МО</image:title>
-            <image:caption>Утилизация лакокрасочных отходов в Москве и МО: лицензии, вывоз, договор и акты. ЭКОТЭК АС, Старая Купавна. ☎ +7 (926)…</image:caption>
+            <image:title>Утилизация ЛКМ, краски и растворителей — Москва и МО</image:title>
+            <image:caption>Утилизация ЛКМ, краски и растворителей в Москве и МО: лицензии, вывоз, договор и акты. ЭКОТЭК АС, Старая Купавна. ☎ +7…</image:caption>
         </image:image>
     </url>
 
     <url>
         <loc>https://ecotek-as.ru/utilizaciya/otrabotannye-masla/</loc>
-        <lastmod>2026-09-15</lastmod>
+        <lastmod>2026-09-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
         <image:image>
             <image:loc>https://ecotek-as.ru/static/images/8.png</image:loc>
-            <image:title>Утилизация отработанных минеральных масел — Москва и МО</image:title>
-            <image:caption>Утилизация отработанных минеральных масел в Москве и МО: лицензии, вывоз, договор и акты. ЭКОТЭК АС, Старая Купавна. ☎…</image:caption>
+            <image:title>Утилизация отработанных масел и нефтепродуктов — Москва и МО</image:title>
+            <image:caption>Утилизация отработанных масел и нефтепродуктов в Москве и МО: лицензии, вывоз, договор и акты. ЭКОТЭК АС, Старая…</image:caption>
         </image:image>
     </url>
 
     <url>
         <loc>https://ecotek-as.ru/utilizaciya/medicinskie-othody/</loc>
-        <lastmod>2026-09-15</lastmod>
+        <lastmod>2026-09-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
         <image:image>
             <image:loc>https://ecotek-as.ru/static/images/4.jpeg</image:loc>
-            <image:title>Обезвреживание медицинских отходов — Москва и МО</image:title>
-            <image:caption>Обезвреживание медицинских отходов в Москве и МО: лицензии, вывоз, договор и акты. ЭКОТЭК АС, Старая Купавна. ☎ +7…</image:caption>
+            <image:title>Утилизация медицинских отходов — Москва и МО</image:title>
+            <image:caption>Утилизация медицинских отходов в Москве и МО: лицензии, вывоз, договор и акты. ЭКОТЭК АС, Старая Купавна. ☎ +7 (926)…</image:caption>
         </image:image>
     </url>
 
     <url>
         <loc>https://ecotek-as.ru/sredstva/g-12/</loc>
-        <lastmod>2026-09-15</lastmod>
+        <lastmod>2026-09-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -158,7 +164,7 @@
 
     <url>
         <loc>https://ecotek-as.ru/utilizaciya/grunt-nefteprodukty/</loc>
-        <lastmod>2026-09-15</lastmod>
+        <lastmod>2026-09-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -170,7 +176,7 @@
 
     <url>
         <loc>https://ecotek-as.ru/utilizaciya/rezina/</loc>
-        <lastmod>2026-09-15</lastmod>
+        <lastmod>2026-09-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -182,7 +188,7 @@
 
     <url>
         <loc>https://ecotek-as.ru/utilizaciya/pesok/</loc>
-        <lastmod>2026-09-15</lastmod>
+        <lastmod>2026-09-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -194,7 +200,7 @@
 
     <url>
         <loc>https://ecotek-as.ru/utilizaciya/specodezhda/</loc>
-        <lastmod>2026-09-15</lastmod>
+        <lastmod>2026-09-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -206,7 +212,7 @@
 
     <url>
         <loc>https://ecotek-as.ru/utilizaciya/shlam/</loc>
-        <lastmod>2026-09-15</lastmod>
+        <lastmod>2026-09-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -218,7 +224,7 @@
 
     <url>
         <loc>https://ecotek-as.ru/utilizaciya/otrabotannye-filtry/</loc>
-        <lastmod>2026-09-15</lastmod>
+        <lastmod>2026-09-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -230,19 +236,19 @@
 
     <url>
         <loc>https://ecotek-as.ru/toplivo/legkoe-pechnoe-toplivo/</loc>
-        <lastmod>2026-09-15</lastmod>
+        <lastmod>2026-09-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
         <image:image>
             <image:loc>https://ecotek-as.ru/static/images/fuel-light-brown.png</image:loc>
             <image:title>Легкое печное топливо ЭКОТЭК Лайт — Москва и МО</image:title>
-            <image:caption>Легкое печное топливо ЭКОТЭК Лайт от ЭКОТЭК АС. Цена 45 ₽/л. Доставка Москва и МО, от 1 т, без НДС. Старая Купавна. ☎…</image:caption>
+            <image:caption>Купить светлое дизельное печное топливо ЭКОТЭК Лайт — аналог ДТ для котлов. Цена 45 ₽/л, опт от 1 т, доставка Москва и…</image:caption>
         </image:image>
     </url>
 
     <url>
         <loc>https://ecotek-as.ru/utilizaciya/akkumuliatory/</loc>
-        <lastmod>2026-09-15</lastmod>
+        <lastmod>2026-09-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -254,7 +260,7 @@
 
     <url>
         <loc>https://ecotek-as.ru/utilizaciya/polietilenovaya-upakovka/</loc>
-        <lastmod>2026-09-15</lastmod>
+        <lastmod>2026-09-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
         <image:image>
@@ -266,7 +272,7 @@
 
     <url>
         <loc>https://ecotek-as.ru/utilizaciya/pishchevye-othody/</loc>
-        <lastmod>2026-09-15</lastmod>
+        <lastmod>2026-09-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
         <image:image>

@@ -1,6 +1,6 @@
-/* Page surface opacity 90% */
+/* Page surface opacity 70% */
 :root {
-    --page-surface: rgba(255, 255, 255, 0.9);
+    --page-surface: rgba(255, 255, 255, 0.7);
 }
 
 * {
@@ -165,7 +165,7 @@ nav a:focus-visible::after {
 .hero {
     padding: 40px 0 24px;
     text-align: center;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.7);
 }
 
 .stats {
@@ -337,21 +337,27 @@ nav a:focus-visible::after {
 }
 
 /* Стили для блока "О компании подробно" */
-/* GEO: блоки для генеративных поисковиков */
-.geo-summary {
-    display: none; /* скрыто от пользователя, остаётся для SEO */
-    max-width: 800px;
-    margin: 0 auto 2rem;
-    padding: 1.25rem 1.5rem;
-    background: #f0f7f0;
-    border-left: 4px solid #2e7d32;
-    border-radius: 0 8px 8px 0;
-    font-size: 1rem;
-    line-height: 1.65;
+/* GEO/AEO-блоки скрыты с экрана: факты остаются в JSON-LD, llms.txt и видимом тексте страницы */
+.geo-summary,
+.aeo-answer,
+.aeo-howto,
+.aeo-block {
+    display: none !important;
 }
-.geo-summary p { margin: 0.5rem 0; }
-.geo-summary p:first-child { margin-top: 0; }
-.geo-summary ul { margin: 0.5rem 0; padding-left: 1.25rem; }
+
+.product-page__seo-extra {
+    margin-top: 1.5rem;
+}
+.product-page__seo-extra h2 {
+    font-size: 1.35rem;
+    color: #1b5e20;
+    margin: 0 0 0.75rem;
+}
+.product-page__seo-extra p {
+    margin: 0;
+    color: #2d3748;
+    line-height: 1.7;
+}
 .geo-faq { max-width: 800px; margin: 2rem auto; }
 .geo-faq h2 { font-size: 1.35rem; color: #1b5e20; margin-bottom: 1rem; }
 .geo-faq .faq-item { margin-bottom: 1.25rem; }
@@ -359,14 +365,14 @@ nav a:focus-visible::after {
 .geo-faq .faq-a { margin: 0; color: #4a5568; line-height: 1.6; }
 
 /* FAQ page */
-.faq-page { background: rgba(255, 255, 255, 0.9); padding-bottom: 3rem; }
+.faq-page { background: rgba(255, 255, 255, 0.7); padding-bottom: 3rem; }
 .faq-hero { text-align: center; max-width: 640px; margin: 0 auto 2.5rem; }
 .faq-hero .section-title { margin-bottom: 0.75rem; }
 .faq-lead { color: #4a5568; font-size: 1.05rem; line-height: 1.65; }
 .faq-lead a { color: #1b5e20; font-weight: 600; text-decoration: none; }
 .faq-lead a:hover { text-decoration: underline; }
 .faq-accordion { max-width: 780px; margin: 0 auto; }
-.faq-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; margin-bottom: 0.75rem; box-shadow: 0 1px 3px rgba(0,0,0,0.06); overflow: hidden; }
+.faq-card { background: rgba(255, 255, 255, 0.7); border: 1px solid #e2e8f0; border-radius: 12px; margin-bottom: 0.75rem; box-shadow: 0 1px 3px rgba(0,0,0,0.06); overflow: hidden; }
 .faq-card summary { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1rem 1.25rem; cursor: pointer; font-weight: 600; color: #1a202c; list-style: none; transition: background 0.2s; }
 .faq-card summary::-webkit-details-marker { display: none; }
 .faq-card summary:hover { background: #f7fafc; }
@@ -394,7 +400,7 @@ nav a:focus-visible::after {
 /* Сравнение видов топлива */
 .fuel-types {
     padding: 24px 0 40px;
-    background: linear-gradient(180deg, rgba(241, 248, 233, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%);
+    background: linear-gradient(180deg, rgba(241, 248, 233, 0.7) 0%, rgba(255, 255, 255, 0.7) 100%);
 }
 
 .fuel-types .section-title {
@@ -442,7 +448,7 @@ nav a:focus-visible::after {
     scroll-snap-align: center;
     display: flex;
     flex-direction: column;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.7);
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 6px 24px rgba(27, 94, 32, 0.1);
@@ -611,7 +617,7 @@ nav a:focus-visible::after {
 .fuel-details,
 .services-list {
     padding: 24px 0 48px;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.7);
 }
 
 .fuel-grid,
@@ -667,7 +673,7 @@ nav a:focus-visible::after {
 /* Калькулятор топлива */
 .fuel-calculator-block {
     padding: 24px 0;
-    background: linear-gradient(180deg, rgba(232, 245, 233, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%);
+    background: linear-gradient(180deg, rgba(232, 245, 233, 0.7) 0%, rgba(255, 255, 255, 0.7) 100%);
 }
 
 .fuel-calculator-block .section-title {
@@ -685,7 +691,7 @@ nav a:focus-visible::after {
     max-width: 360px;
     margin: 0 auto;
     padding: 28px 24px;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.7);
     border-radius: 16px;
     box-shadow: 0 4px 20px rgba(27, 94, 32, 0.12);
     border: 1px solid rgba(46, 125, 50, 0.2);
@@ -871,7 +877,7 @@ nav a:focus-visible::after {
 
 .request-block {
     padding: 28px 0 48px;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.7);
 }
 
 .request-block .section-title {
@@ -932,7 +938,7 @@ nav a:focus-visible::after {
 
 /* Калькулятор + форма в одну строку на десктопе */
 .fuel-calc-request-row {
-    background: linear-gradient(180deg, rgba(232, 245, 233, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%);
+    background: linear-gradient(180deg, rgba(232, 245, 233, 0.7) 0%, rgba(255, 255, 255, 0.7) 100%);
 }
 
 @media (min-width: 992px) {
@@ -990,23 +996,22 @@ nav a:focus-visible::after {
 
 .about-details {
     padding: 56px 0 48px;
-    background: transparent;
+    background: rgba(255, 255, 255, 0.7);
     position: relative;
 }
 
-/* На главной — только SEO-текст (display:none), без видимой полосы фона */
 .about-details--seo {
-    padding: 0;
+    padding: 40px 0 8px;
     margin: 0;
-    height: 0;
-    overflow: hidden;
+    height: auto;
+    overflow: visible;
 }
 
 .about-content {
     max-width: 1100px;
     margin: 0 auto;
     padding: 40px 48px 44px;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.7);
     border-radius: 16px;
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.14);
 }
@@ -1061,7 +1066,7 @@ nav a:focus-visible::after {
 
 /* Стили для блока "О компании" */
 .about-text-block {
-    background: white;
+    background: rgba(255, 255, 255, 0.7);
     border-radius: 12px;
     padding: 35px;
     margin: 30px 0;
@@ -1124,7 +1129,7 @@ nav a:focus-visible::after {
     align-items: center;
     gap: 10px;
     padding: 12px 18px;
-    background: white;
+    background: rgba(255, 255, 255, 0.7);
     border-radius: 8px;
     border: 1px solid #c8e6c9;
     transition: all 0.3s ease;
@@ -1213,7 +1218,7 @@ nav a:focus-visible::after {
 }
 
 .expertise-card {
-    background: white;
+    background: rgba(255, 255, 255, 0.7);
     border-radius: 15px;
     padding: 30px;
     display: flex;
@@ -1343,9 +1348,9 @@ nav a:focus-visible::after {
     }
 
     .about-details--seo {
-        padding: 0;
-        height: 0;
-        overflow: hidden;
+        padding: 28px 0 8px;
+        height: auto;
+        overflow: visible;
     }
 
     .about-content {
@@ -1395,7 +1400,7 @@ nav a:focus-visible::after {
 /* Преимущества — на месте слайдов */
 .advantages-block {
     padding: 28px 0 36px;
-    background: transparent;
+    background: rgba(255, 255, 255, 0.7);
 }
 
 .advantages-block__title,
@@ -1413,7 +1418,7 @@ nav a:focus-visible::after {
 }
 
 .advantage-card {
-    background: #fff;
+    background: rgba(255, 255, 255, 0.7);
     color: #1b5e20;
     border-radius: 14px;
     padding: 26px 20px 24px;
@@ -1532,7 +1537,7 @@ nav a:focus-visible::after {
 /* Блок опыта и лицензий после «Наши направления» */
 .experience-block {
     padding: 50px 0 60px;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.7);
 }
 
 .experience-block .container {
@@ -1540,7 +1545,7 @@ nav a:focus-visible::after {
 }
 
 .experience-card {
-    background: #fff;
+    background: rgba(255, 255, 255, 0.7);
     border-radius: 16px;
     padding: 40px 45px;
     box-shadow: 0 8px 32px rgba(46, 125, 50, 0.12);
@@ -1585,7 +1590,7 @@ nav a:focus-visible::after {
 
 .services-icons {
     padding: 60px 0;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.7);
 }
 
 .services-grid {
@@ -1597,7 +1602,7 @@ nav a:focus-visible::after {
 
 .service-item {
     padding: 30px 20px;
-    background-color: #e8f5e9;
+    background-color: rgba(232, 245, 233, 0.7);
     border-radius: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -1641,7 +1646,7 @@ a.service-item--link:focus-visible {
 }
 
 .catalog {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.7);
 }
 
 /* Каталог товаров */
@@ -1653,7 +1658,7 @@ a.service-item--link:focus-visible {
 }
 
 .catalog-item {
-    background: white;
+    background: rgba(255, 255, 255, 0.7);
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
@@ -1837,7 +1842,7 @@ a.service-item--link:focus-visible {
 .fuel-promo-close {
     top: 12px;
     right: 12px;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.7);
 }
 
 @media (max-width: 480px) {
@@ -2028,7 +2033,7 @@ a.service-item--link:focus-visible {
 /* Стили для блока отзывов */
 .reviews {
     padding: 60px 0;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.7);
 }
 
 .reviews-intro {
@@ -2055,7 +2060,7 @@ a.service-item--link:focus-visible {
 }
 
 .reviews-widget-wrapper {
-    background: white;
+    background: rgba(255, 255, 255, 0.7);
     border-radius: 12px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
     padding: 25px;
@@ -2173,7 +2178,7 @@ a.service-item--link:focus-visible {
 /* Контакты */
 .contacts {
     padding: 0px 0;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.7);
 }
 
 .contacts-grid {
@@ -2454,7 +2459,7 @@ footer {
 /* Стили для секции лицензий */
 .licenses-section {
     padding: 60px 0;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.7);
 }
 
 .licenses-description {
@@ -2503,7 +2508,7 @@ footer {
 }
 
 .license-item {
-    background: white;
+    background: rgba(255, 255, 255, 0.7);
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -2875,7 +2880,6 @@ footer {
         margin: 20px;
         padding: 15px;
         background: rgba(255, 255, 255, 0.6);
-        /* Поднимаем блок выше, чтобы он был поверх изображения */
         position: relative;
         z-index: 2;
     }
@@ -2909,7 +2913,7 @@ footer {
 /* ========== Секция галереи ========== */
 .gallery-section {
     padding: 60px 0;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.7);
 }
 
 .gallery-intro {
@@ -3403,7 +3407,7 @@ footer {
     margin-top: 40px;
     width: 100%;
     padding: 28px 28px 32px;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.7);
     border-radius: 12px;
     box-shadow: 0 2px 12px rgba(31, 45, 36, 0.06);
 }
@@ -3483,7 +3487,7 @@ footer {
     display: flex;
     align-items: center;
     gap: 12px;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.7);
     padding: 12px;
     border-left: 4px solid #2e7d32;
     border-radius: 4px;
@@ -3515,7 +3519,7 @@ footer {
 .product-page__faq {
     margin-top: 32px;
     padding: 28px;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.7);
     border-radius: 12px;
     box-shadow: 0 2px 12px rgba(31, 45, 36, 0.06);
 }
@@ -3651,7 +3655,7 @@ a.catalog-item:focus-visible {
     border: 1px solid #e5ebe7;
     border-radius: 12px;
     overflow: hidden;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.7);
     transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
